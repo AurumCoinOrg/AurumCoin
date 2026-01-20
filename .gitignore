@@ -27,3 +27,22 @@ target/
 /guix-build-*
 
 /ci/scratch/
+
+# --- Local/dev artifacts ---
+.DS_Store
+*.swp
+*.swo
+*.bak
+*.save
+*.OLD
+aurum-regtest-data/
+aurum-main-data/
+regtest-data/
+data/
+*.tmp
+session_*.txt
+last_*.txt
+current_*.txt
+mine_*.txt
+tx_*.txt
+*.json
