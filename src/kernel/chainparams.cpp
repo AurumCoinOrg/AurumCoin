@@ -42,9 +42,25 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
     CMutableTransaction txNew;
     txNew.version = 1;
     txNew.vin.resize(1);
-    txNew.vout.resize(1);
+    txNew.vout.resize(2);
     txNew.vin[0].scriptSig = CScript() << 486604799 << CScriptNum(4) << std::vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
     txNew.vout[0].nValue = genesisReward;
+
+
+    // Aurum premine: 2% of 21,000,000 = 420,000 AUR paid in genesis (block 0)
+    const std::string premine_addr = "bc1qPUT_YOUR_PUBLIC_PREMINE_ADDRESS_HERE";
+    const CTxDestination premine_dest = DecodeDestination(premine_addr);
+    assert(IsValidDestination(premine_dest));
+    txNew.vout[1].nValue = 420000 * COIN;
+    txNew.vout[1].scriptPubKey = GetScriptForDestination(premine_dest);
+
+    // Aurum premine: 2% of 21,000,000 = 420,000 AUR paid in genesis (block 0)
+    const std::string premine_addr = "bc1qPUT_YOUR_PUBLIC_PREMINE_ADDRESS_HERE";
+    const CTxDestination premine_dest = DecodeDestination(premine_addr);
+    assert(IsValidDestination(premine_dest));
+    txNew.vout[1].nValue = 420000 * COIN;
+    txNew.vout[1].scriptPubKey = GetScriptForDestination(premine_dest);
+
     txNew.vout[0].scriptPubKey = genesisOutputScript;
 
     CBlock genesis;
@@ -78,8 +94,7 @@ static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits
 
 /**
  * Main network on which people trade goods and services.
- */
-class CMainParams : public CChainParams {
+ */class CMainParams : public CChainParams {
 public:
     CMainParams() {
         m_chain_type = ChainType::MAIN;
@@ -92,6 +107,27 @@ public:
             uint256{"0000000000000000000f14c35b2d841e986ab5441de8c585d5ffe55ea1e395ad"}, SCRIPT_VERIFY_P2SH | SCRIPT_VERIFY_WITNESS);
         consensus.BIP34Height = 227931;
         consensus.BIP34Hash = uint256{"000000000000024b89b42a942fe0d9fea3bb44ab7bd1b19115dd6a759c0808b8"};
+
+class CAurumMainParams : public CChainParams {
+public:
+    CAurumMainParams() {
+        CMainParams base;
+        *static_cast<CChainParams*>(this) = base;
+
+
+        pchMessageStart[0] = 0xfa;
+        pchMessageStart[1] = 0xbf;
+        pchMessageStart[2] = 0xb5;
+        pchMessageStart[3] = 0xda;
+
+        nDefaultPort = 19444;
+
+        vSeeds.clear();
+        vFixedSeeds.clear();
+
+        bech32_hrp = "au";
+    }
+};
         consensus.BIP65Height = 388381; // 000000000000000004c2b624ed5d7756c508d90fd0da2c7c679febfa6c4735f0
         consensus.BIP66Height = 363725; // 00000000000000000379eaa19dce8c9b722d46ae6a57c2f1a988119488b50931
         consensus.CSVHeight = 419328; // 000000000000000004a1b34462cb8aeebd5799177f7a29cf28f2d1961716b5b5
@@ -135,7 +171,7 @@ public:
         m_assumed_blockchain_size = 810;
         m_assumed_chain_state_size = 14;
 
-        genesis = CreateGenesisBlock(1231006505, 2083236893, 0x1d00ffff, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1231006505, 2083236893, 0x1d00ffff, 1, 0 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
         assert(consensus.hashGenesisBlock == uint256{"000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f"});
         assert(genesis.hashMerkleRoot == uint256{"4a5e1e4baab89f3a32518a88c31bc87f618f76673e2cc77ab2127b7afdeda33b"});
