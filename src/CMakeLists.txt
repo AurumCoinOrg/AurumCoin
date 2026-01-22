@@ -298,18 +298,18 @@ endif()
 
 # Bitcoin Core bitcoind.
 if(BUILD_DAEMON)
-  add_executable(bitcoind
+  add_executable(aurumd
     bitcoind.cpp
     init/bitcoind.cpp
   )
-  add_windows_resources(bitcoind bitcoind-res.rc)
-  add_windows_application_manifest(bitcoind)
-  target_link_libraries(bitcoind
+  add_windows_resources(aurumd bitcoind-res.rc)
+  add_windows_application_manifest(aurumd)
+  target_link_libraries(aurumd
     core_interface
     bitcoin_node
     $<TARGET_NAME_IF_EXISTS:bitcoin_wallet>
   )
-  install_binary_component(bitcoind HAS_MANPAGE)
+  install_binary_component(aurumd HAS_MANPAGE)
 endif()
 if(ENABLE_IPC AND BUILD_DAEMON)
   add_executable(bitcoin-node
@@ -339,10 +339,10 @@ target_link_libraries(bitcoin_cli
 
 # Bitcoin Core RPC client
 if(BUILD_CLI)
-  add_executable(bitcoin-cli bitcoin-cli.cpp)
-  add_windows_resources(bitcoin-cli bitcoin-cli-res.rc)
-  add_windows_application_manifest(bitcoin-cli)
-  target_link_libraries(bitcoin-cli
+  add_executable(aurum-cli bitcoin-cli.cpp)
+  add_windows_resources(aurum-cli bitcoin-cli-res.rc)
+  add_windows_application_manifest(aurum-cli)
+  target_link_libraries(aurum-cli
     core_interface
     bitcoin_cli
     bitcoin_common
@@ -350,7 +350,7 @@ if(BUILD_CLI)
     libevent::core
     libevent::extra
   )
-  install_binary_component(bitcoin-cli HAS_MANPAGE)
+  install_binary_component(aurum-cli HAS_MANPAGE)
 endif()
 
 
@@ -418,3 +418,7 @@ endif()
 if(BUILD_FUZZ_BINARY)
   add_subdirectory(test/fuzz)
 endif()
+
+# AurumCoin binary aliases
+set(AURUMD_BIN aurumd)
+set(AURUM_CLI_BIN aurum-cli)
