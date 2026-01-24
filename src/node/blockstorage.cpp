@@ -693,7 +693,7 @@ bool BlockManager::ReadBlockUndo(CBlockUndo& blockundo, const CBlockIndex& index
         // Read block
         HashVerifier verifier{filein}; // Use HashVerifier, as reserializing may lose data, c.f. commit d3424243
 
-        verifier << index.pprev->GetBlockHash();
+        verifier << (index.pprev ? index.pprev->GetBlockHash() : uint256());
         verifier >> blockundo;
 
         uint256 hashChecksum;
@@ -977,7 +977,7 @@ bool BlockManager::WriteBlockUndo(const CBlockUndo& blockundo, BlockValidationSt
             {
                 // Calculate checksum
                 HashWriter hasher{};
-                hasher << block.pprev->GetBlockHash() << blockundo;
+                hasher << (block.pprev ? block.pprev->GetBlockHash() : uint256()) << blockundo;
                 // Write undo data & checksum
                 fileout << blockundo << hasher.GetHash();
             }
