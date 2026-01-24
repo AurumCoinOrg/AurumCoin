@@ -1843,7 +1843,8 @@ PackageMempoolAcceptResult ProcessNewPackage(Chainstate& active_chainstate, CTxM
 
 CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams)
 {
-    int halvings = nHeight / consensusParams.nSubsidyHalvingInterval;
+    if (nHeight == 0) return 50 * COIN;
+int halvings = nHeight / consensusParams.nSubsidyHalvingInterval;
     if (halvings >= 64) return 0;
 
     CAmount nSubsidy = 25 * COIN;   // Aurum: 25 AUR starting subsidy
@@ -2270,9 +2271,13 @@ DisconnectResult Chainstate::DisconnectBlock(const CBlock& block, const CBlockIn
     }
 
     // move best block pointer to prevout block
-    view.SetBestBlock(pindex->pprev->GetBlockHash());
-
-    return fClean ? DISCONNECT_OK : DISCONNECT_UNCLEAN;
+    if (pindex->pprev) {
+        view.SetBestBlock(pindex->pprev->GetBlockHash());
+    } else {
+        assert(pindex->nHeight == 0);
+        view.SetBestBlock(uint256());
+    }
+return fClean ? DISCONNECT_OK : DISCONNECT_UNCLEAN;
 }
 
 script_verify_flags GetBlockScriptFlags(const CBlockIndex& block_index, const ChainstateManager& chainman)
@@ -2484,8 +2489,8 @@ bool Chainstate::ConnectBlock(const CBlock& block, BlockValidationState& state, 
     // testnet3 has no blocks before the BIP34 height with indicated heights
     // post BIP34 before approximately height 486,000,000. After block
     // 1,983,702 testnet3 starts doing unnecessary BIP30 checking again.
-    assert(pindex->pprev);
-    CBlockIndex* pindexBIP34height = pindex->pprev->GetAncestor(params.GetConsensus().BIP34Height);
+    assert(pindex->pprev || pindex->nHeight == 0);
+    CBlockIndex* pindexBIP34height = (pindex->pprev ? pindex->pprev->GetAncestor(params.GetConsensus().BIP34Height) : nullptr);
     //Only continue to enforce if we're below BIP34 activation height or the block hash at that height doesn't correspond.
     fEnforceBIP30 = fEnforceBIP30 && (!pindexBIP34height || !(pindexBIP34height->GetBlockHash() == params.GetConsensus().BIP34Hash));
 

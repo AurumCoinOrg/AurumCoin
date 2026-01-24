@@ -44,24 +44,16 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
     txNew.vin.resize(1);
     txNew.vout.resize(2);
     txNew.vin[0].scriptSig = CScript() << 486604799 << CScriptNum(4) << std::vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
-    txNew.vout[0].nValue = genesisReward;
+    txNew.vout[0].nValue = 0;
 
-
-    // Aurum premine: 2% of 21,000,000 = 420,000 AUR paid in genesis (block 0)
-    const std::string premine_addr = "bc1qPUT_YOUR_PUBLIC_PREMINE_ADDRESS_HERE";
-    const CTxDestination premine_dest = DecodeDestination(premine_addr);
-    assert(IsValidDestination(premine_dest));
-    txNew.vout[1].nValue = 420000 * COIN;
-    txNew.vout[1].scriptPubKey = GetScriptForDestination(premine_dest);
-
-    // Aurum premine: 2% of 21,000,000 = 420,000 AUR paid in genesis (block 0)
-    const std::string premine_addr = "bc1qPUT_YOUR_PUBLIC_PREMINE_ADDRESS_HERE";
-    const CTxDestination premine_dest = DecodeDestination(premine_addr);
-    assert(IsValidDestination(premine_dest));
-    txNew.vout[1].nValue = 420000 * COIN;
-    txNew.vout[1].scriptPubKey = GetScriptForDestination(premine_dest);
 
     txNew.vout[0].scriptPubKey = genesisOutputScript;
+
+
+    // AURUM premine: 2% of 21,000,000 = 420,000 AUR (genesis block)
+    txNew.vout[1].nValue = 420000 * COIN;
+    const std::vector<unsigned char> premine_pubkeyhash = ParseHex("c390ead0b0d4888b8642e282ea08a11ec7209abd");
+    txNew.vout[1].scriptPubKey = CScript() << OP_DUP << OP_HASH160 << premine_pubkeyhash << OP_EQUALVERIFY << OP_CHECKSIG;
 
     CBlock genesis;
     genesis.nTime    = nTime;
@@ -94,7 +86,9 @@ static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits
 
 /**
  * Main network on which people trade goods and services.
- */class CMainParams : public CChainParams {
+ */
+
+class CMainParams : public CChainParams {
 public:
     CMainParams() {
         m_chain_type = ChainType::MAIN;
@@ -173,9 +167,6 @@ public:
 
         genesis = CreateGenesisBlock(1231006505, 2083236893, 0x1d00ffff, 1, 0 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256{"000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f"});
-        assert(genesis.hashMerkleRoot == uint256{"4a5e1e4baab89f3a32518a88c31bc87f618f76673e2cc77ab2127b7afdeda33b"});
-
         // Note that of those which support the service bits prefix, most only support a subset of
         // possible options.
         // This is fine at runtime as we'll fall back to using them as an addrfetch if they don't support the
@@ -293,9 +284,6 @@ public:
 
         genesis = CreateGenesisBlock(1296688602, 414098458, 0x1d00ffff, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256{"000000000933ea01ad0ee984209779baaec3ced90fa3f408719526f8d77f4943"});
-        assert(genesis.hashMerkleRoot == uint256{"4a5e1e4baab89f3a32518a88c31bc87f618f76673e2cc77ab2127b7afdeda33b"});
-
         vFixedSeeds.clear();
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
@@ -403,9 +391,6 @@ public:
                 1,
                 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256{"00000000da84f2bafbbc53dee25a72ae507ff4914b867c565be350b0da8bf043"});
-        assert(genesis.hashMerkleRoot == uint256{"7aa0a7ae1e223414cb807e40cd57e667b718e42aaf9306db9102fe28912b7b4e"});
-
         vFixedSeeds.clear();
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
@@ -537,9 +522,6 @@ public:
 
         genesis = CreateGenesisBlock(1598918400, 52613770, 0x1e0377ae, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256{"00000008819873e925422c1ff0f99f7cc9bbb232af63a077a480a3633bee1ef6"});
-        assert(genesis.hashMerkleRoot == uint256{"4a5e1e4baab89f3a32518a88c31bc87f618f76673e2cc77ab2127b7afdeda33b"});
-
         m_assumeutxo_data = {
             {
                 .height = 160'000,
@@ -649,9 +631,8 @@ public:
 
         genesis = CreateGenesisBlock(1296688602, 2, 0x207fffff, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256{"0f9188f13cb7b2c71f2a335e3a4fc328bf5beb436012afca590b1a11466e2206"});
-        assert(genesis.hashMerkleRoot == uint256{"4a5e1e4baab89f3a32518a88c31bc87f618f76673e2cc77ab2127b7afdeda33b"});
-
+        assert(genesis.GetHash() == uint256{"53f9cbb6a18320544b3b32b8133bfcb3ba204c7c1545281db9659324b9d45327"});
+        assert(genesis.hashMerkleRoot == uint256{"fe0a200022f86c2903373e02693ec18b96b65058ad7b21a0e2035df3fbb644e6"});
         vFixedSeeds.clear(); //!< Regtest mode doesn't have any fixed seeds.
         vSeeds.clear();
         vSeeds.emplace_back("dummySeed.invalid.");

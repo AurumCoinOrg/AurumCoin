@@ -7,6 +7,8 @@
 #define BITCOIN_KERNEL_CHAINPARAMS_H
 
 #include <consensus/params.h>
+#include <script/script.h>
+#include <consensus/amount.h>
 #include <kernel/messagestartchars.h>
 #include <primitives/block.h>
 #include <uint256.h>
