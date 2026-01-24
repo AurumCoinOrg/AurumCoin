@@ -63,3 +63,29 @@ AurumCoin is experimental software.
 
 This project makes no promises regarding financial value or future development.
 Use at your own risk.
+
+---
+
+## Build
+
+### Release build (recommended)
+
+Note: Some environments require disabling multiprocess IPC if Cap’n Proto is not installed.
+
+```bash
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DENABLE_IPC=OFF
+cmake --build build -j"$(/usr/sbin/sysctl -n hw.ncpu 2>/dev/null || echo 8)"
+
+
+---
+
+## Build
+
+### Release build (recommended)
+
+Note: Some environments require disabling multiprocess IPC if Cap’n Proto is not installed.
+
+```bash
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DENABLE_IPC=OFF
+cmake --build build -j"$(/usr/sbin/sysctl -n hw.ncpu 2>/dev/null || echo 8)"
+```
