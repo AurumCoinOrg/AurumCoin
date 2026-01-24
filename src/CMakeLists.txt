@@ -1,4 +1,4 @@
-# Copyright (c) 2023-present The Bitcoin Core developers
+# Copyright (c) 2023-present The AurumCoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or https://opensource.org/license/mit/.
 
@@ -174,7 +174,7 @@ if(ENABLE_WALLET)
 endif()
 
 
-# P2P and RPC server functionality used by `bitcoind` and `bitcoin-qt` executables.
+# P2P and RPC server functionality used by `aurumd` and `bitcoin-qt` executables.
 add_library(bitcoin_node STATIC EXCLUDE_FROM_ALL
   addrdb.cpp
   addrman.cpp
@@ -287,7 +287,7 @@ target_link_libraries(bitcoin_node
     $<TARGET_NAME_IF_EXISTS:USDT::headers>
 )
 
-# Bitcoin wrapper executable that can call other executables.
+# AurumCoin wrapper executable that can call other executables.
 if(BUILD_BITCOIN_BIN)
   add_executable(bitcoin bitcoin.cpp)
   add_windows_resources(bitcoin bitcoin-res.rc)
@@ -296,13 +296,13 @@ if(BUILD_BITCOIN_BIN)
   install_binary_component(bitcoin HAS_MANPAGE)
 endif()
 
-# Bitcoin Core bitcoind.
+# AurumCoin Core aurumd.
 if(BUILD_DAEMON)
   add_executable(aurumd
     bitcoind.cpp
     init/bitcoind.cpp
   )
-  add_windows_resources(aurumd bitcoind-res.rc)
+  add_windows_resources(aurumd aurumd-res.rc)
   add_windows_application_manifest(aurumd)
   target_link_libraries(aurumd
     core_interface
@@ -337,10 +337,10 @@ target_link_libraries(bitcoin_cli
 )
 
 
-# Bitcoin Core RPC client
+# AurumCoin Core RPC client
 if(BUILD_CLI)
-  add_executable(aurum-cli bitcoin-cli.cpp)
-  add_windows_resources(aurum-cli bitcoin-cli-res.rc)
+  add_executable(aurum-cli aurum-cli.cpp)
+  add_windows_resources(aurum-cli aurum-cli-res.rc)
   add_windows_application_manifest(aurum-cli)
   target_link_libraries(aurum-cli
     core_interface
