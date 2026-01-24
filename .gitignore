@@ -1,48 +1,17 @@
-# Patterns that are specific to a text editor, IDE, operating system, or user
-# environment are not added here. They should be added to your local gitignore
-# file instead:
-# https://docs.github.com/en/get-started/git-basics/ignoring-files#configuring-ignored-files-for-all-repositories-on-your-computer
+aurum-regtest/
+aurum-mainnet/
+aurum-mainnet2/
+mainnet-data/
+*.pid
+*.log
+*.dat
+anchors.dat
+fee_estimates.dat
+mempool.dat
 
-# Build subdirectories.
-/*build*
-!/build-aux
-!/build_msvc
-
-*.pyc
-
-# Only ignore unexpected patches
-*.patch
-!ci/test/*.patch
-!contrib/guix/patches/*.patch
-!depends/patches/**/*.patch
-
-/CMakeUserPresets.json
-
-# Previous releases
-/releases
-
-# cargo default target dir
-target/
-
-/guix-build-*
-
-/ci/scratch/
-
-# --- Local/dev artifacts ---
-.DS_Store
-*.swp
-*.swo
-*.bak
-*.save
-*.OLD
-aurum-regtest-data/
-aurum-main-data/
-regtest-data/
-data/
-*.tmp
-session_*.txt
-last_*.txt
-current_*.txt
-mine_*.txt
-tx_*.txt
-*.json
+*.BAK_*
+fix_chain.sh
+regtest_up.sh
+reset_aurum_mainnet.sh
+2
+64-hex

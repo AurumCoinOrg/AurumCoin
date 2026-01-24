@@ -4,7 +4,6 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include <node/miner.h>
-
 #include <chain.h>
 #include <chainparams.h>
 #include <coins.h>
