@@ -89,3 +89,53 @@ Note: Some environments require disabling multiprocess IPC if Cap’n Proto is n
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DENABLE_IPC=OFF
 cmake --build build -j"$(/usr/sbin/sysctl -n hw.ncpu 2>/dev/null || echo 8)"
 ```
+
+
+---
+
+## Run (Quickstart)
+
+This starts a local regtest node, creates a wallet, mines 1 block, and shows the genesis premine output.
+
+```bash
+A="$HOME/Documents/AurumCoin"
+DATA="$A/aurum-regtest"
+D="$A/build/bin/aurumd"
+CLI="$A/build/bin/aurum-cli"
+
+"$CLI" -datadir="$DATA" -regtest stop 2>/dev/null || true
+pkill -9 aurumd 2>/dev/null || true
+
+rm -rf "$DATA/regtest"
+mkdir -p "$DATA"
+
+"$D" -datadir="$DATA" -regtest -daemon
+
+for i in {1..60}; do
+  "$CLI" -datadir="$DATA" -regtest -rpcclienttimeout=1 getblockchaininfo >/dev/null 2>&1 && break
+  sleep 1
+done
+
+"$CLI" -datadir="$DATA" -regtest createwallet "miner" >/dev/null 2>&1 || true
+"$CLI" -datadir="$DATA" -regtest loadwallet "miner"   >/dev/null 2>&1 || true
+ADDR=$("$CLI" -datadir="$DATA" -regtest -rpcwallet=miner getnewaddress)
+"$CLI" -datadir="$DATA" -regtest -rpcwallet=miner generatetoaddress 1 "$ADDR" >/dev/null
+
+echo "GENESIS_HASH=$("$CLI" -datadir="$DATA" -regtest getblockhash 0)"
+```
+
+## Verify premine (on-chain)
+
+The premine is a dedicated genesis output (vout index 1) worth 420,000 AUR.
+
+```bash
+A="$HOME/Documents/AurumCoin"
+DATA="$A/aurum-regtest"
+CLI="$A/build/bin/aurum-cli"
+
+GEN=$("$CLI" -datadir="$DATA" -regtest getblockhash 0)
+"$CLI" -datadir="$DATA" -regtest getblock "$GEN" 2 | sed -n "/\"vout\"[[:space:]]*:/,/^ *],/p"
+
+# quick check (should print one line)
+"$CLI" -datadir="$DATA" -regtest getblock "$GEN" 2 | grep -n "\"value\": 420000.00000000" || true
+```
