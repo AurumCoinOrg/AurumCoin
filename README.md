@@ -1,39 +1,65 @@
-# AurumCoin
+# AurumCoin (AUR)
 
-AurumCoin is an experimental Bitcoin Core-derived project for learning, testing, and iterating on consensus + wallet tooling.
+AurumCoin is a Bitcoin-derived digital currency focused on scarcity, simplicity, and transparency.
 
-## Build
+The project intentionally avoids experimental monetary mechanics and complex token behavior.
+Its design philosophy mirrors early Bitcoin: fixed supply, predictable issuance, and consensus-locked rules.
 
-    cmake -S . -B build -DCMAKE_BUILD_TYPE=RelWithDebInfo
-    cmake --build build -j 8
+---
 
-## Run (regtest)
+## Key Properties
 
-    rm -rf /tmp/aurum-regtest && mkdir -p /tmp/aurum-regtest
+- **Ticker:** AUR
+- **Consensus:** Proof-of-Work (Bitcoin-derived)
+- **Maximum Supply:** 21,000,000 AUR
+- **Block Subsidy:** Fixed schedule defined by consensus rules
+- **Network Types:** Mainnet, Testnet, Regtest
 
-    cat > /tmp/aurum-regtest/bitcoin.conf <<'CONF'
-    server=1
-    daemon=1
+---
 
-    [regtest]
-    rpcuser=aurumrpc
-    rpcpassword=aurumrpcpass
-    rpcbind=127.0.0.1
-    rpcallowip=127.0.0.1
-    fallbackfee=0.0001
-    txindex=1
-    CONF
+## Premine Disclosure
 
-    ./build/bin/bitcoind -regtest -datadir=/tmp/aurum-regtest
-    ./build/bin/bitcoin-cli -regtest -datadir=/tmp/aurum-regtest -rpcuser=aurumrpc -rpcpassword=aurumrpcpass getblockchaininfo
+AurumCoin includes a fixed premine of **420,000 AUR**, representing **2% of the maximum supply**.
 
-## Docs
-## Premine Transparency (Mainnet)
+- The premine exists **only in the genesis block**
+- No premine logic exists in mining, subsidy, or validation code
+- The premine output is permanently embedded in the genesis transaction
+- Changing the premine would change the genesis hash and create a different chain
 
-AurumCoin mainnet includes a genesis premine. Full details, address, and on-chain proof are documented here:
+This design ensures full transparency and prevents hidden or mutable allocations.
 
-👉 [PREMINE.md](./PREMINE.md)
+---
 
-- docs/PHILOSOPHY.md
-- docs/SECURITY.md
-- docs/RELEASES.md
+## Genesis Block
+
+The genesis block is consensus-locked and verified at startup.
+
+- **Genesis Hash:**  
+  `53f9cbb6a18320544b3b32b8133bfcb3ba204c7c1545281db9659324b9d45327`
+
+- **Genesis Merkle Root:**  
+  `fe0a200022f86c2903373e02693ec18b96b65058ad7b21a0e2035df3fbb644e6`
+
+Any modification to the genesis block parameters will result in a different network.
+
+---
+
+## Design Philosophy
+
+AurumCoin prioritizes:
+
+- Predictable monetary policy
+- Minimal consensus complexity
+- Long-term auditability
+- Human-readable rules
+
+No claims are made about guaranteed value, price performance, or adoption.
+
+---
+
+## Disclaimer
+
+AurumCoin is experimental software.
+
+This project makes no promises regarding financial value or future development.
+Use at your own risk.
