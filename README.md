@@ -19,6 +19,11 @@ Its design philosophy mirrors early Bitcoin: fixed supply, predictable issuance,
 
 ## Premine Disclosure
 
+
+AurumCoin launched with a fixed genesis premine of 420,000 AUR.
+Full exchange-facing disclosure:
+docs/PREMINE_EXCHANGE_DISCLOSURE.md
+
 AurumCoin includes a fixed premine of **420,000 AUR**, representing **2% of the maximum supply**.
 
 - The premine exists **only in the genesis block**
