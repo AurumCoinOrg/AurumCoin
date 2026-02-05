@@ -37,3 +37,11 @@ regtest-data*/
 
 # mac
 .DS_Store
+
+# local secrets / wallet backups
+premine_MAIN_ENCRYPTED_FINAL.bak
+wallet-backups/
+main-data/
+mainnet-data/
+regtest-data/
+premine-data/
