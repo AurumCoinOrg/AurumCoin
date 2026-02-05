@@ -18,3 +18,13 @@ The following keys may be used to communicate sensitive information to developer
 | Ava Chow | 1528 1230 0785 C964 44D3  334D 1756 5732 E08E 5E41 |
 
 You can import a key by running the following command with that individual’s fingerprint: `gpg --keyserver hkps://keys.openpgp.org --recv-keys "<fingerprint>"` Ensure that you put quotes around fingerprints containing spaces.
+
+
+## Backup Policy
+
+- The premine wallet is encrypted at all times
+- The wallet remains locked except during intentional operations
+- Any action involving the premine wallet requires a fresh backup
+- Backups are never overwritten
+- Each backup is verified with SHA256
+- Backups are stored offline only (USB)
