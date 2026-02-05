@@ -70,5 +70,36 @@ Anyone can independently verify the premine by:
 - Observing that the premine UTXO remains unspent
 
 No trust assumptions are required.
-
 This file serves as a permanent public attestation.
+
+---
+
+## How to Verify the Premine
+
+The AurumCoin premine can be independently verified by anyone.
+
+### Step 1: Verify the Genesis Block
+- Confirm the genesis block hash: 0ee5e347b57cd33fc6955be1ce59dbe33636b0db635c560f5b74f540a4cbf232
+
+### Step 2: Inspect the Genesis Outputs
+- The genesis block contains a premine output of **420,000 AUR**
+- Output address: au1q2rre2s6e6pksfhfvefe8ju596unz2rlk5vl4cd
+
+- ScriptPubKey: 001450c7954359d06d04dd2cca72797285d726250ff6
+
+### Step 3: Confirm On-Chain Status
+- The premine output exists on-chain
+- It remains **unspent**
+- No operational or mining transactions spend from this output
+
+### Step 4: Verify Separation of Funds
+- Mining and operational rewards are paid to separate addresses
+- The premine output is not used for mining, fees, or liquidity
+
+### Step 5: Custody & Security
+- Premine keys are held in an encrypted wallet
+- Wallet backups are stored offline
+- Wallet is kept locked when not in use
+
+No private information is required to verify these facts.
+No trust assumptions are required.
