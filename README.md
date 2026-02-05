@@ -28,6 +28,11 @@ AurumCoin is an experimental Bitcoin Core-derived project for learning, testing,
     ./build/bin/bitcoin-cli -regtest -datadir=/tmp/aurum-regtest -rpcuser=aurumrpc -rpcpassword=aurumrpcpass getblockchaininfo
 
 ## Docs
+## Premine Transparency (Mainnet)
+
+AurumCoin mainnet includes a genesis premine. Full details, address, and on-chain proof are documented here:
+
+👉 [PREMINE.md](./PREMINE.md)
 
 - docs/PHILOSOPHY.md
 - docs/SECURITY.md
