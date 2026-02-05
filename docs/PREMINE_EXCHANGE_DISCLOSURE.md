@@ -1,78 +1,62 @@
-# AurumCoin – Exchange Premine Disclosure
+# AurumCoin (AUR) — Premine & Exchange Disclosure
 
-This document is provided for **exchanges, custodians, and listing partners**
-to clearly and transparently disclose the AurumCoin premine.
+This document is intended for exchanges, explorers, listing services, and auditors.
 
-This repository serves as the **official public record** of premine details.
-
----
-
-## Premine Summary
-
-- **Premine Amount:** 420,000 AUR
-- **Percentage of Supply:** ~2%
-- **Creation Method:** Genesis block output
-- **Genesis Block Height:** 0
-- **Genesis Block Hash:**  
-  `0ee5e347b57cd33fc6955be1ce59dbe33636b0db635c560f5b74f540a4cbf232`
+It describes AurumCoin’s genesis allocation and confirms that no ongoing premine or hidden subsidy
+logic exists in mining or validation.
 
 ---
 
-## Premine Address
+## Summary
 
-- **Address (Bech32):**  
-  `au1q2rre2s6e6pksfhfvefe8ju596unz2rlk5vl4cd`
+- **Project:** AurumCoin
+- **Ticker:** AUR
+- **Maximum Supply:** 21,000,000 AUR
+- **Consensus:** Proof-of-Work (Bitcoin-derived)
 
-- **ScriptPubKey:**  
-  `001450c7954359d06d04dd2cca72797285d726250ff6`
+### Genesis Premine
 
-- **Output Index:** `vout = 1`
+AurumCoin includes a **fixed premine of 420,000 AUR**, equal to **2% of the maximum supply**.
 
----
-
-## On-Chain Status
-
-- Premine UTXO exists on-chain
-- Funds are **unspent**
-- Premine output is distinct from mining rewards
-- No operational transactions spend from this output
+- The premine exists **only in the genesis block (height 0)**
+- The premine is paid as a **dedicated genesis coinbase output** (genesis transaction `vout[1]`)
+- There is **no premine logic** in mining, subsidy calculation, or validation rules
+- Any change to premine parameters would change the **genesis hash** and result in a different network
 
 ---
 
-## Wallet & Security Handling
+## Genesis Identifiers
 
-- Premine is controlled by an **encrypted wallet**
-- Private keys are stored **offline**
-- Wallet is **locked by default**
-- Encrypted backups are kept on **removable offline media**
-- USB media is disconnected after verification
+These values are consensus-locked and verified at startup:
 
----
+- **Genesis block hash:**  
+  `53f9cbb6a18320544b3b32b8133bfcb3ba204c7c1545281db9659324b9d45327`
 
-## Operational Funds Separation
-
-- Mining rewards and operational funds were consolidated
-- Operational outputs are held separately
-- Premine output is **never used** for:
-  - Mining
-  - Fees
-  - Liquidity
-  - Operational expenses
+- **Genesis merkle root:**  
+  `fe0a200022f86c2903373e02693ec18b96b65058ad7b21a0e2035df3fbb644e6`
 
 ---
 
-## Transparency Commitment
+## Verification (Node / RPC)
 
-The AurumCoin project commits to:
+### Important note about genesis coinbase
 
-- Never secretly move premine funds
-- Publicly disclose **any future premine movement before execution**
-- Maintain auditable records via GitHub
+Bitcoin-derived nodes do **not** treat the genesis coinbase as an “ordinary transaction”.
+As a result, RPC methods such as `getrawtransaction` may refuse to return it.
 
-This file is intended to satisfy exchange due-diligence requirements
-regarding premine transparency and custody practices.
+Use `getblock <genesis> 2` to view the full genesis transaction and outputs.
 
----
+### Verify the premine output exists (value = 420,000 AUR)
 
-**Maintained by:** AurumCoin  
-**Repository:** https://github.com/Hondacivic1992/Aurum
+```bash
+A="$HOME/Documents/AurumCoin"
+DATA="$A/aurum-regtest"
+CLI="$A/build/bin/aurum-cli"
+
+GEN=$("$CLI" -datadir="$DATA" -regtest getblockhash 0)
+
+# Show the genesis transaction JSON (includes vout array)
+"$CLI" -datadir="$DATA" -regtest getblock "$GEN" 2 | sed -n '/"tx"[[:space:]]*:/,/^ *],/p'
+
+# Quick check for the premine amount
+"$CLI" -datadir="$DATA" -regtest getblock "$GEN" 2 | grep -n '"value":[[:space:]]*420000\.00000000' || true
