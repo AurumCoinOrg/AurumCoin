@@ -15,3 +15,25 @@ regtest_up.sh
 reset_aurum_mainnet.sh
 2
 64-hex
+
+# build outputs
+build/
+**/build/
+
+# local chain data / wallets / backups
+main-data/
+main-data-*/
+premine-data/
+premine-test/
+regtest-data*/
+*.bak
+*.dat
+*.wallet
+.wallet/
+*.cookie
+*.log
+*.ldb
+*.json
+
+# mac
+.DS_Store
