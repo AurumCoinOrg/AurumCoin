@@ -1,0 +1,581 @@
+
+
+
+
+
+2026-02-07T07:11:39Z AurumCoin version v30.99.0-68a394c73ea3-dirty (release build)
+2026-02-07T07:11:39Z Using the 'arm_shani(1way;2way)' SHA256 implementation
+2026-02-07T07:11:39Z Default data directory /Users/ericciciotti/Library/Application Support/Bitcoin
+2026-02-07T07:11:39Z Using data directory /Users/ericciciotti/Documents/AurumCoin/regtest-halving-test/regtest
+2026-02-07T07:11:39Z Config file: /Users/ericciciotti/Documents/AurumCoin/regtest-halving-test/bitcoin.conf (not found, skipping)
+2026-02-07T07:11:39Z Command-line arg: daemon=""
+2026-02-07T07:11:39Z Command-line arg: datadir="/Users/ericciciotti/Documents/AurumCoin/regtest-halving-test"
+2026-02-07T07:11:39Z Command-line arg: fallbackfee="0.00001"
+2026-02-07T07:11:39Z Command-line arg: regtest=""
+2026-02-07T07:11:39Z Using at most 125 automatic connections (1024 file descriptors available)
+2026-02-07T07:11:39Z scheduler thread start
+2026-02-07T07:11:39Z Binding RPC on address ::1 port 18443
+2026-02-07T07:11:39Z Binding RPC on address 127.0.0.1 port 18443
+2026-02-07T07:11:39Z Generated RPC authentication cookie /Users/ericciciotti/Documents/AurumCoin/regtest-halving-test/regtest/.cookie
+2026-02-07T07:11:39Z Permissions used for cookie: rw-------
+2026-02-07T07:11:39Z Using random cookie authentication.
+2026-02-07T07:11:39Z Starting HTTP server with 16 worker threads
+2026-02-07T07:11:39Z Using wallet directory /Users/ericciciotti/Documents/AurumCoin/regtest-halving-test/regtest/wallets
+2026-02-07T07:11:39Z Using SQLite Version 3.51.0
+2026-02-07T07:11:39Z init message: Verifying wallet(s)…
+2026-02-07T07:11:39Z Using /16 prefix for IP bucketing
+2026-02-07T07:11:39Z init message: Loading P2P addresses…
+2026-02-07T07:11:39Z Creating peers.dat because the file was not found ("/Users/ericciciotti/Documents/AurumCoin/regtest-halving-test/regtest/peers.dat")
+2026-02-07T07:11:39Z init message: Loading banlist…
+2026-02-07T07:11:39Z Recreating the banlist database
+2026-02-07T07:11:39Z SetNetworkActive: true
+2026-02-07T07:11:39Z /Users/ericciciotti/Documents/AurumCoin/regtest-halving-test/regtest/fee_estimates.dat is not found. Continue anyway.
+2026-02-07T07:11:39Z Cache configuration:
+2026-02-07T07:11:39Z * Using 2.0 MiB for block index database
+2026-02-07T07:11:39Z * Using 8.0 MiB for chain state database
+2026-02-07T07:11:39Z * Using 440.0 MiB for in-memory UTXO set (plus up to 286.1 MiB of unused mempool space)
+2026-02-07T07:11:39Z Script verification uses 7 additional threads
+2026-02-07T07:11:39Z Using obfuscation key for blocksdir *.dat files (/Users/ericciciotti/Documents/AurumCoin/regtest-halving-test/regtest/blocks): '2c7f7410e6f35de2'
+2026-02-07T07:11:39Z Opening LevelDB in /Users/ericciciotti/Documents/AurumCoin/regtest-halving-test/regtest/blocks/index
+2026-02-07T07:11:39Z Opened LevelDB successfully
+2026-02-07T07:11:39Z Using obfuscation key for /Users/ericciciotti/Documents/AurumCoin/regtest-halving-test/regtest/blocks/index: 0000000000000000
+2026-02-07T07:11:39Z Using 16 MiB out of 16 MiB requested for signature cache, able to store 524288 elements
+2026-02-07T07:11:39Z Using 16 MiB out of 16 MiB requested for script execution cache, able to store 524288 elements
+2026-02-07T07:11:39Z init message: Loading block index…
+2026-02-07T07:11:39Z Validating signatures for all blocks.
+2026-02-07T07:11:39Z Setting nMinimumChainWork=0000000000000000000000000000000000000000000000000000000000000000
+2026-02-07T07:11:39Z Loading block index db: last block file = 0
+2026-02-07T07:11:39Z Loading block index db: last block file info: CBlockFileInfo(blocks=0, size=0, heights=0...0, time=1970-01-01...1970-01-01)
+2026-02-07T07:11:39Z Checking all blk files are present...
+2026-02-07T07:11:39Z Initializing chainstate Chainstate [ibd] @ height -1 (null)
+2026-02-07T07:11:39Z Opening LevelDB in /Users/ericciciotti/Documents/AurumCoin/regtest-halving-test/regtest/chainstate
+2026-02-07T07:11:39Z Opened LevelDB successfully
+2026-02-07T07:11:39Z Wrote new obfuscation key for /Users/ericciciotti/Documents/AurumCoin/regtest-halving-test/regtest/chainstate: a1e607ec3b161178
+2026-02-07T07:11:39Z Using obfuscation key for /Users/ericciciotti/Documents/AurumCoin/regtest-halving-test/regtest/chainstate: a1e607ec3b161178
+2026-02-07T07:11:39Z init message: Verifying blocks…
+2026-02-07T07:11:39Z Block index and chainstate loaded
+2026-02-07T07:11:39Z Setting NODE_NETWORK in non-prune mode
+2026-02-07T07:11:39Z initload thread start
+2026-02-07T07:11:39Z UpdateTip: new best=14343c5da9120e333539e1255c426cf1a2a4954849472e365e088cdd0ee709a6 height=0 version=0x00000001 log2_work=1.000000 tx=1 date='2011-02-02T23:16:42Z' progress=0.000002 cache=0.3MiB(0txo)
+2026-02-07T07:11:39Z block tree size = 1
+2026-02-07T07:11:39Z nBestHeight = 0
+2026-02-07T07:11:39Z Failed to open mempool file. Continuing anyway.
+2026-02-07T07:11:39Z initload thread exit
+2026-02-07T07:11:39Z mapport thread start
+2026-02-07T07:11:39Z torcontrol thread start
+2026-02-07T07:11:39Z Bound to 127.0.0.1:18445
+2026-02-07T07:11:39Z Bound to [::]:18444
+2026-02-07T07:11:39Z Bound to 0.0.0.0:18444
+2026-02-07T07:11:39Z 0 block-relay-only anchors will be tried for connections.
+2026-02-07T07:11:39Z init message: Starting network threads…
+2026-02-07T07:11:39Z net thread start
+2026-02-07T07:11:39Z dnsseed thread start
+2026-02-07T07:11:39Z addcon thread start
+2026-02-07T07:11:39Z 0 addresses found from DNS seeds
+2026-02-07T07:11:39Z dnsseed thread exit
+2026-02-07T07:11:39Z opencon thread start
+2026-02-07T07:11:39Z msghand thread start
+2026-02-07T07:11:39Z init message: Done loading
+2026-02-07T07:11:40Z init message: Loading wallet…
+2026-02-07T07:11:40Z [aurum] Legacy Wallet Keys: 0 plaintext, 0 encrypted, 0 w/ metadata, 0 total.
+2026-02-07T07:11:40Z [aurum] Descriptors: 0, Descriptor Keys: 0 plaintext, 0 encrypted, 0 total.
+2026-02-07T07:11:41Z [aurum] Setting spkMan to active: id = b70d9ea168fb0481cafceadbfb7b88aee33e336eccf69284a4662bdd2ca450e7, type = legacy, internal = false
+2026-02-07T07:11:41Z [aurum] Setting spkMan to active: id = 573f15c281af94d0b892573caa72d986538035bb2570d5c65c4a5251e6d684a8, type = p2sh-segwit, internal = false
+2026-02-07T07:11:41Z [aurum] Setting spkMan to active: id = cf50ea21c7f87e86c4b1db534b77e4ded1390c03e9939a3b3dbd494dddae9ce9, type = bech32, internal = false
+2026-02-07T07:11:41Z [aurum] Setting spkMan to active: id = c9a0b45a1ef6a5b57a2bd774bf9e2f8111097e570770b8c763f37d934f7c11db, type = bech32m, internal = false
+2026-02-07T07:11:41Z [aurum] Setting spkMan to active: id = e8ebef0314f092d1405cefe25e4de514ec2265335d2cdb5ebd1e842712626e7e, type = legacy, internal = true
+2026-02-07T07:11:41Z [aurum] Setting spkMan to active: id = c104152ad7531cf09811303e9fb670d8a6825d25e47544b6935e222e3c09f833, type = p2sh-segwit, internal = true
+2026-02-07T07:11:41Z [aurum] Setting spkMan to active: id = 0064aa795130a773ceced7800e76e816b5e48072899573874089885cad4487fc, type = bech32, internal = true
+2026-02-07T07:11:41Z [aurum] Setting spkMan to active: id = 6650d7c52bdf0dd2648223135176c366ce90674df5f1f637647fa77f10a1970f, type = bech32m, internal = true
+2026-02-07T07:11:41Z [aurum] Wallet completed loading in             294ms
+2026-02-07T07:11:41Z [aurum] setKeyPool.size() = 8000
+2026-02-07T07:11:41Z [aurum] mapWallet.size() = 0
+2026-02-07T07:11:41Z [aurum] m_address_book.size() = 0
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 884 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z Enabling script verification at block #1 (de0fa0b890d67df0c0f7b2621bdebe159ac417b0567a1c7607b9786002aace4f): assumevalid=0 (always verify).
+2026-02-07T07:11:41Z Leaving InitialBlockDownload (latching to false)
+2026-02-07T07:11:41Z UpdateTip: new best=7e76136b6810b68531c748a2059721837155263fd195b1a9e01b08080a30c246 height=1 version=0x20000000 log2_work=2.000000 tx=2 date='2026-02-07T07:11:41Z' progress=1.000000 cache=0.3MiB(1txo)
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 884 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z UpdateTip: new best=6e17a05aeee5960a1cf63b88af3ea5399ec39efac76b856a7c18978100d868dd height=2 version=0x20000000 log2_work=2.584963 tx=3 date='2026-02-07T07:11:42Z' progress=1.000000 cache=0.3MiB(2txo)
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 884 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z UpdateTip: new best=723cad32a1a78eaee614f2018e3e27f74356dd45241108fff7b613f20a5adc03 height=3 version=0x20000000 log2_work=3.000000 tx=4 date='2026-02-07T07:11:42Z' progress=1.000000 cache=0.3MiB(3txo)
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 884 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z UpdateTip: new best=560be0318dca8f9961fe142a914d5cd3c73a97e5639f0822bde4b0ee1b448198 height=4 version=0x20000000 log2_work=3.321928 tx=5 date='2026-02-07T07:11:43Z' progress=1.000000 cache=0.3MiB(4txo)
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 884 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z UpdateTip: new best=3421871fad87e2cb5935afacd24a5ed8033f3acaf3f2faccaccc660bc8a73fb3 height=5 version=0x20000000 log2_work=3.584963 tx=6 date='2026-02-07T07:11:43Z' progress=1.000000 cache=0.3MiB(5txo)
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 884 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z [aurum] AddToWallet 5a757b634e7542dbb5cb5aac80e92948a5d4f8c339ebe38d16c377226660bdd5  new Confirmed (block=7e76136b6810b68531c748a2059721837155263fd195b1a9e01b08080a30c246, height=1, index=0)
+2026-02-07T07:11:41Z [aurum] AddToWallet c8b4586752a736885f22ea38146aca8c87be7c5ca28f5d2460ee4db2dfb51ffa  new Confirmed (block=6e17a05aeee5960a1cf63b88af3ea5399ec39efac76b856a7c18978100d868dd, height=2, index=0)
+2026-02-07T07:11:41Z [aurum] AddToWallet 73d5a7dc402a1c46c13b6aec08b9d03834789f3525b71a9a04ebb8b7d8c038ed  new Confirmed (block=723cad32a1a78eaee614f2018e3e27f74356dd45241108fff7b613f20a5adc03, height=3, index=0)
+2026-02-07T07:11:41Z [aurum] AddToWallet 3942772b0162c9b657ce78a89a653cbe00cdf30eee2b1d407b326b6593b1b3fe  new Confirmed (block=560be0318dca8f9961fe142a914d5cd3c73a97e5639f0822bde4b0ee1b448198, height=4, index=0)
+2026-02-07T07:11:41Z [aurum] AddToWallet 26f3359db0d2f4ae93d053aabd6c4dc73b117d4c4d08a4c9ff9ea6265f4b3463  new Confirmed (block=3421871fad87e2cb5935afacd24a5ed8033f3acaf3f2faccaccc660bc8a73fb3, height=5, index=0)
+2026-02-07T07:11:41Z UpdateTip: new best=2d8f0547587e91e0f3d95c0c1e66eb3abd487855b9639eda6e50cccbaaffa4b5 height=6 version=0x20000000 log2_work=3.807355 tx=7 date='2026-02-07T07:11:43Z' progress=1.000000 cache=0.3MiB(6txo)
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 884 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z UpdateTip: new best=666ecefb0ca937eafa9d9d668fd828bc7d313d8c2580f9849024736249b93cdb height=7 version=0x20000000 log2_work=4.000000 tx=8 date='2026-02-07T07:11:43Z' progress=1.000000 cache=0.3MiB(7txo)
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 884 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z UpdateTip: new best=2dc36bf720ac6f557cd9095fa0a438fdc1522e64cf4bbe0e37f50ac9da6d2290 height=8 version=0x20000000 log2_work=4.169925 tx=9 date='2026-02-07T07:11:44Z' progress=1.000000 cache=0.3MiB(8txo)
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 884 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z UpdateTip: new best=142d57a85f3fb15eff8aacf74c4b0e4a33af08f906ffcfcd6d859d46ff2d7a81 height=9 version=0x20000000 log2_work=4.321928 tx=10 date='2026-02-07T07:11:44Z' progress=1.000000 cache=0.3MiB(9txo)
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 884 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z UpdateTip: new best=4e225480cb07135c6839de68411be5ae9e68f79bf756a428bdf94e436d32ffb8 height=10 version=0x20000000 log2_work=4.459432 tx=11 date='2026-02-07T07:11:44Z' progress=1.000000 cache=0.3MiB(10txo)
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 884 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z [aurum] AddToWallet 79c2a82dcee0cb666bd7d7eba15de9e6cdac24698298a452250e687f2211b0f2  new Confirmed (block=2d8f0547587e91e0f3d95c0c1e66eb3abd487855b9639eda6e50cccbaaffa4b5, height=6, index=0)
+2026-02-07T07:11:41Z [aurum] AddToWallet d36feb495dbaecc147512f9eb950d8da8937f093b1f0e4c1f732b8a7fc2e785e  new Confirmed (block=666ecefb0ca937eafa9d9d668fd828bc7d313d8c2580f9849024736249b93cdb, height=7, index=0)
+2026-02-07T07:11:41Z [aurum] AddToWallet 4ff11768be3418391d75a5c2f707341c83c52ef3919ec44b9c164885e54b494e  new Confirmed (block=2dc36bf720ac6f557cd9095fa0a438fdc1522e64cf4bbe0e37f50ac9da6d2290, height=8, index=0)
+2026-02-07T07:11:41Z [aurum] AddToWallet c557e7cf8b991fde131bc9c9c2ed9542db8c98506ebdbec05958e7b64b18d04e  new Confirmed (block=142d57a85f3fb15eff8aacf74c4b0e4a33af08f906ffcfcd6d859d46ff2d7a81, height=9, index=0)
+2026-02-07T07:11:41Z [aurum] AddToWallet bb2dd65724940bfb001ca8bd8fa5e0ef3f961b23dfcf9febac530c7eef615f3b  new Confirmed (block=4e225480cb07135c6839de68411be5ae9e68f79bf756a428bdf94e436d32ffb8, height=10, index=0)
+2026-02-07T07:11:41Z UpdateTip: new best=2d9ba8801188e62812c6b88df0e1fcf08296d7f4767b0f65deee6cc2461f0c40 height=11 version=0x20000000 log2_work=4.584963 tx=12 date='2026-02-07T07:11:44Z' progress=1.000000 cache=0.3MiB(11txo)
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 884 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z UpdateTip: new best=4db4742084809ed2a7d54814f2a1c4e2b15769f3ba7ca7b90b0c5548239b684b height=12 version=0x20000000 log2_work=4.700440 tx=13 date='2026-02-07T07:11:44Z' progress=1.000000 cache=0.3MiB(12txo)
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 884 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z UpdateTip: new best=10ced554b4c0d1820ce0a6fcd3bfbfc343a64668653995d29f63a284eaf8ffb4 height=13 version=0x20000000 log2_work=4.807355 tx=14 date='2026-02-07T07:11:44Z' progress=1.000000 cache=0.3MiB(13txo)
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 884 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z UpdateTip: new best=18b023b3f5e5a620e130389dbe6e2760ce7a15bd7d009f04bb45ab0dcc06104a height=14 version=0x20000000 log2_work=4.906891 tx=15 date='2026-02-07T07:11:45Z' progress=1.000000 cache=0.3MiB(14txo)
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 884 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z UpdateTip: new best=141b1dc6d1df3b377350da5330fc32729135297083cacd088528fb41d23230e9 height=15 version=0x20000000 log2_work=5.000000 tx=16 date='2026-02-07T07:11:45Z' progress=1.000000 cache=0.3MiB(15txo)
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 884 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z [aurum] AddToWallet f6ae1ab35302dc9216185b6d0a34aba30f8de3cbd80e8f66d4cdffe19f23bd4c  new Confirmed (block=2d9ba8801188e62812c6b88df0e1fcf08296d7f4767b0f65deee6cc2461f0c40, height=11, index=0)
+2026-02-07T07:11:41Z [aurum] AddToWallet dd87e87e4140d1ba0dbc8d4fb2bfc758f176f06afd48bd355303097b1870b237  new Confirmed (block=4db4742084809ed2a7d54814f2a1c4e2b15769f3ba7ca7b90b0c5548239b684b, height=12, index=0)
+2026-02-07T07:11:41Z [aurum] AddToWallet 683f4718cf0d3fc129ea27dcfbed7c42dbea22d61551551db2d8683680227885  new Confirmed (block=10ced554b4c0d1820ce0a6fcd3bfbfc343a64668653995d29f63a284eaf8ffb4, height=13, index=0)
+2026-02-07T07:11:41Z [aurum] AddToWallet 95cbb31a5bd9bf3b812d9d6a38f121e62d428d5309dd998bcfac389aa33bb836  new Confirmed (block=18b023b3f5e5a620e130389dbe6e2760ce7a15bd7d009f04bb45ab0dcc06104a, height=14, index=0)
+2026-02-07T07:11:41Z [aurum] AddToWallet 4a29f4b96d1df00c75b1ec5101a5e8135b9418c6f09c4cf27c9a5977cf216d3e  new Confirmed (block=141b1dc6d1df3b377350da5330fc32729135297083cacd088528fb41d23230e9, height=15, index=0)
+2026-02-07T07:11:41Z UpdateTip: new best=7cde8f454182a5ac3e5a5b67d536bd976a4028081ac1bd8a76e87796c32d70de height=16 version=0x20000000 log2_work=5.087463 tx=17 date='2026-02-07T07:11:45Z' progress=1.000000 cache=0.3MiB(16txo)
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z UpdateTip: new best=1d9c400c9228f59ceaf69344800dde1f52e7cfe5a8340d1df79f9776d5221b73 height=17 version=0x20000000 log2_work=5.169925 tx=18 date='2026-02-07T07:11:45Z' progress=1.000000 cache=0.3MiB(17txo)
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z UpdateTip: new best=305efd3548f9f1efe9314be3cd638c0008a566e1a996a9f9125f86ce13f6e4e4 height=18 version=0x20000000 log2_work=5.247928 tx=19 date='2026-02-07T07:11:45Z' progress=1.000000 cache=0.3MiB(18txo)
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z UpdateTip: new best=1b9a98ab7011d997c0ec3afa40c4d94593643d82308efc890a0378cbec70559b height=19 version=0x20000000 log2_work=5.321928 tx=20 date='2026-02-07T07:11:45Z' progress=1.000000 cache=0.3MiB(19txo)
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z UpdateTip: new best=29cc4dd0917853fb0c82b2fb60f5cb8797116bcb401ea2b6e7b64527c695e27d height=20 version=0x20000000 log2_work=5.392317 tx=21 date='2026-02-07T07:11:46Z' progress=1.000000 cache=0.3MiB(20txo)
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z [aurum] AddToWallet e21746593ed1066fe221f831d27a08dfa42aaed5742442109357ab14beb3fe68  new Confirmed (block=7cde8f454182a5ac3e5a5b67d536bd976a4028081ac1bd8a76e87796c32d70de, height=16, index=0)
+2026-02-07T07:11:41Z [aurum] AddToWallet 12b94d3ba584a89322d6e6c6ce46b154f32d6dd02efebec320d0401655c36fdc  new Confirmed (block=1d9c400c9228f59ceaf69344800dde1f52e7cfe5a8340d1df79f9776d5221b73, height=17, index=0)
+2026-02-07T07:11:41Z [aurum] AddToWallet dc760fddbefc7092452f9d7691610610a05a97ca8690259757792099850e0822  new Confirmed (block=305efd3548f9f1efe9314be3cd638c0008a566e1a996a9f9125f86ce13f6e4e4, height=18, index=0)
+2026-02-07T07:11:41Z [aurum] AddToWallet c42e653b3f0842f04c2c8f680ef73aaa565f1c43d947b0941ac876df685486db  new Confirmed (block=1b9a98ab7011d997c0ec3afa40c4d94593643d82308efc890a0378cbec70559b, height=19, index=0)
+2026-02-07T07:11:41Z [aurum] AddToWallet 8a5d0fd76a631c0ccbb6dc5ac73ad2ff60702d9d1c7ad3b789c2d98b3f5626db  new Confirmed (block=29cc4dd0917853fb0c82b2fb60f5cb8797116bcb401ea2b6e7b64527c695e27d, height=20, index=0)
+2026-02-07T07:11:41Z UpdateTip: new best=453bdefe1014302a9af6040e3ce84bb3e6efef7f8341b271e5c9fa836c045005 height=21 version=0x20000000 log2_work=5.459432 tx=22 date='2026-02-07T07:11:46Z' progress=1.000000 cache=0.3MiB(21txo)
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z UpdateTip: new best=43ae495431f46f1c0a978471b5a2b736d72d678cbc8cf1af5cde891f69498548 height=22 version=0x20000000 log2_work=5.523562 tx=23 date='2026-02-07T07:11:46Z' progress=1.000000 cache=0.3MiB(22txo)
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z UpdateTip: new best=23eba7c5b657f74c3c6be9ab1c8c9e8b6107220f5bd3fec7e6c60de29b4605f8 height=23 version=0x20000000 log2_work=5.584963 tx=24 date='2026-02-07T07:11:46Z' progress=1.000000 cache=0.3MiB(23txo)
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z UpdateTip: new best=421512dadcfd02c08f9b37411dc326a4606fd27c2c9e665ce5600493b6be2618 height=24 version=0x20000000 log2_work=5.643856 tx=25 date='2026-02-07T07:11:46Z' progress=1.000000 cache=0.3MiB(24txo)
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z UpdateTip: new best=392d066730d7e8abf3c8ad3d78e5c1f257c6f789bb95b3619ac849f3ec93b99f height=25 version=0x20000000 log2_work=5.700440 tx=26 date='2026-02-07T07:11:46Z' progress=1.000000 cache=0.3MiB(25txo)
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z [aurum] AddToWallet fef74b26bf8ae2d3d4ee8152cb4fc5be2dfe50f6c4ed45105c58424e924253e5  new Confirmed (block=453bdefe1014302a9af6040e3ce84bb3e6efef7f8341b271e5c9fa836c045005, height=21, index=0)
+2026-02-07T07:11:41Z [aurum] AddToWallet d7532f401f3cc20863525038a647c6de722d7094896dff221743ea2fec109aff  new Confirmed (block=43ae495431f46f1c0a978471b5a2b736d72d678cbc8cf1af5cde891f69498548, height=22, index=0)
+2026-02-07T07:11:41Z [aurum] AddToWallet 4c111356ea396b7c54689328181c05b5a9409209467862760791c87fda6e5f98  new Confirmed (block=23eba7c5b657f74c3c6be9ab1c8c9e8b6107220f5bd3fec7e6c60de29b4605f8, height=23, index=0)
+2026-02-07T07:11:41Z [aurum] AddToWallet 0a0f815563e998a3e5bc32fa3fe3adf3cab15d8ac51eda5bb0dc905e4bd9581f  new Confirmed (block=421512dadcfd02c08f9b37411dc326a4606fd27c2c9e665ce5600493b6be2618, height=24, index=0)
+2026-02-07T07:11:41Z [aurum] AddToWallet 6ad3192929cf8fef851de8fa1dea0ad4c1694ab00cc473be7f1bd547038b4ad8  new Confirmed (block=392d066730d7e8abf3c8ad3d78e5c1f257c6f789bb95b3619ac849f3ec93b99f, height=25, index=0)
+2026-02-07T07:11:41Z UpdateTip: new best=4539bfe4ba065efb85e0bddd611b7257fa8a649dc2df0deae093f1f0420da907 height=26 version=0x20000000 log2_work=5.754888 tx=27 date='2026-02-07T07:11:47Z' progress=1.000000 cache=0.3MiB(26txo)
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z UpdateTip: new best=3256e552ea93640a85efdb7bb2f31d94b80b0e825cbf63f9d351171b3d05783c height=27 version=0x20000000 log2_work=5.807355 tx=28 date='2026-02-07T07:11:47Z' progress=1.000000 cache=0.3MiB(27txo)
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z UpdateTip: new best=6ae3dd316e5e751b753b5fe60ee5c963b7c4a7a8135ea72ae0493557a4477359 height=28 version=0x20000000 log2_work=5.857981 tx=29 date='2026-02-07T07:11:47Z' progress=1.000000 cache=0.3MiB(28txo)
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z UpdateTip: new best=55ca572ce5eaff878480d6bc48ddb6731fb5ce12670f813511eb1fc340e7b655 height=29 version=0x20000000 log2_work=5.906891 tx=30 date='2026-02-07T07:11:47Z' progress=1.000000 cache=0.3MiB(29txo)
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z UpdateTip: new best=6da0d187c504d45f96edb6fd0c946bb62adde19e692845497bebedf9d5a459e6 height=30 version=0x20000000 log2_work=5.954196 tx=31 date='2026-02-07T07:11:47Z' progress=1.000000 cache=0.3MiB(30txo)
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z [aurum] AddToWallet af29172c8c08e91d95604e902a29c17aec2a8bfadaae0fb992cebf111335509b  new Confirmed (block=4539bfe4ba065efb85e0bddd611b7257fa8a649dc2df0deae093f1f0420da907, height=26, index=0)
+2026-02-07T07:11:41Z [aurum] AddToWallet 5995e98f4decb395387a4f2946a09bcb1affdefc63e14e6493d79f1a95bdafce  new Confirmed (block=3256e552ea93640a85efdb7bb2f31d94b80b0e825cbf63f9d351171b3d05783c, height=27, index=0)
+2026-02-07T07:11:41Z [aurum] AddToWallet 054e222954b5e7648c64e7c29c38b828d377838ca539b31e5eab46131c3a0b93  new Confirmed (block=6ae3dd316e5e751b753b5fe60ee5c963b7c4a7a8135ea72ae0493557a4477359, height=28, index=0)
+2026-02-07T07:11:41Z [aurum] AddToWallet c47b0e5dad9d4e4445ee0ab2fe12defa9abcaad453b6d1b38d37930c5a70e8bb  new Confirmed (block=55ca572ce5eaff878480d6bc48ddb6731fb5ce12670f813511eb1fc340e7b655, height=29, index=0)
+2026-02-07T07:11:41Z [aurum] AddToWallet e6bb972777e8e8c22ce074151fd647d8a27c1d63e3664ce4660d7080bce06c00  new Confirmed (block=6da0d187c504d45f96edb6fd0c946bb62adde19e692845497bebedf9d5a459e6, height=30, index=0)
+2026-02-07T07:11:41Z UpdateTip: new best=392cd52bf37ac1cd7f27e88853f57f4687fce6f138c3326a09af186892035fad height=31 version=0x20000000 log2_work=6.000000 tx=32 date='2026-02-07T07:11:47Z' progress=1.000000 cache=0.3MiB(31txo)
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z UpdateTip: new best=204ff6078cb2b3416627aea3d3e8d3483ac7a4793d44cf77e98d91f1c4fd4b4b height=32 version=0x20000000 log2_work=6.044394 tx=33 date='2026-02-07T07:11:48Z' progress=1.000000 cache=0.3MiB(32txo)
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z UpdateTip: new best=1ee39d64c11a57a17014947b69ae825ef34769fa2262bb0b3de6a2d963fbfdbe height=33 version=0x20000000 log2_work=6.087463 tx=34 date='2026-02-07T07:11:48Z' progress=1.000000 cache=0.3MiB(33txo)
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z UpdateTip: new best=591e9497d951caad945b46ddfd9a12a637bbdd6319ce8b5a0eb586fe8ca8084e height=34 version=0x20000000 log2_work=6.129283 tx=35 date='2026-02-07T07:11:48Z' progress=1.000000 cache=0.3MiB(34txo)
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z UpdateTip: new best=59753422a8ec17d3a92924d42c41375cf593acfb0d75e0fb72f129eb47f5419c height=35 version=0x20000000 log2_work=6.169925 tx=36 date='2026-02-07T07:11:48Z' progress=1.000000 cache=0.3MiB(35txo)
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z [aurum] AddToWallet 57c1aefe752bd5c6e7f7527ea670ced1ce6546c52a2865cc649477a56e73e241  new Confirmed (block=392cd52bf37ac1cd7f27e88853f57f4687fce6f138c3326a09af186892035fad, height=31, index=0)
+2026-02-07T07:11:41Z [aurum] AddToWallet ab04ba751033342eca4ed5917550ae86017159fef4811c2bfea97b790017e817  new Confirmed (block=204ff6078cb2b3416627aea3d3e8d3483ac7a4793d44cf77e98d91f1c4fd4b4b, height=32, index=0)
+2026-02-07T07:11:41Z [aurum] AddToWallet 07e9d289fc52f6da911f6a4473720ab25caadb7781cae491fa593048832638e0  new Confirmed (block=1ee39d64c11a57a17014947b69ae825ef34769fa2262bb0b3de6a2d963fbfdbe, height=33, index=0)
+2026-02-07T07:11:41Z [aurum] AddToWallet 092f70b8f06a96ebaa1c1578a0c20819d881bdb8525651753d2304d26630f737  new Confirmed (block=591e9497d951caad945b46ddfd9a12a637bbdd6319ce8b5a0eb586fe8ca8084e, height=34, index=0)
+2026-02-07T07:11:41Z [aurum] AddToWallet 30dc1a76c99c1d399f93287781e19146e19e4ddcccd61c3821fabe5ae4645d73  new Confirmed (block=59753422a8ec17d3a92924d42c41375cf593acfb0d75e0fb72f129eb47f5419c, height=35, index=0)
+2026-02-07T07:11:41Z UpdateTip: new best=545d296476779bb9e897f6bcb41e37c3cde47e73dc0825c5d1de2c56c8aada25 height=36 version=0x20000000 log2_work=6.209453 tx=37 date='2026-02-07T07:11:48Z' progress=1.000000 cache=0.3MiB(36txo)
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z UpdateTip: new best=20e6de6193560e60c14d6b14bc02c5f6a06c8a1927943ebe46b7615d933b6bb9 height=37 version=0x20000000 log2_work=6.247928 tx=38 date='2026-02-07T07:11:48Z' progress=1.000000 cache=0.3MiB(37txo)
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z UpdateTip: new best=03a7a5c68eea40e6044db0994cd1156a8d88a7041b9c9f3040972e157985c25b height=38 version=0x20000000 log2_work=6.285402 tx=39 date='2026-02-07T07:11:49Z' progress=1.000000 cache=0.3MiB(38txo)
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z UpdateTip: new best=7f4a8df34af7ee2341e63b3b83aea5c1e5e4ba772a783a5db7ad8464e812879f height=39 version=0x20000000 log2_work=6.321928 tx=40 date='2026-02-07T07:11:49Z' progress=1.000000 cache=0.3MiB(39txo)
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z UpdateTip: new best=5c1f059b751b0465f5ddfad36c3572a7434e5f5fba440882a8655348e8aa03ec height=40 version=0x20000000 log2_work=6.357552 tx=41 date='2026-02-07T07:11:49Z' progress=1.000000 cache=0.3MiB(40txo)
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z [aurum] AddToWallet 518e1a2e99db862c3874a5f46d43afa7eab09d4b48ea030b10ca2acf2bd328c9  new Confirmed (block=545d296476779bb9e897f6bcb41e37c3cde47e73dc0825c5d1de2c56c8aada25, height=36, index=0)
+2026-02-07T07:11:41Z [aurum] AddToWallet a19a4562bf8811df5f969f90d63cc3b4362cbbd30229097522c8fcd975e0275b  new Confirmed (block=20e6de6193560e60c14d6b14bc02c5f6a06c8a1927943ebe46b7615d933b6bb9, height=37, index=0)
+2026-02-07T07:11:41Z [aurum] AddToWallet 67e69d3e2af1cbc90e83c80a8468002f7d12a4e1b67d7966c02788c0289540c7  new Confirmed (block=03a7a5c68eea40e6044db0994cd1156a8d88a7041b9c9f3040972e157985c25b, height=38, index=0)
+2026-02-07T07:11:41Z [aurum] AddToWallet fe933aa55d3b5a2f922193f5095ee4c1b9c7b79aea78ea7f185023263e8cc6b5  new Confirmed (block=7f4a8df34af7ee2341e63b3b83aea5c1e5e4ba772a783a5db7ad8464e812879f, height=39, index=0)
+2026-02-07T07:11:41Z [aurum] AddToWallet 05be165adc723b0f170aedc0bf45988792925d3b2b52eb18ea2f875fe3ff3b1f  new Confirmed (block=5c1f059b751b0465f5ddfad36c3572a7434e5f5fba440882a8655348e8aa03ec, height=40, index=0)
+2026-02-07T07:11:41Z UpdateTip: new best=3c3b4a1fbcc814b41f85a02caeb5a21a1d9367d325873328a63b99db91d58ddd height=41 version=0x20000000 log2_work=6.392317 tx=42 date='2026-02-07T07:11:49Z' progress=1.000000 cache=0.3MiB(41txo)
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z UpdateTip: new best=38da40692b00d81a74687b47aa037a60af51c5ca6fe59a4e6cacfec8daf9ebd6 height=42 version=0x20000000 log2_work=6.426265 tx=43 date='2026-02-07T07:11:49Z' progress=1.000000 cache=0.3MiB(42txo)
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z UpdateTip: new best=5412e7e1fafd529c9238f8eeae704e0d5a727850c0d5e2f40eb961e6d11a7f3a height=43 version=0x20000000 log2_work=6.459432 tx=44 date='2026-02-07T07:11:49Z' progress=1.000000 cache=0.3MiB(43txo)
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z UpdateTip: new best=00523980b84d51d5b3fde17758ea4f4717800117a8d75748f99e24aae1611180 height=44 version=0x20000000 log2_work=6.491853 tx=45 date='2026-02-07T07:11:50Z' progress=1.000000 cache=0.3MiB(44txo)
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z UpdateTip: new best=01e7816373a3a042c67011a7ea9d33cdf862036f8f141cdcc55de5508a293340 height=45 version=0x20000000 log2_work=6.523562 tx=46 date='2026-02-07T07:11:50Z' progress=1.000000 cache=0.3MiB(45txo)
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z [aurum] AddToWallet 5834b7dd39d0261c30b6dae453e7cdd1c280d7c18ffe1b3dcaba916f04f926e5  new Confirmed (block=3c3b4a1fbcc814b41f85a02caeb5a21a1d9367d325873328a63b99db91d58ddd, height=41, index=0)
+2026-02-07T07:11:41Z [aurum] AddToWallet 8fb6b5c61a57840e61766c9c7be692e4f3149a46122e7e142ca17ddb298b4454  new Confirmed (block=38da40692b00d81a74687b47aa037a60af51c5ca6fe59a4e6cacfec8daf9ebd6, height=42, index=0)
+2026-02-07T07:11:41Z [aurum] AddToWallet c9286f15125d51ce46c890fe894ebcc0246644cdb82e71f45c775b7522ae6eee  new Confirmed (block=5412e7e1fafd529c9238f8eeae704e0d5a727850c0d5e2f40eb961e6d11a7f3a, height=43, index=0)
+2026-02-07T07:11:41Z [aurum] AddToWallet f97bf84e8d57f932f86f5933877adc4f1aaed3a6bdaf4bb6512e35b7b82db07b  new Confirmed (block=00523980b84d51d5b3fde17758ea4f4717800117a8d75748f99e24aae1611180, height=44, index=0)
+2026-02-07T07:11:41Z [aurum] AddToWallet b454704cecb9eef46d5e6c420bf54dd3425a79239e59e85331fabb57e0aaa83f  new Confirmed (block=01e7816373a3a042c67011a7ea9d33cdf862036f8f141cdcc55de5508a293340, height=45, index=0)
+2026-02-07T07:11:41Z UpdateTip: new best=2315ffd23983951bb741eb291e330bab80cea1f81d3515ea48baa6de6df73eba height=46 version=0x20000000 log2_work=6.554589 tx=47 date='2026-02-07T07:11:50Z' progress=1.000000 cache=0.3MiB(46txo)
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z UpdateTip: new best=1333509a46131d4c4d13d07771c5a05d56ae44769a837f93743f643bebf0dc60 height=47 version=0x20000000 log2_work=6.584963 tx=48 date='2026-02-07T07:11:50Z' progress=1.000000 cache=0.3MiB(47txo)
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z UpdateTip: new best=6d62510d65553cd30d4026cc2a945821ae8eb995900f78ca9ff59abd10117287 height=48 version=0x20000000 log2_work=6.614710 tx=49 date='2026-02-07T07:11:50Z' progress=1.000000 cache=0.3MiB(48txo)
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z UpdateTip: new best=527010ca7706c158bfc6212706b8c384f98ea4fffe6b5485d4b55a3b97344a4c height=49 version=0x20000000 log2_work=6.643856 tx=50 date='2026-02-07T07:11:50Z' progress=1.000000 cache=0.3MiB(49txo)
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z UpdateTip: new best=02d93e34dad6989d90bbb38d94be9c7c0faffa44d4167378df1b01704dd9873c height=50 version=0x20000000 log2_work=6.672425 tx=51 date='2026-02-07T07:11:51Z' progress=1.000000 cache=0.3MiB(50txo)
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z [aurum] AddToWallet a8ba792045f92b4af38af75d58ae56852af5cc92db2d20d0609b49d276e8ea1f  new Confirmed (block=2315ffd23983951bb741eb291e330bab80cea1f81d3515ea48baa6de6df73eba, height=46, index=0)
+2026-02-07T07:11:41Z [aurum] AddToWallet bb26552605e2808f0f3296a41d136c983ef1e817a773c5556511544f67885b66  new Confirmed (block=1333509a46131d4c4d13d07771c5a05d56ae44769a837f93743f643bebf0dc60, height=47, index=0)
+2026-02-07T07:11:41Z [aurum] AddToWallet 952d12e26b0ceb27cfdc70e7a6b7e044676ead7ba2567a1d998acd7b016b9cf4  new Confirmed (block=6d62510d65553cd30d4026cc2a945821ae8eb995900f78ca9ff59abd10117287, height=48, index=0)
+2026-02-07T07:11:41Z [aurum] AddToWallet 21a267ba22ba2f1df9bd8ec75af280820a6f5b7c30093c8845b987ca4f160653  new Confirmed (block=527010ca7706c158bfc6212706b8c384f98ea4fffe6b5485d4b55a3b97344a4c, height=49, index=0)
+2026-02-07T07:11:41Z [aurum] AddToWallet d44c4b65610bf1c1dbaf42ee264054a09e0a1978b9ef462de44da0c3b07bc0e4  new Confirmed (block=02d93e34dad6989d90bbb38d94be9c7c0faffa44d4167378df1b01704dd9873c, height=50, index=0)
+2026-02-07T07:11:41Z UpdateTip: new best=759f54cb9b5366d87cb973ed3b7983a86506dd82b183020a2181b34c0e617b7f height=51 version=0x20000000 log2_work=6.700440 tx=52 date='2026-02-07T07:11:51Z' progress=1.000000 cache=0.3MiB(51txo)
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z UpdateTip: new best=40ef08622a144be0e1221173f705974991e61e98d8db8fa4a0f78591cf44a0e5 height=52 version=0x20000000 log2_work=6.727920 tx=53 date='2026-02-07T07:11:51Z' progress=1.000000 cache=0.3MiB(52txo)
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z UpdateTip: new best=3576fdd98a8cf02d73a3e1386e0961fdc6098e51d4694c265eb80ad11dcd477c height=53 version=0x20000000 log2_work=6.754888 tx=54 date='2026-02-07T07:11:51Z' progress=1.000000 cache=0.3MiB(53txo)
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z UpdateTip: new best=5d0cf9ed8e262d6a1e265d36ea10476f7113f10e5d2ed8db385292eb863c02a5 height=54 version=0x20000000 log2_work=6.781360 tx=55 date='2026-02-07T07:11:51Z' progress=1.000000 cache=0.3MiB(54txo)
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z UpdateTip: new best=4f0fc01e95c78171eb75590fb5dd317df90802b22f8e4cc1a17a7abcfe6130a6 height=55 version=0x20000000 log2_work=6.807355 tx=56 date='2026-02-07T07:11:51Z' progress=1.000000 cache=0.3MiB(55txo)
+2026-02-07T07:11:41Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:41Z [aurum] AddToWallet 6f24e9fefcba6e063c79b5b407ba2e729f30c151b638ecab655e82830c921aa4  new Confirmed (block=759f54cb9b5366d87cb973ed3b7983a86506dd82b183020a2181b34c0e617b7f, height=51, index=0)
+2026-02-07T07:11:41Z [aurum] AddToWallet fb77c2e22f8fd8716443341a80a05c33f6fa7833f39c140b31d867610fff0dd1  new Confirmed (block=40ef08622a144be0e1221173f705974991e61e98d8db8fa4a0f78591cf44a0e5, height=52, index=0)
+2026-02-07T07:11:42Z [aurum] AddToWallet 8e555af9e983692aaba0a57c067dc93e4bb6edc95212aa6edc9688433f838c88  new Confirmed (block=3576fdd98a8cf02d73a3e1386e0961fdc6098e51d4694c265eb80ad11dcd477c, height=53, index=0)
+2026-02-07T07:11:42Z [aurum] AddToWallet 3a077f5889e0c7de74225f9d934f8403f0081695a506179137ad07dd43aeaeeb  new Confirmed (block=5d0cf9ed8e262d6a1e265d36ea10476f7113f10e5d2ed8db385292eb863c02a5, height=54, index=0)
+2026-02-07T07:11:42Z [aurum] AddToWallet 389cf08b7dfbb47547a6da875a39215416b7dc27e523b2a2df1fc0672175dc00  new Confirmed (block=4f0fc01e95c78171eb75590fb5dd317df90802b22f8e4cc1a17a7abcfe6130a6, height=55, index=0)
+2026-02-07T07:11:42Z UpdateTip: new best=43b9a7508923f2b06e238d1175c0b3256bfdffaac2b187caf6d1a1fe394383e1 height=56 version=0x20000000 log2_work=6.832890 tx=57 date='2026-02-07T07:11:52Z' progress=1.000000 cache=0.3MiB(56txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z UpdateTip: new best=270ec64714c286083b3e050b2b17b3bb3e41b7ca8332a1b4d7b5f15a6ee7ff65 height=57 version=0x20000000 log2_work=6.857981 tx=58 date='2026-02-07T07:11:52Z' progress=1.000000 cache=0.3MiB(57txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z UpdateTip: new best=753868e5d5690846cea95d5183301a5ce976e46e53ac5a9d080d202bdb131f59 height=58 version=0x20000000 log2_work=6.882643 tx=59 date='2026-02-07T07:11:52Z' progress=1.000000 cache=0.3MiB(58txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z UpdateTip: new best=29e64e21b38fe614ac23ec9ee2ef1cc7851548800ab555b9033dc3cb740b9daa height=59 version=0x20000000 log2_work=6.906891 tx=60 date='2026-02-07T07:11:52Z' progress=1.000000 cache=0.3MiB(59txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z UpdateTip: new best=247a0c806c79395f65d9757892a79f4e66c20b825cd4dcd4e2de7dd70b67eaa9 height=60 version=0x20000000 log2_work=6.930737 tx=61 date='2026-02-07T07:11:52Z' progress=1.000000 cache=0.3MiB(60txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z [aurum] AddToWallet d2f45b7d7bf6fe361a00154c0487f4227d94931bf1c06b716a77fc7edcf5cde6  new Confirmed (block=43b9a7508923f2b06e238d1175c0b3256bfdffaac2b187caf6d1a1fe394383e1, height=56, index=0)
+2026-02-07T07:11:42Z [aurum] AddToWallet a8bd1f366a0ff6c9800c35eb9beeb806b5809fa3758d78a249dc3aad231b0c09  new Confirmed (block=270ec64714c286083b3e050b2b17b3bb3e41b7ca8332a1b4d7b5f15a6ee7ff65, height=57, index=0)
+2026-02-07T07:11:42Z [aurum] AddToWallet 50b0f2af287091c137b9da51a847bbd51e890d915b57dc1f6661c495a2377e5d  new Confirmed (block=753868e5d5690846cea95d5183301a5ce976e46e53ac5a9d080d202bdb131f59, height=58, index=0)
+2026-02-07T07:11:42Z [aurum] AddToWallet b806042a41d0a1b63e619e257b3fca55956e90a23fdc584b2f3c86a64f6aba1b  new Confirmed (block=29e64e21b38fe614ac23ec9ee2ef1cc7851548800ab555b9033dc3cb740b9daa, height=59, index=0)
+2026-02-07T07:11:42Z [aurum] AddToWallet 7a183e310de20024bef2f315ad1db14a3d5b6afee9aac1c0f0044af6c252e03b  new Confirmed (block=247a0c806c79395f65d9757892a79f4e66c20b825cd4dcd4e2de7dd70b67eaa9, height=60, index=0)
+2026-02-07T07:11:42Z UpdateTip: new best=40e2774e9fe2059356174a856c7615a0bc476ccfda64d2dca44e6eb69e89ae11 height=61 version=0x20000000 log2_work=6.954196 tx=62 date='2026-02-07T07:11:52Z' progress=1.000000 cache=0.3MiB(61txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z UpdateTip: new best=564e6075f397bef4d4a6eb6cdce4453f67dc7be3ef66bf97931cee4643a50e72 height=62 version=0x20000000 log2_work=6.977280 tx=63 date='2026-02-07T07:11:53Z' progress=1.000000 cache=0.3MiB(62txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z UpdateTip: new best=6707a50310bdc7cd5909ba6637a22f93f90faaa6ad7e16e9f26be117aad40340 height=63 version=0x20000000 log2_work=7.000000 tx=64 date='2026-02-07T07:11:53Z' progress=1.000000 cache=0.3MiB(63txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z UpdateTip: new best=5796a61e707b60c2f6577aec98f41fa4a5d11652fb7b5af4c8d2806a6500723d height=64 version=0x20000000 log2_work=7.022368 tx=65 date='2026-02-07T07:11:53Z' progress=1.000000 cache=0.3MiB(64txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z UpdateTip: new best=7350d9b1355b151a2efd56a0bf87a2e7c41668ad334cb4d45ee3b2913bf1c497 height=65 version=0x20000000 log2_work=7.044394 tx=66 date='2026-02-07T07:11:53Z' progress=1.000000 cache=0.3MiB(65txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z [aurum] AddToWallet 0106b09063128eb2c67c293ab95c708612380a2a7ea7999dc84bc371a49b829b  new Confirmed (block=40e2774e9fe2059356174a856c7615a0bc476ccfda64d2dca44e6eb69e89ae11, height=61, index=0)
+2026-02-07T07:11:42Z [aurum] AddToWallet 91fcd84d380d9bcc7a309bdef668e8bbc0b3783c9df89b30fdf3b8780090fba8  new Confirmed (block=564e6075f397bef4d4a6eb6cdce4453f67dc7be3ef66bf97931cee4643a50e72, height=62, index=0)
+2026-02-07T07:11:42Z [aurum] AddToWallet fe04626feed5cd045b68dd92fe67ec8c85f7b37320ee46c63f99607b9c202838  new Confirmed (block=6707a50310bdc7cd5909ba6637a22f93f90faaa6ad7e16e9f26be117aad40340, height=63, index=0)
+2026-02-07T07:11:42Z [aurum] AddToWallet 08ed4a491e03a5056906f2203482889d3f0e3b4ebbc70fd3ff74b0ff8193d781  new Confirmed (block=5796a61e707b60c2f6577aec98f41fa4a5d11652fb7b5af4c8d2806a6500723d, height=64, index=0)
+2026-02-07T07:11:42Z [aurum] AddToWallet e14e30d35babc1a49984f585ca4805d407c34a9a2f63db1b0d83ad638528846e  new Confirmed (block=7350d9b1355b151a2efd56a0bf87a2e7c41668ad334cb4d45ee3b2913bf1c497, height=65, index=0)
+2026-02-07T07:11:42Z UpdateTip: new best=6a5e02cdf77a9ff11a74289d461562841a353d017c30d695a41f70b9b6e483f3 height=66 version=0x20000000 log2_work=7.066089 tx=67 date='2026-02-07T07:11:53Z' progress=1.000000 cache=0.3MiB(66txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z UpdateTip: new best=17dcc36833c3b6558da529f542fb5b26df8efc990cfabee092839897f41c549a height=67 version=0x20000000 log2_work=7.087463 tx=68 date='2026-02-07T07:11:53Z' progress=1.000000 cache=0.3MiB(67txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z UpdateTip: new best=270819983fffbb47b6c7b96846440dd249fea374b51c9e1a3484121668c74215 height=68 version=0x20000000 log2_work=7.108524 tx=69 date='2026-02-07T07:11:54Z' progress=1.000000 cache=0.3MiB(68txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z UpdateTip: new best=185470f8735f25944a3af29263a0c1951d34c929647a608255df103ea5bb8964 height=69 version=0x20000000 log2_work=7.129283 tx=70 date='2026-02-07T07:11:54Z' progress=1.000000 cache=0.3MiB(69txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z UpdateTip: new best=6fd8d39e44b77a4687d2f7022f7ddcf75dfc58e20056f48f72a4de821753426d height=70 version=0x20000000 log2_work=7.149747 tx=71 date='2026-02-07T07:11:54Z' progress=1.000000 cache=0.3MiB(70txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z [aurum] AddToWallet 515b84b19785e5c29c563c391b309325eb865355713089eda6ef84f7cb16d2dd  new Confirmed (block=6a5e02cdf77a9ff11a74289d461562841a353d017c30d695a41f70b9b6e483f3, height=66, index=0)
+2026-02-07T07:11:42Z [aurum] AddToWallet 76fb8b387d97be64b32c97194f11230b8e68d68494f15b3f424d399debe8a83a  new Confirmed (block=17dcc36833c3b6558da529f542fb5b26df8efc990cfabee092839897f41c549a, height=67, index=0)
+2026-02-07T07:11:42Z [aurum] AddToWallet 3dd9ba2eb27b6421289de4aaab8640cb25b402c41d899b0c1f3790e09719a1be  new Confirmed (block=270819983fffbb47b6c7b96846440dd249fea374b51c9e1a3484121668c74215, height=68, index=0)
+2026-02-07T07:11:42Z [aurum] AddToWallet d33dea38cfd570ee9144720ce71c7499a9b1b03fd5cb42bacc10ac7b5bdd68af  new Confirmed (block=185470f8735f25944a3af29263a0c1951d34c929647a608255df103ea5bb8964, height=69, index=0)
+2026-02-07T07:11:42Z [aurum] AddToWallet a9324211ad85227e17c888aa660f9c11c0c3bb9e286b97a21368ff444095c90a  new Confirmed (block=6fd8d39e44b77a4687d2f7022f7ddcf75dfc58e20056f48f72a4de821753426d, height=70, index=0)
+2026-02-07T07:11:42Z UpdateTip: new best=7951977f5dafc175bf93f8b2e20e0aeb491ca8f3143abacd127e68e7fb70c2b7 height=71 version=0x20000000 log2_work=7.169925 tx=72 date='2026-02-07T07:11:54Z' progress=1.000000 cache=0.3MiB(71txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z UpdateTip: new best=093d91f0c6e4550cdb070657635a5797df65a0ffc4d44fc1d0bf33705445eed3 height=72 version=0x20000000 log2_work=7.189825 tx=73 date='2026-02-07T07:11:54Z' progress=1.000000 cache=0.3MiB(72txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z UpdateTip: new best=4ef0a9a570241b8d45a56add3f1ebd9f09066cc720dcab26b13217fc2a86c4b9 height=73 version=0x20000000 log2_work=7.209453 tx=74 date='2026-02-07T07:11:54Z' progress=1.000000 cache=0.3MiB(73txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z UpdateTip: new best=7f86f4925c82e28412fb4df6b5fa8944fc51983f5676d7e2f20facfae67d4a4f height=74 version=0x20000000 log2_work=7.228819 tx=75 date='2026-02-07T07:11:55Z' progress=1.000000 cache=0.3MiB(74txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z UpdateTip: new best=69a8ad409edf2543c9984f9679f48b0b065e9cc93ca631e3984c856eadcd30a8 height=75 version=0x20000000 log2_work=7.247928 tx=76 date='2026-02-07T07:11:55Z' progress=1.000000 cache=0.3MiB(75txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z [aurum] AddToWallet a5c799ab2ef0c8bfd2ee45465a2ef6bb826ffd32a1d78716a373b4a05b6e4f38  new Confirmed (block=7951977f5dafc175bf93f8b2e20e0aeb491ca8f3143abacd127e68e7fb70c2b7, height=71, index=0)
+2026-02-07T07:11:42Z [aurum] AddToWallet 5573f25908b7e3a22daa88894a3bc167ababeaaf546d800695cb3e57e8436bd7  new Confirmed (block=093d91f0c6e4550cdb070657635a5797df65a0ffc4d44fc1d0bf33705445eed3, height=72, index=0)
+2026-02-07T07:11:42Z [aurum] AddToWallet f922da702317d645c67ab0c2ffdf2fb4a97abd673e0a70790856b52033b7cae9  new Confirmed (block=4ef0a9a570241b8d45a56add3f1ebd9f09066cc720dcab26b13217fc2a86c4b9, height=73, index=0)
+2026-02-07T07:11:42Z [aurum] AddToWallet 6a2dac445a8f8b75821d1296adda2e1f23da17020f22010ac0253efe64dd5118  new Confirmed (block=7f86f4925c82e28412fb4df6b5fa8944fc51983f5676d7e2f20facfae67d4a4f, height=74, index=0)
+2026-02-07T07:11:42Z [aurum] AddToWallet 3834d0a3ed6beea309b9b0c5c250758bd7561dd2bc8fa5f91cd1c2bf72653cb8  new Confirmed (block=69a8ad409edf2543c9984f9679f48b0b065e9cc93ca631e3984c856eadcd30a8, height=75, index=0)
+2026-02-07T07:11:42Z UpdateTip: new best=3a2a25daeec77b2aa430aabda6a2bfeb3bc41e49377609be77ee91dc2c6d49be height=76 version=0x20000000 log2_work=7.266787 tx=77 date='2026-02-07T07:11:55Z' progress=1.000000 cache=0.3MiB(76txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z UpdateTip: new best=15fa4905a0e0f6ad5ab20aad4d0ae5b537459b3fca330590c00f1da5f55b3ce3 height=77 version=0x20000000 log2_work=7.285402 tx=78 date='2026-02-07T07:11:55Z' progress=1.000000 cache=0.3MiB(77txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z UpdateTip: new best=22bb9db54d5956cbebb66a70c935d777b8c843677e8bfbeb438f14f2dcd44138 height=78 version=0x20000000 log2_work=7.303781 tx=79 date='2026-02-07T07:11:55Z' progress=1.000000 cache=0.3MiB(78txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z UpdateTip: new best=3245ce8b6c27161372e3cfc495b6ad3f97bb90798b7cffe6d63b426846f63d6d height=79 version=0x20000000 log2_work=7.321928 tx=80 date='2026-02-07T07:11:55Z' progress=1.000000 cache=0.3MiB(79txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z UpdateTip: new best=7bf3ce5f17b49fb5810db7cb281983d00c2f83ee72cddb2aa25a22cd91234597 height=80 version=0x20000000 log2_work=7.339850 tx=81 date='2026-02-07T07:11:56Z' progress=1.000000 cache=0.3MiB(80txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z [aurum] AddToWallet 12d56a49c36ba8501b27daa06bc3d747e729900961a659dc4b17277322bada3c  new Confirmed (block=3a2a25daeec77b2aa430aabda6a2bfeb3bc41e49377609be77ee91dc2c6d49be, height=76, index=0)
+2026-02-07T07:11:42Z [aurum] AddToWallet 5e5855e894b3807fff6e15f3d8e8aaffb7b5f9fbdcfd80412779a41efeb20d6e  new Confirmed (block=15fa4905a0e0f6ad5ab20aad4d0ae5b537459b3fca330590c00f1da5f55b3ce3, height=77, index=0)
+2026-02-07T07:11:42Z [aurum] AddToWallet 548b0cfe805336bd14630e113de292cbae165bdf20b6381603ca0d4b7792a0a9  new Confirmed (block=22bb9db54d5956cbebb66a70c935d777b8c843677e8bfbeb438f14f2dcd44138, height=78, index=0)
+2026-02-07T07:11:42Z [aurum] AddToWallet 8ce33d076dd19b0d236e940914a000b27f3ca7bcd7d4273a3353d509dc2307c0  new Confirmed (block=3245ce8b6c27161372e3cfc495b6ad3f97bb90798b7cffe6d63b426846f63d6d, height=79, index=0)
+2026-02-07T07:11:42Z [aurum] AddToWallet ecf80a5b939034cf1d4b4ea58bcf17faaec8c99cd86a7a6c8b279590504e340e  new Confirmed (block=7bf3ce5f17b49fb5810db7cb281983d00c2f83ee72cddb2aa25a22cd91234597, height=80, index=0)
+2026-02-07T07:11:42Z UpdateTip: new best=15d0e2bb54c5703802b2ae84677c0e703ee61f71b1f65c590f96dce282374255 height=81 version=0x20000000 log2_work=7.357552 tx=82 date='2026-02-07T07:11:56Z' progress=1.000000 cache=0.3MiB(81txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z UpdateTip: new best=4d7ffb590d7df93371aab4a06c08077dc820c670fa4f7a8cb0378dace6b5bf34 height=82 version=0x20000000 log2_work=7.375039 tx=83 date='2026-02-07T07:11:56Z' progress=1.000000 cache=0.3MiB(82txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z UpdateTip: new best=380b709a33d148170473ad94877f3d316f0bb1f0eeb3c0ced3b67de1dd31652b height=83 version=0x20000000 log2_work=7.392317 tx=84 date='2026-02-07T07:11:56Z' progress=1.000000 cache=0.3MiB(83txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z UpdateTip: new best=42678ebfad6f29ad002c13217a1f7f110c4167800471ab5ab19995b0e82feb7e height=84 version=0x20000000 log2_work=7.409391 tx=85 date='2026-02-07T07:11:56Z' progress=1.000000 cache=0.3MiB(84txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z UpdateTip: new best=1cf896ff5e0e862680231464f2fb1c30699d989771d7af315d000b8db462cf26 height=85 version=0x20000000 log2_work=7.426265 tx=86 date='2026-02-07T07:11:56Z' progress=1.000000 cache=0.3MiB(85txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z [aurum] AddToWallet 7a2dc300202eac054869f0871aff84b506ee649f2eeea9c903795a16b4aadcbc  new Confirmed (block=15d0e2bb54c5703802b2ae84677c0e703ee61f71b1f65c590f96dce282374255, height=81, index=0)
+2026-02-07T07:11:42Z [aurum] AddToWallet c06a41d264c9708003fc8ecf59b64a1ce65c5cab9feb030fdca2c738162f6dce  new Confirmed (block=4d7ffb590d7df93371aab4a06c08077dc820c670fa4f7a8cb0378dace6b5bf34, height=82, index=0)
+2026-02-07T07:11:42Z [aurum] AddToWallet 19f76a4c4bf4fe530bba3be45db26eb2c2215d8a05db9977f4d81d9f076f5d59  new Confirmed (block=380b709a33d148170473ad94877f3d316f0bb1f0eeb3c0ced3b67de1dd31652b, height=83, index=0)
+2026-02-07T07:11:42Z [aurum] AddToWallet f60adaa1cebd26adbf8956226cbccb4845aa6b49ced7c159ea423dfd3516f098  new Confirmed (block=42678ebfad6f29ad002c13217a1f7f110c4167800471ab5ab19995b0e82feb7e, height=84, index=0)
+2026-02-07T07:11:42Z [aurum] AddToWallet 7f4b0c618ffefb772d45148de3f8a6ad3e877cec516d037df33f535c4198a26c  new Confirmed (block=1cf896ff5e0e862680231464f2fb1c30699d989771d7af315d000b8db462cf26, height=85, index=0)
+2026-02-07T07:11:42Z UpdateTip: new best=5414af96313d433653b34ac8649e81425ab87c86062481fa506d13d5fe5d5321 height=86 version=0x20000000 log2_work=7.442943 tx=87 date='2026-02-07T07:11:57Z' progress=1.000000 cache=0.3MiB(86txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z UpdateTip: new best=2db780fac456e37cd3eb0695892a9fbfa4c9374362a08cd046006dd1b7589ef0 height=87 version=0x20000000 log2_work=7.459432 tx=88 date='2026-02-07T07:11:57Z' progress=1.000000 cache=0.3MiB(87txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z UpdateTip: new best=7861041a708a941951faacfcb38b91234addf9133f7ca6f1ffbe5e1555fb279f height=88 version=0x20000000 log2_work=7.475733 tx=89 date='2026-02-07T07:11:57Z' progress=1.000000 cache=0.3MiB(88txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z UpdateTip: new best=53832fb59635e04aedb03cc39ec85aedd0bfcbb9ca8867053fd0523cb417d0fc height=89 version=0x20000000 log2_work=7.491853 tx=90 date='2026-02-07T07:11:57Z' progress=1.000000 cache=0.3MiB(89txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z UpdateTip: new best=0ee73739a715ad73ab6a3e7d09134420020153c89b9fa4bc5c395fb0c0468fd9 height=90 version=0x20000000 log2_work=7.507795 tx=91 date='2026-02-07T07:11:57Z' progress=1.000000 cache=0.3MiB(90txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z [aurum] AddToWallet 224d1b68dbd989f86043004bb51a3e21b273d220115f4732593e51b507c4b8b4  new Confirmed (block=5414af96313d433653b34ac8649e81425ab87c86062481fa506d13d5fe5d5321, height=86, index=0)
+2026-02-07T07:11:42Z [aurum] AddToWallet 6013bda08e6cab98b6405658254fa191df87a159f6372490d1307d8fe17da949  new Confirmed (block=2db780fac456e37cd3eb0695892a9fbfa4c9374362a08cd046006dd1b7589ef0, height=87, index=0)
+2026-02-07T07:11:42Z [aurum] AddToWallet 209b21b79cf239afb3e7ed9eab07209abce20d644f25f7318d12011a0ae09310  new Confirmed (block=7861041a708a941951faacfcb38b91234addf9133f7ca6f1ffbe5e1555fb279f, height=88, index=0)
+2026-02-07T07:11:42Z [aurum] AddToWallet 1cbc6e039ace80a5a28962c5acd465f9005b36f98c3af1118ad3bc1dc9cb7dfe  new Confirmed (block=53832fb59635e04aedb03cc39ec85aedd0bfcbb9ca8867053fd0523cb417d0fc, height=89, index=0)
+2026-02-07T07:11:42Z [aurum] AddToWallet 223419c432d9fe51508f3b7cce9690ef3de7883d883abf928c71152c9605a3a3  new Confirmed (block=0ee73739a715ad73ab6a3e7d09134420020153c89b9fa4bc5c395fb0c0468fd9, height=90, index=0)
+2026-02-07T07:11:42Z UpdateTip: new best=173cb659bf08a721180f77a621cc63149c35177b55b9c5a2ca601c7ede215238 height=91 version=0x20000000 log2_work=7.523562 tx=92 date='2026-02-07T07:11:57Z' progress=1.000000 cache=0.3MiB(91txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z UpdateTip: new best=23e6efc06cf6b5609bf255a2333333d2ce0bb256219f93eabc1a54af4ac6a236 height=92 version=0x20000000 log2_work=7.539159 tx=93 date='2026-02-07T07:11:58Z' progress=1.000000 cache=0.3MiB(92txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z UpdateTip: new best=24d45b9a8490c11aa82ff5941cbdf5f30540519ab158c08542c3f66b80351a10 height=93 version=0x20000000 log2_work=7.554589 tx=94 date='2026-02-07T07:11:58Z' progress=1.000000 cache=0.3MiB(93txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z UpdateTip: new best=70a6a7a3f77343068e515d540d53d8cfea4638bd8703f31a3d91a9d25435a68f height=94 version=0x20000000 log2_work=7.569856 tx=95 date='2026-02-07T07:11:58Z' progress=1.000000 cache=0.3MiB(94txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z UpdateTip: new best=53e1f10bfc059d79b9e32e6e748c1b6a38defba89996728f7866bc1b65a41e27 height=95 version=0x20000000 log2_work=7.584963 tx=96 date='2026-02-07T07:11:58Z' progress=1.000000 cache=0.3MiB(95txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z [aurum] AddToWallet f97383aa0cf36629e30b83e93e4495cec70224a193a859668a6faa5b4058ebb5  new Confirmed (block=173cb659bf08a721180f77a621cc63149c35177b55b9c5a2ca601c7ede215238, height=91, index=0)
+2026-02-07T07:11:42Z [aurum] AddToWallet b4a0cc7641085e169e42ee7e6000c288a5d7387ac1e1d0098a5413231cd56933  new Confirmed (block=23e6efc06cf6b5609bf255a2333333d2ce0bb256219f93eabc1a54af4ac6a236, height=92, index=0)
+2026-02-07T07:11:42Z [aurum] AddToWallet 8823db2692a3a28bc777fe2f267d0701b466c347328169e3798ea188b5bab8fa  new Confirmed (block=24d45b9a8490c11aa82ff5941cbdf5f30540519ab158c08542c3f66b80351a10, height=93, index=0)
+2026-02-07T07:11:42Z [aurum] AddToWallet f8589eaffb9d81dcadf75814a88fe7243d0ee5abf0a5aaa13fefb58376103c4f  new Confirmed (block=70a6a7a3f77343068e515d540d53d8cfea4638bd8703f31a3d91a9d25435a68f, height=94, index=0)
+2026-02-07T07:11:42Z [aurum] AddToWallet e2e872b8a640b1a0e8a337c5bd651f9884c26e76b6f4744bc12c4746c5fe05a2  new Confirmed (block=53e1f10bfc059d79b9e32e6e748c1b6a38defba89996728f7866bc1b65a41e27, height=95, index=0)
+2026-02-07T07:11:42Z UpdateTip: new best=4352f508d2865dbc3b0b5067e7c435e3e534c6d3b65ade5a0281ec4fb644c305 height=96 version=0x20000000 log2_work=7.599913 tx=97 date='2026-02-07T07:11:58Z' progress=1.000000 cache=0.3MiB(96txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z UpdateTip: new best=43c447616c07ce8d32327ae7cf33a4a8f9a84cdb504056030aee6e076e404235 height=97 version=0x20000000 log2_work=7.614710 tx=98 date='2026-02-07T07:11:58Z' progress=1.000000 cache=0.3MiB(97txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z UpdateTip: new best=141507e990e3e886e41c07ff303902e228ae64470fc5bbac311abe98145e287e height=98 version=0x20000000 log2_work=7.629357 tx=99 date='2026-02-07T07:11:59Z' progress=1.000000 cache=0.3MiB(98txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z UpdateTip: new best=2ef06f80b0b1a2f808f9c4ff63ea28ccfde39a21eba2175de88258885ef62cf0 height=99 version=0x20000000 log2_work=7.643856 tx=100 date='2026-02-07T07:11:59Z' progress=1.000000 cache=0.3MiB(99txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z UpdateTip: new best=69f1b87697f034ed527dc3bcda9d1c278aa8e41b8e9fe8f08fca4c886f63a328 height=100 version=0x20000000 log2_work=7.658211 tx=101 date='2026-02-07T07:11:59Z' progress=1.000000 cache=0.3MiB(100txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z [aurum] AddToWallet ac22853b53cb50c50816f0c1577f516c7e08cfd717444eaaa5665e8fb942089b  new Confirmed (block=4352f508d2865dbc3b0b5067e7c435e3e534c6d3b65ade5a0281ec4fb644c305, height=96, index=0)
+2026-02-07T07:11:42Z [aurum] AddToWallet db85d43be8e84958dbdadeb09b822c6bd052ca9fb83b5dce8f800fb4734e2233  new Confirmed (block=43c447616c07ce8d32327ae7cf33a4a8f9a84cdb504056030aee6e076e404235, height=97, index=0)
+2026-02-07T07:11:42Z [aurum] AddToWallet 29bfe341511c22576ac96b34200de1268aca85a0392f0ae6c302af60cb8453b5  new Confirmed (block=141507e990e3e886e41c07ff303902e228ae64470fc5bbac311abe98145e287e, height=98, index=0)
+2026-02-07T07:11:42Z [aurum] AddToWallet a5ce7c2b1e9c2b5d14db046b1d527c17b8ab4e3e2fc6d985828d79605661990a  new Confirmed (block=2ef06f80b0b1a2f808f9c4ff63ea28ccfde39a21eba2175de88258885ef62cf0, height=99, index=0)
+2026-02-07T07:11:42Z [aurum] AddToWallet c357d88b367600b53dcfd8c595ee28af3009bb071fb0d099ac203512bace60f6  new Confirmed (block=69f1b87697f034ed527dc3bcda9d1c278aa8e41b8e9fe8f08fca4c886f63a328, height=100, index=0)
+2026-02-07T07:11:42Z UpdateTip: new best=3d691e4e1302383c3c9a7bacddf4d7c85898f890b3350c825eb992c252359f8a height=101 version=0x20000000 log2_work=7.672425 tx=102 date='2026-02-07T07:11:59Z' progress=1.000000 cache=0.3MiB(101txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z UpdateTip: new best=5db12cd1d3d6f92133a920c72da3e2911a688e22c181bce205f5faed9532b65d height=102 version=0x20000000 log2_work=7.686501 tx=103 date='2026-02-07T07:11:59Z' progress=1.000000 cache=0.3MiB(102txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z UpdateTip: new best=1caae189bdb1a06c9b201a6ff5025077d1b80c8741a3544d80b4e025a300e4c9 height=103 version=0x20000000 log2_work=7.700440 tx=104 date='2026-02-07T07:11:59Z' progress=1.000000 cache=0.3MiB(103txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z UpdateTip: new best=5ed3442b9d9ae0335728403d09dae93a128e86e0acd5aa395f6313a3dc8a0404 height=104 version=0x20000000 log2_work=7.714246 tx=105 date='2026-02-07T07:12:00Z' progress=1.000000 cache=0.3MiB(104txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z UpdateTip: new best=6541fff5ad5da4c4d6be2eedb514c0cfe3f5a864609ae88103b6e8054c90f393 height=105 version=0x20000000 log2_work=7.727920 tx=106 date='2026-02-07T07:12:00Z' progress=1.000000 cache=0.3MiB(105txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z [aurum] AddToWallet 6438fc51a2477366f7978b5b039f00abcbd6f88a971a0e323b92667035e8dcb6  new Confirmed (block=3d691e4e1302383c3c9a7bacddf4d7c85898f890b3350c825eb992c252359f8a, height=101, index=0)
+2026-02-07T07:11:42Z [aurum] AddToWallet f4566b66d8419525a4389a48fe589cd3e8a50dac91bbba46fac5bc7b3b647a8d  new Confirmed (block=5db12cd1d3d6f92133a920c72da3e2911a688e22c181bce205f5faed9532b65d, height=102, index=0)
+2026-02-07T07:11:42Z [aurum] AddToWallet 8f928e127c6854379102f8dad64fd308fa20d7ca0db17c7962a75db4e87a7a36  new Confirmed (block=1caae189bdb1a06c9b201a6ff5025077d1b80c8741a3544d80b4e025a300e4c9, height=103, index=0)
+2026-02-07T07:11:42Z [aurum] AddToWallet 1e8b4b8ff54c059b7eb5e0e54197de49fde4fa8ddeb8aa8b07c352f006c45929  new Confirmed (block=5ed3442b9d9ae0335728403d09dae93a128e86e0acd5aa395f6313a3dc8a0404, height=104, index=0)
+2026-02-07T07:11:42Z [aurum] AddToWallet 5d7c42a9ee1e2a9ba957d848f697efab9132cc7858dc00007532c10a1a7a08a7  new Confirmed (block=6541fff5ad5da4c4d6be2eedb514c0cfe3f5a864609ae88103b6e8054c90f393, height=105, index=0)
+2026-02-07T07:11:42Z UpdateTip: new best=3d191728eeb9b1a6103e57aa29038cc5325839b674660295b0b29f706d35e224 height=106 version=0x20000000 log2_work=7.741467 tx=107 date='2026-02-07T07:12:00Z' progress=1.000000 cache=0.3MiB(106txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z UpdateTip: new best=58f32c22c282fcd931a10148171e81b2b6e87f089eb836eeb3d58da16f3ea2b0 height=107 version=0x20000000 log2_work=7.754888 tx=108 date='2026-02-07T07:12:00Z' progress=1.000000 cache=0.3MiB(107txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z UpdateTip: new best=71de6c52c0ef54c291cb2c8a64fd311ba8286b0573cd30d3f954dca17119975c height=108 version=0x20000000 log2_work=7.768184 tx=109 date='2026-02-07T07:12:00Z' progress=1.000000 cache=0.3MiB(108txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z UpdateTip: new best=435da107507488bcf393f77aaa50068c6f1daace6e8716354e77467f6552f48e height=109 version=0x20000000 log2_work=7.781360 tx=110 date='2026-02-07T07:12:00Z' progress=1.000000 cache=0.3MiB(109txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z UpdateTip: new best=3bf4423ee51ff12fc34d937bc7370bbc1123ffc902efd5b7fe580fc45f9136a7 height=110 version=0x20000000 log2_work=7.794416 tx=111 date='2026-02-07T07:12:01Z' progress=1.000000 cache=0.3MiB(110txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z [aurum] AddToWallet fbb3541829c600280e98b785325dcff1ffe6c87863a3941e48ca1849446b5c98  new Confirmed (block=3d191728eeb9b1a6103e57aa29038cc5325839b674660295b0b29f706d35e224, height=106, index=0)
+2026-02-07T07:11:42Z [aurum] AddToWallet 2c40cd671d2074971c71e0f034c5abe40c87d5281d292048fa564008923306d0  new Confirmed (block=58f32c22c282fcd931a10148171e81b2b6e87f089eb836eeb3d58da16f3ea2b0, height=107, index=0)
+2026-02-07T07:11:42Z [aurum] AddToWallet c9318465d5c421f0f8f7dfc6f281b586d4ed1a63c1272efc6ea5b54638322829  new Confirmed (block=71de6c52c0ef54c291cb2c8a64fd311ba8286b0573cd30d3f954dca17119975c, height=108, index=0)
+2026-02-07T07:11:42Z [aurum] AddToWallet 4ed452346034f9be8ddd10c721f2aba47052c161ef9ac156b526958e34316189  new Confirmed (block=435da107507488bcf393f77aaa50068c6f1daace6e8716354e77467f6552f48e, height=109, index=0)
+2026-02-07T07:11:42Z [aurum] AddToWallet 1175e43b85d4120496c5d61f722fc0b2a612b60695ae5e147002c6fb39359253  new Confirmed (block=3bf4423ee51ff12fc34d937bc7370bbc1123ffc902efd5b7fe580fc45f9136a7, height=110, index=0)
+2026-02-07T07:11:42Z UpdateTip: new best=2a011f22ea6f0509c49106b49a592aa169bc00b932536126b266992c7e065edd height=111 version=0x20000000 log2_work=7.807355 tx=112 date='2026-02-07T07:12:01Z' progress=1.000000 cache=0.3MiB(111txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z UpdateTip: new best=4f18fc0ff364ee2b206b30c9bce0ae75e583b28a4b29b4831c2f51c49d23bfe7 height=112 version=0x20000000 log2_work=7.820179 tx=113 date='2026-02-07T07:12:01Z' progress=1.000000 cache=0.3MiB(112txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z UpdateTip: new best=685493e9d5f15f9a4ee3bb3a5f344db83bd21f38acd6ee6264f77661b0f66408 height=113 version=0x20000000 log2_work=7.832890 tx=114 date='2026-02-07T07:12:01Z' progress=1.000000 cache=0.3MiB(113txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z UpdateTip: new best=1dddde2e5aed6b337ed2c90f40e917a58b33406068ff4c6758527ac215f80b6e height=114 version=0x20000000 log2_work=7.845490 tx=115 date='2026-02-07T07:12:01Z' progress=1.000000 cache=0.3MiB(114txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z UpdateTip: new best=6d8674797a30e26705f6b0e43dfc0cded06cbde076a7edee7e9070e83eb35248 height=115 version=0x20000000 log2_work=7.857981 tx=116 date='2026-02-07T07:12:01Z' progress=1.000000 cache=0.3MiB(115txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:42Z [aurum] AddToWallet 6312186bfc9a07e6bb38bc49ecb43522d30273c8bfd9d6de2042750be50d9a1e  new Confirmed (block=2a011f22ea6f0509c49106b49a592aa169bc00b932536126b266992c7e065edd, height=111, index=0)
+2026-02-07T07:11:42Z [aurum] AddToWallet 5c7941fffeaa6063b90912ba84e17752585dd4383db37477b2945df1c0b7b579  new Confirmed (block=4f18fc0ff364ee2b206b30c9bce0ae75e583b28a4b29b4831c2f51c49d23bfe7, height=112, index=0)
+2026-02-07T07:11:42Z [aurum] AddToWallet 01d65618cb56227261a0edd443e5f963e0a43ac6e8a94daf789dc7c6acc91c3c  new Confirmed (block=685493e9d5f15f9a4ee3bb3a5f344db83bd21f38acd6ee6264f77661b0f66408, height=113, index=0)
+2026-02-07T07:11:42Z [aurum] AddToWallet d81f87a934a80e37c043fd881390bb3ed25de9433503fadf00ce3702d87c9ac8  new Confirmed (block=1dddde2e5aed6b337ed2c90f40e917a58b33406068ff4c6758527ac215f80b6e, height=114, index=0)
+2026-02-07T07:11:42Z [aurum] AddToWallet d06369292ea08691596c5b8a2732092464dc4a616662171b0fd0735aaf587386  new Confirmed (block=6d8674797a30e26705f6b0e43dfc0cded06cbde076a7edee7e9070e83eb35248, height=115, index=0)
+2026-02-07T07:11:42Z UpdateTip: new best=1db2bfc96a0c4228ae183ffa05e2f77eac14ced93d17ed417230c7cd063aefbf height=116 version=0x20000000 log2_work=7.870365 tx=117 date='2026-02-07T07:12:02Z' progress=1.000000 cache=0.3MiB(116txo)
+2026-02-07T07:11:42Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:43Z UpdateTip: new best=77b157ee68848fa9bd1be6ebcfc3d30f0357561cb2a390a7ae525ee78a4184f4 height=117 version=0x20000000 log2_work=7.882643 tx=118 date='2026-02-07T07:12:02Z' progress=1.000000 cache=0.3MiB(117txo)
+2026-02-07T07:11:43Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:43Z UpdateTip: new best=0be8c675cd7513ba4c5aee642dc12203b7d3da12606c7727a789c1d062137d17 height=118 version=0x20000000 log2_work=7.894818 tx=119 date='2026-02-07T07:12:02Z' progress=1.000000 cache=0.3MiB(118txo)
+2026-02-07T07:11:43Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:43Z UpdateTip: new best=541d8fb0f0214b99044b2b0af34517bc4df522935f2adc79665a85c36528db66 height=119 version=0x20000000 log2_work=7.906891 tx=120 date='2026-02-07T07:12:02Z' progress=1.000000 cache=0.3MiB(119txo)
+2026-02-07T07:11:43Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:43Z UpdateTip: new best=7059dcd92a6f4fa15f84f2f1142b80eb41665a3dbaef1b58b6b9f7488c192ce2 height=120 version=0x20000000 log2_work=7.918863 tx=121 date='2026-02-07T07:12:02Z' progress=1.000000 cache=0.3MiB(120txo)
+2026-02-07T07:11:43Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:43Z [aurum] AddToWallet bf927f1148112edd58d848a5f00e1945bf6bc8cdcb7523f1e44197b440716f1d  new Confirmed (block=1db2bfc96a0c4228ae183ffa05e2f77eac14ced93d17ed417230c7cd063aefbf, height=116, index=0)
+2026-02-07T07:11:43Z [aurum] AddToWallet 04d1bf3e76ee75241ff28118aa26da58f8799701da6ed3f45bb8c0c2388ccb99  new Confirmed (block=77b157ee68848fa9bd1be6ebcfc3d30f0357561cb2a390a7ae525ee78a4184f4, height=117, index=0)
+2026-02-07T07:11:43Z [aurum] AddToWallet 77655deba886b4fd3766195694915e6e4d3581f2cddea2ee47ee63bdfc516f32  new Confirmed (block=0be8c675cd7513ba4c5aee642dc12203b7d3da12606c7727a789c1d062137d17, height=118, index=0)
+2026-02-07T07:11:43Z [aurum] AddToWallet 607c279a896d6022941794e52ef9ab9a515664723d5e3d0b7836edd99991a95c  new Confirmed (block=541d8fb0f0214b99044b2b0af34517bc4df522935f2adc79665a85c36528db66, height=119, index=0)
+2026-02-07T07:11:43Z [aurum] AddToWallet c6f48bd11b826d0dd9988c9a7a673e8fa60aa3103ee762df7e7323a28f01ccb0  new Confirmed (block=7059dcd92a6f4fa15f84f2f1142b80eb41665a3dbaef1b58b6b9f7488c192ce2, height=120, index=0)
+2026-02-07T07:11:43Z UpdateTip: new best=4d376e394c89901d305c1af896833673359eb56f9e488ab9f5cde0d28fda3209 height=121 version=0x20000000 log2_work=7.930737 tx=122 date='2026-02-07T07:12:02Z' progress=1.000000 cache=0.3MiB(121txo)
+2026-02-07T07:11:43Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:43Z UpdateTip: new best=2655e1686706d3231fe176f15612a0cac80075ec983ec7e963710c942f40e251 height=122 version=0x20000000 log2_work=7.942515 tx=123 date='2026-02-07T07:12:03Z' progress=1.000000 cache=0.3MiB(122txo)
+2026-02-07T07:11:43Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:43Z UpdateTip: new best=5c9727a0b152f1006b163ded8f4e94b06eda6587837d7319db501494e2fb3830 height=123 version=0x20000000 log2_work=7.954196 tx=124 date='2026-02-07T07:12:03Z' progress=1.000000 cache=0.3MiB(123txo)
+2026-02-07T07:11:43Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:43Z UpdateTip: new best=72e6a6848a512fee1ef457acb0debe09bbe67c205af9562094a50411da32080e height=124 version=0x20000000 log2_work=7.965784 tx=125 date='2026-02-07T07:12:03Z' progress=1.000000 cache=0.3MiB(124txo)
+2026-02-07T07:11:43Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:43Z UpdateTip: new best=49370cbcef76325b8ee99ffc3df32e02adeb09e7edbe0a2e1b2933f421f1c89c height=125 version=0x20000000 log2_work=7.977280 tx=126 date='2026-02-07T07:12:03Z' progress=1.000000 cache=0.3MiB(125txo)
+2026-02-07T07:11:43Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:43Z [aurum] AddToWallet 944103a27bed3871e7837d8b35a194face234f06ba4cd3022326c73ab76b83c3  new Confirmed (block=4d376e394c89901d305c1af896833673359eb56f9e488ab9f5cde0d28fda3209, height=121, index=0)
+2026-02-07T07:11:43Z [aurum] AddToWallet 885bdd1a86b2e320d0f3c9f491fa30d4a3f2c1c7e925a94ddcfb9f27549bce44  new Confirmed (block=2655e1686706d3231fe176f15612a0cac80075ec983ec7e963710c942f40e251, height=122, index=0)
+2026-02-07T07:11:43Z [aurum] AddToWallet 93a27723723b7d18c36bf0f6056081a77e216e34fc675bbb0e5ada7da84a87cc  new Confirmed (block=5c9727a0b152f1006b163ded8f4e94b06eda6587837d7319db501494e2fb3830, height=123, index=0)
+2026-02-07T07:11:43Z [aurum] AddToWallet 65cd7dd4b7d14307fe0efd1d2cfdf1f7704e03e94d4cee137b3424a8fb61e1c3  new Confirmed (block=72e6a6848a512fee1ef457acb0debe09bbe67c205af9562094a50411da32080e, height=124, index=0)
+2026-02-07T07:11:43Z [aurum] AddToWallet 417af795411a0dec96fa4dd13f6318ae6ee3f784e5a8e0fab57d33437ee6478a  new Confirmed (block=49370cbcef76325b8ee99ffc3df32e02adeb09e7edbe0a2e1b2933f421f1c89c, height=125, index=0)
+2026-02-07T07:11:43Z UpdateTip: new best=46d6947d5b15ec26135a1d251c9c15debef199db90af0be027a1d755e4a16c4d height=126 version=0x20000000 log2_work=7.988685 tx=127 date='2026-02-07T07:12:03Z' progress=1.000000 cache=0.3MiB(126txo)
+2026-02-07T07:11:43Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:43Z UpdateTip: new best=0b144c967a932af0c6cffb1278c672fb303e138b51c4fb27ff680e371f7c74b7 height=127 version=0x20000000 log2_work=8.000000 tx=128 date='2026-02-07T07:12:03Z' progress=1.000000 cache=0.3MiB(127txo)
+2026-02-07T07:11:43Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:43Z UpdateTip: new best=0e8e97bf9eca1fc9c106ecfaefb01e8e0b2fcb1310b974dff09a8bd8453e8ee8 height=128 version=0x20000000 log2_work=8.011227 tx=129 date='2026-02-07T07:12:04Z' progress=1.000000 cache=0.3MiB(128txo)
+2026-02-07T07:11:43Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:43Z UpdateTip: new best=291a72dbfe0cf97693ebea7987777e39963dc6e9c15c5505c9b3d1a5345bef82 height=129 version=0x20000000 log2_work=8.022368 tx=130 date='2026-02-07T07:12:04Z' progress=1.000000 cache=0.3MiB(129txo)
+2026-02-07T07:11:43Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:43Z UpdateTip: new best=70390ca4e9e6f31b569ca689dec1c469ab4749e67a6efbf488906ccb7730fd62 height=130 version=0x20000000 log2_work=8.033423 tx=131 date='2026-02-07T07:12:04Z' progress=1.000000 cache=0.3MiB(130txo)
+2026-02-07T07:11:43Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:43Z [aurum] AddToWallet 81337849a7b14481508e4cb50e283940e80b45046cc50e9b6b0908265eb093f9  new Confirmed (block=46d6947d5b15ec26135a1d251c9c15debef199db90af0be027a1d755e4a16c4d, height=126, index=0)
+2026-02-07T07:11:43Z [aurum] AddToWallet 9f70f1d21bc1851010d69fb77edc7eec0553c1508ba338fa4bc09713b91711d1  new Confirmed (block=0b144c967a932af0c6cffb1278c672fb303e138b51c4fb27ff680e371f7c74b7, height=127, index=0)
+2026-02-07T07:11:43Z [aurum] AddToWallet 9ebaf70d180da61c33992cced0496e9524ce9b66ba4d24b0d7f1a2cf4ad944c1  new Confirmed (block=0e8e97bf9eca1fc9c106ecfaefb01e8e0b2fcb1310b974dff09a8bd8453e8ee8, height=128, index=0)
+2026-02-07T07:11:43Z [aurum] AddToWallet abc31fe216c3e834563672ec2d1ee7fb1ada57e17fe98c0680e078c5a158c676  new Confirmed (block=291a72dbfe0cf97693ebea7987777e39963dc6e9c15c5505c9b3d1a5345bef82, height=129, index=0)
+2026-02-07T07:11:43Z [aurum] AddToWallet 9bdc828c0ccfa6106481235ae507217e980509dd7b5cd6ac9bf715d11d9226ed  new Confirmed (block=70390ca4e9e6f31b569ca689dec1c469ab4749e67a6efbf488906ccb7730fd62, height=130, index=0)
+2026-02-07T07:11:43Z UpdateTip: new best=0471e8804b596fe14f538dde8f4260f66a3e99c3f3957fd611806e75d1b7b444 height=131 version=0x20000000 log2_work=8.044394 tx=132 date='2026-02-07T07:12:04Z' progress=1.000000 cache=0.3MiB(131txo)
+2026-02-07T07:11:43Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:43Z UpdateTip: new best=2c9948ff72ce28c25288977174ff5f52fde5a9314cd199402fff9ed7385ccf37 height=132 version=0x20000000 log2_work=8.055282 tx=133 date='2026-02-07T07:12:04Z' progress=1.000000 cache=0.3MiB(132txo)
+2026-02-07T07:11:43Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:43Z UpdateTip: new best=220dc819f41b480746cb84f2030cdfe804a551b3ec4e3c4e0fb274e5cf9f23f2 height=133 version=0x20000000 log2_work=8.066089 tx=134 date='2026-02-07T07:12:04Z' progress=1.000000 cache=0.3MiB(133txo)
+2026-02-07T07:11:43Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:43Z UpdateTip: new best=61db06cf2d1b2031395e2e7b907a400831f6b433c1d23b188733e874761aa96c height=134 version=0x20000000 log2_work=8.076816 tx=135 date='2026-02-07T07:12:05Z' progress=1.000000 cache=0.3MiB(134txo)
+2026-02-07T07:11:43Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:43Z UpdateTip: new best=58dd0fd05dc6d7e949cf8e1c766c4af64486d469aa5f046919337ad5eb57eafe height=135 version=0x20000000 log2_work=8.087463 tx=136 date='2026-02-07T07:12:05Z' progress=1.000000 cache=0.3MiB(135txo)
+2026-02-07T07:11:43Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:43Z [aurum] AddToWallet 7aee6efe7bb42047e2afba124169d11dfa7ec0d1d5e5465dd3057dd19d79688b  new Confirmed (block=0471e8804b596fe14f538dde8f4260f66a3e99c3f3957fd611806e75d1b7b444, height=131, index=0)
+2026-02-07T07:11:43Z [aurum] AddToWallet 5f528c9fe05f8316339397c723e5da4195bde9b75639b2a31d7efc0320021a6c  new Confirmed (block=2c9948ff72ce28c25288977174ff5f52fde5a9314cd199402fff9ed7385ccf37, height=132, index=0)
+2026-02-07T07:11:43Z [aurum] AddToWallet 635d7195894137432fa4d7fc69b2aa70c0aeb0acf2a7a30a942f85d60fd53f4e  new Confirmed (block=220dc819f41b480746cb84f2030cdfe804a551b3ec4e3c4e0fb274e5cf9f23f2, height=133, index=0)
+2026-02-07T07:11:43Z [aurum] AddToWallet 0c2364e048d2f372daa65839141c38b3663417cd58456430ed3870f2e03b8f84  new Confirmed (block=61db06cf2d1b2031395e2e7b907a400831f6b433c1d23b188733e874761aa96c, height=134, index=0)
+2026-02-07T07:11:43Z [aurum] AddToWallet 5eaa3074170cb96aacba02ba200fafb0617bb44492fb27527baa59c7a179ce5a  new Confirmed (block=58dd0fd05dc6d7e949cf8e1c766c4af64486d469aa5f046919337ad5eb57eafe, height=135, index=0)
+2026-02-07T07:11:43Z UpdateTip: new best=53e7a85c3b70243bb3a1492b50bb193074172a08529e250991ed1aa0402d885e height=136 version=0x20000000 log2_work=8.098032 tx=137 date='2026-02-07T07:12:05Z' progress=1.000000 cache=0.3MiB(136txo)
+2026-02-07T07:11:43Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:43Z UpdateTip: new best=21af1f14d6320e10f09824c4abba52c53f657dc22e69003b12076ac22dde9807 height=137 version=0x20000000 log2_work=8.108524 tx=138 date='2026-02-07T07:12:05Z' progress=1.000000 cache=0.3MiB(137txo)
+2026-02-07T07:11:43Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:43Z UpdateTip: new best=4ae91aacb63163d8fe88ca079f46d0f4e9103d67d2c1300234bbe7ce3aa6cb92 height=138 version=0x20000000 log2_work=8.118941 tx=139 date='2026-02-07T07:12:05Z' progress=1.000000 cache=0.3MiB(138txo)
+2026-02-07T07:11:43Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:43Z UpdateTip: new best=676283c40627c7acc333f88c3ea56012b9e2af126be985516add51bb8a236ec8 height=139 version=0x20000000 log2_work=8.129283 tx=140 date='2026-02-07T07:12:05Z' progress=1.000000 cache=0.3MiB(139txo)
+2026-02-07T07:11:43Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:43Z UpdateTip: new best=59f4dc48ffcc0a5a410b35694fd86274b7d52662f70a07fba8e72116bcd60d6c height=140 version=0x20000000 log2_work=8.139551 tx=141 date='2026-02-07T07:12:06Z' progress=1.000000 cache=0.3MiB(140txo)
+2026-02-07T07:11:43Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:43Z [aurum] AddToWallet 9b3bbc7e9d4be1d29ce0a9ba236360cbf6d50e53e513aba0b2cee82683f2f238  new Confirmed (block=53e7a85c3b70243bb3a1492b50bb193074172a08529e250991ed1aa0402d885e, height=136, index=0)
+2026-02-07T07:11:43Z [aurum] AddToWallet b4edd9be0de2bcf4da98c3e94bdab606b93550dd4e771a1717cdea3f02ca5949  new Confirmed (block=21af1f14d6320e10f09824c4abba52c53f657dc22e69003b12076ac22dde9807, height=137, index=0)
+2026-02-07T07:11:43Z [aurum] AddToWallet 5d1cf43df0af0e240cbe4b618664162ec5bd9b1fe7b760e9af99f77bd62145b1  new Confirmed (block=4ae91aacb63163d8fe88ca079f46d0f4e9103d67d2c1300234bbe7ce3aa6cb92, height=138, index=0)
+2026-02-07T07:11:43Z [aurum] AddToWallet ec5e948296a30b51751bc34666498c8cde88b6b17e495bcf341576afe48e948f  new Confirmed (block=676283c40627c7acc333f88c3ea56012b9e2af126be985516add51bb8a236ec8, height=139, index=0)
+2026-02-07T07:11:43Z [aurum] AddToWallet b9c70dbc2784a8e038c6bc151663bed5e1355c7bb494ff5d6e90b9f85af09ca0  new Confirmed (block=59f4dc48ffcc0a5a410b35694fd86274b7d52662f70a07fba8e72116bcd60d6c, height=140, index=0)
+2026-02-07T07:11:43Z UpdateTip: new best=574c21654b283589755453b17eac5d6cd8bf601f2c88825c48b346142261cb7c height=141 version=0x20000000 log2_work=8.149747 tx=142 date='2026-02-07T07:12:06Z' progress=1.000000 cache=0.3MiB(141txo)
+2026-02-07T07:11:43Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:43Z UpdateTip: new best=3035a4eb0bd8e21c989bcc6785037174297bae341b6372b08c448f3871bcc7ce height=142 version=0x20000000 log2_work=8.159871 tx=143 date='2026-02-07T07:12:06Z' progress=1.000000 cache=0.3MiB(142txo)
+2026-02-07T07:11:43Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:43Z UpdateTip: new best=24d1ee488e9a2b806eaca165f607bcd9c04aada30956f92b01575342f31af52c height=143 version=0x20000000 log2_work=8.169925 tx=144 date='2026-02-07T07:12:06Z' progress=1.000000 cache=0.3MiB(143txo)
+2026-02-07T07:11:43Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:43Z UpdateTip: new best=08becefa066bc07dbff40f5c4277e7fae19aabbca9051f27a4d75399f0d88428 height=144 version=0x30000000 log2_work=8.179909 tx=145 date='2026-02-07T07:12:06Z' progress=1.000000 cache=0.3MiB(144txo)
+2026-02-07T07:11:43Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:43Z UpdateTip: new best=1fcdec10304121e98560090d59e419e2710e012b40289aad8410e9d599cdeb23 height=145 version=0x30000000 log2_work=8.189825 tx=146 date='2026-02-07T07:12:06Z' progress=1.000000 cache=0.3MiB(145txo)
+2026-02-07T07:11:43Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:43Z [aurum] AddToWallet 13502cd572f484c57e205d7f58f4985334d4ecf3de654655fe0026e172f0d1ce  new Confirmed (block=574c21654b283589755453b17eac5d6cd8bf601f2c88825c48b346142261cb7c, height=141, index=0)
+2026-02-07T07:11:43Z [aurum] AddToWallet 4af5eecedf449a66088ea8e19bfd95c2330f6a543d82c1e34c76e8f7e949f869  new Confirmed (block=3035a4eb0bd8e21c989bcc6785037174297bae341b6372b08c448f3871bcc7ce, height=142, index=0)
+2026-02-07T07:11:43Z [aurum] AddToWallet e13687e82a7b8f0df808bbf3694924e8f1d9c0c83d88204030168513526be217  new Confirmed (block=24d1ee488e9a2b806eaca165f607bcd9c04aada30956f92b01575342f31af52c, height=143, index=0)
+2026-02-07T07:11:43Z [aurum] AddToWallet f917900de328cf287d56cea4378e8e94e0b52a63ce0aa11da535b040e1f9a75f  new Confirmed (block=08becefa066bc07dbff40f5c4277e7fae19aabbca9051f27a4d75399f0d88428, height=144, index=0)
+2026-02-07T07:11:43Z [aurum] AddToWallet c530fedfb968b079b038cc2a3959b2ee82dfed8e1e2178ff861c0f8b450e50ab  new Confirmed (block=1fcdec10304121e98560090d59e419e2710e012b40289aad8410e9d599cdeb23, height=145, index=0)
+2026-02-07T07:11:43Z UpdateTip: new best=6280f12a8b9bbb526fe5a7d320cc21449707544b63b5ef4310498b67b5f0128c height=146 version=0x30000000 log2_work=8.199672 tx=147 date='2026-02-07T07:12:07Z' progress=1.000000 cache=0.3MiB(146txo)
+2026-02-07T07:11:43Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:43Z UpdateTip: new best=73f262b09abd3a8dad9a072a628501ef03017908a807bb30f3e98b44ad7ec3e9 height=147 version=0x30000000 log2_work=8.209453 tx=148 date='2026-02-07T07:12:07Z' progress=1.000000 cache=0.3MiB(147txo)
+2026-02-07T07:11:43Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:43Z UpdateTip: new best=64e3c2403f392730c532ae95d1ef1b01aafb38c0c846bc3f14e8828dc9c64e5f height=148 version=0x30000000 log2_work=8.219169 tx=149 date='2026-02-07T07:12:07Z' progress=1.000000 cache=0.3MiB(148txo)
+2026-02-07T07:11:43Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:43Z UpdateTip: new best=153f26d091763e7572a35c42cd5c14b1828a371bf82869ab5783132ed095c2f2 height=149 version=0x30000000 log2_work=8.228819 tx=150 date='2026-02-07T07:12:07Z' progress=1.000000 cache=0.3MiB(149txo)
+2026-02-07T07:11:43Z [aurum] AddToWallet 63c2b787336fac92f763ae98e56a14e3b104d42736bdb349b1a0392e374c96b4  new Confirmed (block=6280f12a8b9bbb526fe5a7d320cc21449707544b63b5ef4310498b67b5f0128c, height=146, index=0)
+2026-02-07T07:11:43Z [aurum] AddToWallet 1889fd4ead4a9e4408e931f4e071a1440c5cfe9b73e1cd8c3f30c38be3372df9  new Confirmed (block=73f262b09abd3a8dad9a072a628501ef03017908a807bb30f3e98b44ad7ec3e9, height=147, index=0)
+2026-02-07T07:11:43Z [aurum] AddToWallet c5abfd4f0b17c6e8bc45cd0d85e31b5358e552a8536fc56012f997b8596b8cfe  new Confirmed (block=64e3c2403f392730c532ae95d1ef1b01aafb38c0c846bc3f14e8828dc9c64e5f, height=148, index=0)
+2026-02-07T07:11:43Z [aurum] AddToWallet 957a309008d0ab5cd0c67f7358fdcd8a34bff0314e50e6a83cf6608b58f9d092  new Confirmed (block=153f26d091763e7572a35c42cd5c14b1828a371bf82869ab5783132ed095c2f2, height=149, index=0)
+2026-02-07T07:11:43Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2026-02-07T07:11:43Z UpdateTip: new best=5def31b2866445bd7cc2a506dc0c64d5a9849992134a795ae378b9f0d9ea1fbe height=150 version=0x30000000 log2_work=8.238405 tx=151 date='2026-02-07T07:12:07Z' progress=1.000000 cache=0.3MiB(150txo)
+2026-02-07T07:11:43Z [aurum] AddToWallet 5b9f0e3cb4d84d5c8512f4f1f67b35d5224347ba63419007d4b62f0cd8a0174b  new Confirmed (block=5def31b2866445bd7cc2a506dc0c64d5a9849992134a795ae378b9f0d9ea1fbe, height=150, index=0)
+2026-02-07T07:12:40Z Adding fixed seeds as 60 seconds have passed and addrman is empty for at least one reachable network
+2026-02-07T07:12:40Z Added 0 fixed seeds from reachable networks.
+2026-02-07T07:49:58Z Potential stale tip detected, will try using extra outbound peer (last tip update: 2295 seconds ago)
+2026-02-07T09:33:32Z Potential stale tip detected, will try using extra outbound peer (last tip update: 8509 seconds ago)
+2026-02-07T09:33:32Z Flushed fee estimates to fee_estimates.dat.
+2026-02-07T10:34:03Z Potential stale tip detected, will try using extra outbound peer (last tip update: 12140 seconds ago)
+2026-02-07T10:34:03Z Flushed fee estimates to fee_estimates.dat.
+2026-02-07T11:35:18Z Potential stale tip detected, will try using extra outbound peer (last tip update: 15815 seconds ago)
+2026-02-07T11:35:18Z Flushed fee estimates to fee_estimates.dat.
+2026-02-07T13:21:09Z Potential stale tip detected, will try using extra outbound peer (last tip update: 22166 seconds ago)
+2026-02-07T13:21:09Z Flushed fee estimates to fee_estimates.dat.
+2026-02-07T14:38:52Z Potential stale tip detected, will try using extra outbound peer (last tip update: 26829 seconds ago)
+2026-02-07T14:38:52Z Flushed fee estimates to fee_estimates.dat.
+2026-02-07T16:10:47Z Potential stale tip detected, will try using extra outbound peer (last tip update: 32344 seconds ago)
+2026-02-07T16:10:47Z Flushed fee estimates to fee_estimates.dat.
+2026-02-07T17:40:38Z Potential stale tip detected, will try using extra outbound peer (last tip update: 37735 seconds ago)
+2026-02-07T17:40:38Z Flushed fee estimates to fee_estimates.dat.
+2026-02-07T18:00:12Z Potential stale tip detected, will try using extra outbound peer (last tip update: 38909 seconds ago)
+2026-02-07T18:10:42Z Potential stale tip detected, will try using extra outbound peer (last tip update: 39539 seconds ago)
+2026-02-07T18:13:49Z tor: Thread interrupt
+2026-02-07T18:13:49Z torcontrol thread exit
+2026-02-07T18:13:49Z addcon thread exit
+2026-02-07T18:13:49Z mapport thread exit
+2026-02-07T18:13:49Z opencon thread exit
+2026-02-07T18:13:49Z Shutdown in progress...
+2026-02-07T18:13:49Z msghand thread exit
+2026-02-07T18:13:49Z net thread exit
+2026-02-07T18:13:49Z [aurum] Releasing wallet aurum..
+2026-02-07T18:13:49Z DumpAnchors: Flush 0 outbound block-relay-only peer addresses to anchors.dat started
+2026-02-07T18:13:49Z DumpAnchors: Flush 0 outbound block-relay-only peer addresses to anchors.dat completed (0.00s)
+2026-02-07T18:13:49Z scheduler thread exit
+2026-02-07T18:13:49Z Writing 0 mempool transactions to file...
+2026-02-07T18:13:49Z Writing 0 unbroadcast transactions to file.
+2026-02-07T18:13:49Z Dumped mempool: 0.000s to copy, 0.005s to dump, 27 bytes dumped to file
+2026-02-07T18:13:49Z Flushed fee estimates to fee_estimates.dat.
+2026-02-07T18:13:49Z Shutdown done
