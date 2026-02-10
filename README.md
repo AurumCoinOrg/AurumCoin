@@ -54,3 +54,8 @@ Aurum is experimental software. No guarantees are made regarding value, adoption
 
 ## License
 See `COPYING`.
+
+## Development status
+
+Automated CI checks are temporarily disabled while the project is in early development.
+All checks will be re-enabled prior to public release.
