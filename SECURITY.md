@@ -1,18 +1,22 @@
 # Security Policy
 
 ## Reporting a Vulnerability
-If you discover a security vulnerability in Aurum:
 
-- **Do NOT** open a public GitHub issue
-- Email: security@aurumcoin.org (or open a private advisory if available)
+If you discover a security vulnerability in Aurum, **do not** open a public issue.
 
-Please include:
+Please report it privately by emailing:
+
+**security@aurumcoin.org** (replace with a real inbox before launch)
+
+Include:
 - A clear description of the issue
 - Steps to reproduce
-- Affected versions / commits
-- Any proof-of-concept code (if safe)
+- Affected versions or commit hash
+- Any proof-of-concept code (if available)
 
-We aim to acknowledge reports within **48 hours**.
+## Disclosure Policy
+- We will acknowledge receipt within 72 hours
+- We aim to provide a fix or mitigation within a reasonable timeframe
+- Coordinated disclosure is encouraged
 
-## Supported Versions
-Only the `master` branch and the latest tagged release are supported.
+Thank you for helping keep Aurum secure.
