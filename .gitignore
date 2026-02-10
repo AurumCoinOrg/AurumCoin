@@ -1,3 +1,4 @@
+# Build outputs
 /build/
 /build-*/
 /**/CMakeFiles/
@@ -11,16 +12,30 @@
 /**/*.dll
 /**/*.exe
 
+# Editor / OS
+.DS_Store
+
+# Local data / nodes
 **/*-data/
 **/*-node*/
 **/debug.log
 **/.cookie
 **/wallet.dat
 **/wallets/
-**/*.dat
-**/*wallet*backup*
-**/*premine*
-**/*Premine*
 
+# Local scratch / conversions
 *_wallet_convert_*
-.DS_Store
+*_wallet_inspect_*
+
+# Never commit "backup" copies
+**/*.bak
+**/*.bak.*
+**/*.fix
+**/*.fix.*
+**/*.orig
+**/*.rej
+
+# Accidental weird folders
+=
+Aurum
+main-data-main

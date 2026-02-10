@@ -1,104 +1,36 @@
-# AurumCoin (AUR)
+# Aurum (AUR)
 
-AurumCoin is an independent, Bitcoin-derived Proof-of-Work blockchain designed for
-simplicity, transparency, and long-term monetary certainty.
+Aurum is a Bitcoin-derived Proof-of-Work Layer-1 blockchain focused on **simplicity, auditability, and fair launch**.
 
-Aurum intentionally avoids experimental monetary mechanics, staking systems,
-governance minting, or mutable supply logic.  
-Its design philosophy mirrors early Bitcoin and Litecoin: conservative consensus,
-predictable issuance, and rules locked by code.
+## Principles
+- **Fair launch** (no premine, no founder allocation, no hidden minting)
+- Conservative consensus rules (Bitcoin-style engineering)
+- Designed for long-term verification and operational clarity
 
----
+## Network parameters (mainnet)
+- Ticker: **AUR**
+- Consensus: **Proof-of-Work**
+- Target block time: **150 seconds** (2.5 minutes)
+- Halving interval: **840,000 blocks** (~4 years at 2.5-minute blocks)
+- Supply schedule: **Bitcoin-style halvings** (implemented in `src/validation.cpp` → `GetBlockSubsidy()`)
 
-## Core Principles
+> Note: We do **not** hardcode a marketing “max supply” number in docs unless it is computed directly from consensus code.
+> The authoritative source of truth is the consensus implementation.
 
-- Fair launch — **no premine**
-- No founder or developer allocation
-- No ICO or token sale
-- Fixed maximum supply
-- Consensus rules are immutable once released
-- Engineering decisions favor auditability over novelty
+## Genesis (mainnet, consensus-locked)
+Changing any genesis parameter creates a different network.
 
----
-
-## Network Overview
-
-- **Ticker:** AUR  
-- **Consensus:** Proof-of-Work (PoW)  
-- **Hashing:** SHA-256 based  
-- **Supply Cap:** **94,000,000 AUR**  
-- **Network Types:** Mainnet, Testnet, Regtest  
-
-Aurum operates as its **own Layer-1 blockchain**, not a token or smart-contract asset.
-
----
-
-## Monetary Policy
-
-- Fixed maximum supply of **94,000,000 AUR**
-- Deterministic block subsidy schedule enforced by consensus
-- No inflation beyond the defined issuance curve
-- No staking, rebasing, or admin-controlled minting
-- No governance or upgrade keys
-
-All monetary rules are enforced at the consensus layer and cannot be altered without
-creating a new, incompatible network.
-
----
-
-## Genesis & Consensus
-
-The genesis block and all consensus parameters are **locked in code** and verified
-at node startup.
-
-Canonical definitions live in:
-- `src/kernel/chainparams.cpp`
-
-Any change to genesis or consensus parameters results in a **different network**.
-
-Genesis values are intentionally not duplicated in documentation to avoid drift.
-
----
-
-## What Aurum Is Not
-
-- Not a premined coin
-- Not a DAO
-- Not a staking network
-- Not a smart-contract platform
-- Not an experimental monetary system
-
-Aurum is focused on **sound money mechanics and reliable base-layer transfers**.
-
----
-
-## Development Status
-
-- **Mainnet:** Live (bootstrap phase)
-- **Testnet:** Available for public testing
-- **Wallets:** CLI + RPC available
-- **Mining:** Proof-of-Work enabled
-
----
+- Height: **0**
+- Hash: **fe4ef79e105f5f722c0a6991b3e113190eaea9d7217e6437b05b10b33d626440**
+- Merkle root: **3496b8efe1e8b3aaa03f89ce802a239131b76a27a3c6e2335f84bdd558b7e590**
+- nTime: **1770336000** (2026-02-06 00:00:00 UTC)
+- nBits: **207fffff**
+- nNonce: **1663842**
+- Version: **1**
 
 ## Build
+See `docs/BUILD.md`.
 
-See:
-- `docs/BUILD.md`
-
----
-
-## Documentation
-
-- `docs/POSITIONING.md` — project direction
-- `docs/LAUNCH_NOTES.md` — release requirements
-- `docs/BUILD.md` — build instructions
-
----
-
-## Disclaimer
-
-AurumCoin is experimental software.
-
-No guarantees are made regarding financial value, adoption, or future development.
-Use at your own risk.
+## Status
+- Mainnet: bootstrapping/private nodes
+- Public testnet: pending
