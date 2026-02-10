@@ -213,7 +213,7 @@ public:
         m_chain_type = ChainType::TESTNET;
         consensus.signet_blocks = false;
         consensus.signet_challenge.clear();
-        consensus.nSubsidyHalvingInterval = 840960; // Aurum: ~4 years @ 2.5m blocks
+        consensus.nSubsidyHalvingInterval = 840960; // ~4 years @ 2.5m blocks (exact 4*365 days)
         consensus.BIP34Height = 0;
         consensus.BIP34Hash = uint256{};
         consensus.BIP65Height = 0;
@@ -222,7 +222,7 @@ public:
         consensus.SegwitHeight = 0;
         consensus.MinBIP9WarningHeight = 0;
         consensus.powLimit = uint256{"7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"};
-        consensus.nPowTargetTimespan = 24 * 60 * 60; // 3.5 days
+        consensus.nPowTargetTimespan = 24 * 60 * 60; // 1 day
         consensus.nPowTargetSpacing = 150; // 2.5 minutes
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.enforce_BIP94 = false;
@@ -311,7 +311,7 @@ public:
         m_chain_type = ChainType::TESTNET4;
         consensus.signet_blocks = false;
         consensus.signet_challenge.clear();
-        consensus.nSubsidyHalvingInterval = 840960; // Aurum: ~4 years @ 2.5m blocks
+        consensus.nSubsidyHalvingInterval = 840960; // ~4 years @ 2.5m blocks (exact 4*365 days)
         consensus.BIP34Height = 0;
         consensus.BIP34Hash = uint256{};
         consensus.BIP65Height = 0;
@@ -450,7 +450,7 @@ public:
         m_chain_type = ChainType::SIGNET;
         consensus.signet_blocks = true;
         consensus.signet_challenge.assign(bin.begin(), bin.end());
-        consensus.nSubsidyHalvingInterval = 840960; // Aurum: ~4 years @ 2.5m blocks
+        consensus.nSubsidyHalvingInterval = 840960; // ~4 years @ 2.5m blocks (exact 4*365 days)
         consensus.BIP34Height = 0;
         consensus.BIP34Hash = uint256{};
         consensus.BIP65Height = 0;
@@ -529,7 +529,7 @@ public:
         m_chain_type = ChainType::REGTEST;
         consensus.signet_blocks = false;
         consensus.signet_challenge.clear();
-        consensus.nSubsidyHalvingInterval = 150; // Aurum: ~4 years @ 2.5m blocks
+        consensus.nSubsidyHalvingInterval = 150; // regtest: fast halvings for local testing
         consensus.BIP34Height = 0;
         consensus.BIP34Hash = uint256();
         consensus.BIP65Height = 0;
