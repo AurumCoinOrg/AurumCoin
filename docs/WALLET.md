@@ -22,13 +22,12 @@ This guide explains how to create, backup, and restore an Aurum wallet.
 ./build/bin/aurum-cli backupwallet "$HOME/aurum-wallet-backup.dat"
 ```
 
-## Restore Wallet
+## Restore Wallet (example)
 ```bash
 ./build/bin/aurumd -daemon -wallet=restored
 ./build/bin/aurum-cli restorewallet "restored" "$HOME/aurum-wallet-backup.dat"
 ```
 
-## Notes
-- Always encrypt backups
-- Never store backups online
-- Wallet files are compatible with Bitcoin Core tooling
+## Safety
+- Keep backups offline
+- Don’t commit wallets or datadirs to git

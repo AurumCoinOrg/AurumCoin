@@ -2,19 +2,17 @@
 
 Start here:
 
-- **CHAIN_SPEC.md** — consensus, genesis, ports
+- **CHAIN_SPEC.md** — exchange / integrator specification (ports, genesis, consensus)
 - **BUILD.md** — build instructions
 - **OVERVIEW.md** — project overview
-- **NETWORK.md** — running a node
-- **MINING.md** — mining (regtest)
-- **WALLET.md** — wallet usage
-- **EXCHANGE.md** — exchange integration
-- **SEEDS.md** — network seeds
-- **RELEASE_CHECKLIST.md** — release process
+- **NETWORK.md** — node networking + ports
+- **MINING.md** — mining guide (regtest)
+- **WALLET.md** — wallet usage (create/backup/restore)
+- **RELEASE_CHECKLIST.md** — release + launch checklist
 
 Project meta:
 
 - **../SECURITY.md** — security policy
-- **../SUPPORT.md** — support & help
+- **../SUPPORT.md** — support / help
 
-If docs conflict with code, **code wins**.
+If anything in docs conflicts with code, **code wins**.
