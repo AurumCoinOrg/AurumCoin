@@ -170,20 +170,20 @@ public:
         {
             DataStream ds;
             ds << static_cast<const CBlockHeader&>(genesis);
-            std::fprintf(stderr, "GENESIS header80=%s\n", HexStr(ds).c_str());
-        }
+//            std::fprintf(stderr, "GENESIS header80=%s\n", HexStr(ds).c_str());
+//        }
+//        
+//
+//consensus.hashGenesisBlock = genesis.GetHash();
+        
+        
         
 
-consensus.hashGenesisBlock = genesis.GetHash();
-        
-        
-        
-
-        std::fprintf(stderr, "GENESIS nTime=%u nBits=%08x nNonce=%u\nGENESIS merkle=%s\nGENESIS GetHash=%s\nGENESIS GetPoWHash=%s\n",
-    genesis.nTime, genesis.nBits, genesis.nNonce,
-    genesis.hashMerkleRoot.ToString().c_str(),
-    genesis.GetHash().ToString().c_str(),
-    genesis.GetPoWHash().ToString().c_str());
+//        std::fprintf(stderr, "GENESIS nTime=%u nBits=%08x nNonce=%u\nGENESIS merkle=%s\nGENESIS GetHash=%s\nGENESIS GetPoWHash=%s\n",
+//    genesis.nTime, genesis.nBits, genesis.nNonce,
+//    genesis.hashMerkleRoot.ToString().c_str(),
+//    genesis.GetHash().ToString().c_str(),
+//    genesis.GetPoWHash().ToString().c_str());
 
         // TEMP: make startup succeed so we can read GENESIS GetHash above, then we will pin it.
         
