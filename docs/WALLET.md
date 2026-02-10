@@ -1,11 +1,13 @@
 # Aurum Wallet Guide
 
-## Create a Wallet
+This guide explains how to create, backup, and restore an Aurum wallet.
+
+## Create a Wallet (Mainnet)
 ```bash
 ./build/bin/aurum-cli createwallet "main"
 ```
 
-## Get an Address
+## Get a New Address
 ```bash
 ./build/bin/aurum-cli getnewaddress
 ```
@@ -15,11 +17,17 @@
 ./build/bin/aurum-cli getbalance
 ```
 
-## Backup
+## Backup Wallet
 ```bash
-./build/bin/aurum-cli backupwallet ~/aurum-wallet-backup.dat
+./build/bin/aurum-cli backupwallet "$HOME/aurum-wallet-backup.dat"
+```
+
+## Restore Wallet (example)
+```bash
+./build/bin/aurumd -daemon -wallet=restored
+./build/bin/aurum-cli restorewallet "restored" "$HOME/aurum-wallet-backup.dat"
 ```
 
 ## Safety
-- Never commit wallets/logs/data dirs
-- Store backups offline
+- Keep backups offline
+- Don’t commit wallets or datadirs to git

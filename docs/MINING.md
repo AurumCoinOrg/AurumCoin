@@ -16,18 +16,14 @@ This is intended for **development and testing only**.
 
 ```bash
 DATADIR="$HOME/Documents/AurumCoin/regtest-data"
+mkdir -p "$DATADIR"
 
 ./build/bin/aurumd -regtest -datadir="$DATADIR" -daemon
-
 ./build/bin/aurum-cli -regtest -datadir="$DATADIR" createwallet "miner"
-
 ADDR="$(./build/bin/aurum-cli -regtest -datadir="$DATADIR" getnewaddress)"
-
 ./build/bin/aurum-cli -regtest -datadir="$DATADIR" generatetoaddress 101 "$ADDR"
-
 ./build/bin/aurum-cli -regtest -datadir="$DATADIR" getbalance
 ```
 
 ## Notes
-- Mainnet mining parameters are enforced by consensus
-- GPU/ASIC mining requires external Scrypt miners (cgminer-compatible)
+- Mainnet mining requires external Scrypt miners (ASIC/GPU); CPU mining is for testing only.

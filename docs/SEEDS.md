@@ -1,14 +1,16 @@
-# Seed Nodes
+# Aurum Network Seeds
 
-Seed nodes help new nodes discover peers.
+This document lists DNS seeds and static nodes.
 
-## Status
-- **TBD** (add after stable public nodes are online)
+## DNS Seeds
+- (to be announced)
 
-## Format
-- DNS seeds: `seed1.example.org`, `seed2.example.org`
-- Fixed seeds (IPs) are discouraged unless necessary
+## Static addnode Examples
+```bash
+addnode=seed1.aurumcoin.org
+addnode=seed2.aurumcoin.org
+```
 
 ## Notes
-- Only add reliable, monitored nodes
-- Avoid single points of failure
+- Seeds will be added before public mainnet launch
+- Exchanges may request private bootstrap nodes
