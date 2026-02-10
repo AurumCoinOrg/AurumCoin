@@ -45,3 +45,6 @@ main-data/
 mainnet-data/
 regtest-data/
 premine-data/
+
+# local artifacts
+_wallet_convert_*
