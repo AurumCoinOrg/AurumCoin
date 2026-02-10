@@ -1,31 +1,30 @@
-# Build outputs
+# Build artifacts
 /build/
 /build-*/
-/**/CMakeFiles/
-/**/CMakeCache.txt
-/**/cmake_install.cmake
-/**/Makefile
+/CMakeFiles/
+/CMakeCache.txt
+cmake_install.cmake
+Makefile
 
-# Local chain data / wallets / logs
-/*-data/
-/mainnet-data/
-/mainnet-node2/
-/regtest-data/
-/testnet-data/
-/signet-data/
-**/debug.log
-**/peers.dat
-**/anchors.dat
-**/.cookie
-**/banlist.dat
-**/fee_estimates.dat
-**/mempool.dat
-**/wallets/
-**/chainstate/
-**/blocks/
-**/indexes/
+# Runtime data
+**/aurum/blocks/
+**/aurum/chainstate/
+**/aurum/wallets/
+**/aurum/.cookie
+**/aurum/debug.log
+**/aurum/peers.dat
+**/aurum/fee_estimates.dat
 
-# Local scripts/artifacts
-*_wallet_convert_*/
-*.log
+# Wallets / keys
+wallet.dat
+*.wallet
+*.key
+*.pem
+*.seed
+
+# OS junk
 .DS_Store
+Thumbs.db
+
+# Local tools / temp
+_wallet_convert_*
