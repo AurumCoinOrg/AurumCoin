@@ -51,3 +51,6 @@ DATADIR="$HOME/Documents/AurumCoin/main-data-main"
 
 ## Disclaimer
 Aurum is experimental software. No guarantees are made regarding value, adoption, or future development. Use at your own risk.
+
+## License
+See `COPYING`.
