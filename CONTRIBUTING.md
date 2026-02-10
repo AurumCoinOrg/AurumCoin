@@ -17,3 +17,9 @@ Thanks for your interest in contributing.
 ## Style
 - Keep changes minimal and focused.
 - Prefer existing project conventions.
+
+## Before you open a PR
+- Run: `bash scripts/verify_spec.sh`
+- Read: `docs/README.md`
+- For security issues: see `SECURITY.md`
+- For help: see `SUPPORT.md`
