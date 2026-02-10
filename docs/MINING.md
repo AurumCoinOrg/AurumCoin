@@ -2,22 +2,32 @@
 
 ## Proof-of-Work
 - Algorithm: **Scrypt**
-- Target spacing: **150s**
-- Retarget: **302,400s (3.5 days)**
+- Target block time: **150 seconds**
+- Difficulty retarget: **302,400 seconds (3.5 days)**
 
-## Solo mining (regtest)
+## Block Rewards
+- Initial subsidy: **56 AUR**
+- Halving interval: **840,000 blocks**
+- Maximum supply: **94,080,000 AUR**
+
+## Solo Mining (Regtest)
+
+This is intended for **development and testing only**.
+
 ```bash
 DATADIR="$HOME/Documents/AurumCoin/regtest-data"
+
 ./build/bin/aurumd -regtest -datadir="$DATADIR" -daemon
+
 ./build/bin/aurum-cli -regtest -datadir="$DATADIR" createwallet "miner"
+
 ADDR="$(./build/bin/aurum-cli -regtest -datadir="$DATADIR" getnewaddress)"
+
 ./build/bin/aurum-cli -regtest -datadir="$DATADIR" generatetoaddress 101 "$ADDR"
+
 ./build/bin/aurum-cli -regtest -datadir="$DATADIR" getbalance
 ```
 
-## Mainnet / testnet mining
-Recommended approach:
-- Run a full node
-- Use a pool/stratum compatible with Scrypt
-- Monitor hashrate, shares, and orphan rate
-
+## Notes
+- Mainnet mining parameters are enforced by consensus
+- GPU/ASIC mining requires external Scrypt miners (cgminer-compatible)
