@@ -12,9 +12,6 @@
 /**/*.dll
 /**/*.exe
 
-# Editor / OS
-.DS_Store
-
 # Local data / nodes
 **/*-data/
 **/*-node*/
@@ -27,7 +24,7 @@
 *_wallet_convert_*
 *_wallet_inspect_*
 
-# Never commit "backup" copies
+# Never commit backup copies
 **/*.bak
 **/*.bak.*
 **/*.fix
@@ -39,3 +36,5 @@
 =
 Aurum
 main-data-main
+
+.DS_Store
