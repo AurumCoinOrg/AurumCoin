@@ -1,47 +1,34 @@
 # Aurum Wallet Guide
 
-This guide explains how to create, use, back up, and restore an Aurum wallet.
+This guide explains how to create, backup, and restore an Aurum wallet.
 
-## Wallet Types
-- Descriptor wallets (default, recommended)
-- Legacy wallets (not recommended)
-
-## Create a Wallet (mainnet)
+## Create a Wallet (Mainnet)
 ```bash
-DATADIR="$HOME/Documents/AurumCoin/main-data-main"
-
-./build/bin/aurum-cli -datadir="$DATADIR" createwallet "main"
-./build/bin/aurum-cli -datadir="$DATADIR" getwalletinfo
+./build/bin/aurum-cli createwallet "main"
 ```
 
-## Get a Receiving Address
+## Get a New Address
 ```bash
-./build/bin/aurum-cli -datadir="$DATADIR" getnewaddress
+./build/bin/aurum-cli getnewaddress
 ```
 
 ## Check Balance
 ```bash
-./build/bin/aurum-cli -datadir="$DATADIR" getbalance
+./build/bin/aurum-cli getbalance
 ```
 
 ## Backup Wallet
 ```bash
-./build/bin/aurum-cli -datadir="$DATADIR" backupwallet "$DATADIR/wallet-backup.dat"
+./build/bin/aurum-cli backupwallet "$HOME/aurum-wallet-backup.dat"
 ```
 
-## Restore Wallet (from backup)
+## Restore Wallet
 ```bash
-# Stop the node first
-./build/bin/aurum-cli -datadir="$DATADIR" stop
-
-# Replace wallet.dat with your backup, then restart the node
-./build/bin/aurumd -datadir="$DATADIR" -daemon
+./build/bin/aurumd -daemon -wallet=restored
+./build/bin/aurum-cli restorewallet "restored" "$HOME/aurum-wallet-backup.dat"
 ```
 
-## Regtest Wallet (development only)
-```bash
-DATADIR="$HOME/Documents/AurumCoin/regtest-data"
-
-./build/bin/aurum-cli -regtest -datadir="$DATADIR" createwallet "test"
-./build/bin/aurum-cli -regtest -datadir="$DATADIR" getbalance
-```
+## Notes
+- Always encrypt backups
+- Never store backups online
+- Wallet files are compatible with Bitcoin Core tooling
