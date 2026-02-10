@@ -41,8 +41,8 @@ public:
      */
     enum class Unit {
         AUR,
-        mBTC,
-        uBTC,
+        mAUR,
+        uAUR,
         SAT
     };
     Q_ENUM(Unit)

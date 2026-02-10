@@ -10,7 +10,7 @@
 
 #include <cassert>
 
-static constexpr auto MAX_DIGITS_BTC = 16;
+static constexpr auto MAX_DIGITS_AUR = 16;
 
 BitcoinUnits::BitcoinUnits(QObject *parent):
         QAbstractListModel(parent),
@@ -22,8 +22,8 @@ QList<BitcoinUnit> BitcoinUnits::availableUnits()
 {
     QList<BitcoinUnit> unitlist;
     unitlist.append(Unit::AUR);
-    unitlist.append(Unit::mBTC);
-    unitlist.append(Unit::uBTC);
+    unitlist.append(Unit::mAUR);
+    unitlist.append(Unit::uAUR);
     unitlist.append(Unit::SAT);
     return unitlist;
 }
@@ -32,8 +32,8 @@ QString BitcoinUnits::longName(Unit unit)
 {
     switch (unit) {
     case Unit::AUR: return QString("AUR");
-    case Unit::mBTC: return QString("mBTC");
-    case Unit::uBTC: return QString::fromUtf8("µAUR (bits)");
+    case Unit::mAUR: return QString("mAUR");
+    case Unit::uAUR: return QString::fromUtf8("µAUR");
     case Unit::SAT: return QString("Satoshi (sat)");
     } // no default case, so the compiler can warn about missing cases
     assert(false);
@@ -43,8 +43,8 @@ QString BitcoinUnits::shortName(Unit unit)
 {
     switch (unit) {
     case Unit::AUR: return longName(unit);
-    case Unit::mBTC: return longName(unit);
-    case Unit::uBTC: return QString("bits");
+    case Unit::mAUR: return longName(unit);
+    case Unit::uAUR: return QString("bits");
     case Unit::SAT: return QString("sat");
     } // no default case, so the compiler can warn about missing cases
     assert(false);
@@ -54,8 +54,8 @@ QString BitcoinUnits::description(Unit unit)
 {
     switch (unit) {
     case Unit::AUR: return QString("Bitcoins");
-    case Unit::mBTC: return QString("Milli-Bitcoins (1 / 1" THIN_SP_UTF8 "000)");
-    case Unit::uBTC: return QString("Micro-Bitcoins (bits) (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+    case Unit::mAUR: return QString("Milli-Aurum (1 / 1" THIN_SP_UTF8 "000)");
+    case Unit::uAUR: return QString("Micro-Aurum (bits) (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
     case Unit::SAT: return QString("Satoshi (sat) (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
     } // no default case, so the compiler can warn about missing cases
     assert(false);
@@ -65,8 +65,8 @@ qint64 BitcoinUnits::factor(Unit unit)
 {
     switch (unit) {
     case Unit::AUR: return 100'000'000;
-    case Unit::mBTC: return 100'000;
-    case Unit::uBTC: return 100;
+    case Unit::mAUR: return 100'000;
+    case Unit::uAUR: return 100;
     case Unit::SAT: return 1;
     } // no default case, so the compiler can warn about missing cases
     assert(false);
@@ -76,8 +76,8 @@ int BitcoinUnits::decimals(Unit unit)
 {
     switch (unit) {
     case Unit::AUR: return 8;
-    case Unit::mBTC: return 5;
-    case Unit::uBTC: return 2;
+    case Unit::mAUR: return 5;
+    case Unit::uAUR: return 2;
     case Unit::SAT: return 0;
     } // no default case, so the compiler can warn about missing cases
     assert(false);
@@ -94,7 +94,7 @@ QString BitcoinUnits::format(Unit unit, const CAmount& nIn, bool fPlus, Separato
     qint64 quotient = n_abs / coin;
     QString quotient_str = QString::number(quotient);
     if (justify) {
-        quotient_str = quotient_str.rightJustified(MAX_DIGITS_BTC - num_decimals, ' ');
+        quotient_str = quotient_str.rightJustified(MAX_DIGITS_AUR - num_decimals, ' ');
     }
 
     // Use SI-style thin space separators as these are locale independent and can't be
@@ -233,8 +233,8 @@ qint8 ToQint8(BitcoinUnit unit)
 {
     switch (unit) {
     case BitcoinUnit::AUR: return 0;
-    case BitcoinUnit::mBTC: return 1;
-    case BitcoinUnit::uBTC: return 2;
+    case BitcoinUnit::mAUR: return 1;
+    case BitcoinUnit::uAUR: return 2;
     case BitcoinUnit::SAT: return 3;
     } // no default case, so the compiler can warn about missing cases
     assert(false);
@@ -244,8 +244,8 @@ BitcoinUnit FromQint8(qint8 num)
 {
     switch (num) {
     case 0: return BitcoinUnit::AUR;
-    case 1: return BitcoinUnit::mBTC;
-    case 2: return BitcoinUnit::uBTC;
+    case 1: return BitcoinUnit::mAUR;
+    case 2: return BitcoinUnit::uAUR;
     case 3: return BitcoinUnit::SAT;
     }
     assert(false);
