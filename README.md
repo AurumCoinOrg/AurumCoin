@@ -59,3 +59,9 @@ See `COPYING`.
 
 Automated CI checks are temporarily disabled while the project is in early development.
 All checks will be re-enabled prior to public release.
+
+## Consensus status
+
+Mainnet consensus parameters are **frozen**.
+See `docs/SPEC_LOCK.md` for authoritative values.
+
