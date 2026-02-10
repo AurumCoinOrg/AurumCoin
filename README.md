@@ -1,26 +1,21 @@
-# Aurum (AUR)
+# Aurum (AURUM)
 
-Aurum is a proof-of-work cryptocurrency focused on simplicity, transparency, and long-term network stability.
+Aurum is a payments-focused Proof-of-Work blockchain designed for fast, reliable on-chain transfers with a fair launch from genesis.
 
-## Core Principles
-- Fair launch (no pre-allocation)
-- No team or developer rewards
-- Fixed and auditable monetary policy
-- Minimal changes from battle-tested consensus design
+## What Aurum is
+- A PoW L1 chain built for everyday payments
+- Conservative, auditable design
+- Focus: faster confirmations + simple operation
 
-## Consensus
-- Proof-of-Work (SHA256d)
-
-## Network Status
-- Genesis: locked
-- Mainnet: live (early bootstrap)
-- Testnet: private (public release pending)
-
-## Philosophy
-Aurum prioritizes clarity over complexity. Every rule is intended to be inspectable, predictable, and resistant to hidden incentives.
+## Fair Launch
+- No premine
+- No founder/developer allocation
+- No ICO
+- Coins enter circulation through PoW mining
 
 ## Build
-See `docs/BUILD.md`
+See docs/BUILD.md
 
-## License
-MIT
+## Docs
+- docs/POSITIONING.md
+- docs/LAUNCH_NOTES.md
