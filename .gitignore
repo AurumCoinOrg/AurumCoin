@@ -48,3 +48,5 @@ premine-data/
 
 # local artifacts
 _wallet_convert_*
+
+build-genesis/
