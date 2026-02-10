@@ -364,7 +364,7 @@ BOOST_AUTO_TEST_CASE(cnetaddr_serialize_v2)
     const auto ser_params{CAddress::V2_NETWORK};
 
     s << ser_params(addr);
-    BOOST_CHECK_EQUAL(HexStr(s), "021000000000000000000000000000000000");
+    BOOST_CHECK_EQUAL(HexStr(s), "0MAX_MONEY000000000000000000000000000");
     s.clear();
 
     addr = LookupHost("1.2.3.4", false).value();

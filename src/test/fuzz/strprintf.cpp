@@ -28,7 +28,7 @@ FUZZ_TARGET(str_printf)
     const int digits_in_format_specifier = std::count_if(format_string.begin(), format_string.end(), IsDigit);
 
     // Avoid triggering the following crash bug:
-    // * strprintf("%987654321000000:", 1);
+    // * strprintf("%9876543MAX_MONEY:", 1);
     //
     // Avoid triggering the following OOM bug:
     // * strprintf("%.222222200000000$", 1.1);
