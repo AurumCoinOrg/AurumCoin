@@ -21,8 +21,7 @@ fail() { echo "ERROR: $*" >&2; exit 1; }
 note() { echo "NOTE: $*" >&2; }
 
 echo "== GENESIS (node truth, if node is running) =="
-if ./build/bin/aurum-cli -chain=main -datadir="$DATADIR" getblockhash 0 >/tmp/aurum_genhash 2>/dev/null; then
-  GENHASH="$(cat /tmp/aurum_genhash)"
+if GENHASH="$(./build/bin/aurum-cli -chain=main -datadir="$DATADIR" getblockhash 0 2>/dev/null)"; then
   echo "GENESIS_HASH=$GENHASH"
   [[ "$GENHASH" == "$EXPECTED_GENESIS_HASH" ]] || fail "Genesis hash mismatch: got $GENHASH expected $EXPECTED_GENESIS_HASH"
 
@@ -43,10 +42,12 @@ echo
 rg -n "CAmount GetBlockSubsidy|halvings|COIN" src/validation.cpp | sed -n '1835,1860p' || true
 echo
 
+MAINNET_CP="$(sed -n '1,220p' src/kernel/chainparams.cpp)"
+
 # Hard assertions for mainnet params
-rg -q "consensus\.nPowTargetSpacing\s*=\s*${EXPECTED_SPACING}\b" src/kernel/chainparams.cpp || fail "Missing/changed mainnet nPowTargetSpacing=${EXPECTED_SPACING}"
-rg -q "consensus\.nPowTargetTimespan\s*=\s*${EXPECTED_TIMESPAN}\b" src/kernel/chainparams.cpp || fail "Missing/changed mainnet nPowTargetTimespan=${EXPECTED_TIMESPAN}"
-rg -q "consensus\.nSubsidyHalvingInterval\s*=\s*${EXPECTED_HALVING}\b" src/kernel/chainparams.cpp || fail "Missing/changed mainnet nSubsidyHalvingInterval=${EXPECTED_HALVING}"
+printf "%s\n" "$MAINNET_CP" | rg -q "consensus\.nPowTargetSpacing\s*=\s*${EXPECTED_SPACING}\b" || fail "Missing/changed mainnet nPowTargetSpacing=${EXPECTED_SPACING}"
+printf "%s\n" "$MAINNET_CP" | rg -q "consensus\.nPowTargetTimespan\s*=\s*${EXPECTED_TIMESPAN}\b" || fail "Missing/changed mainnet nPowTargetTimespan=${EXPECTED_TIMESPAN}"
+printf "%s\n" "$MAINNET_CP" | rg -q "consensus\.nSubsidyHalvingInterval\s*=\s*${EXPECTED_HALVING}\b" || fail "Missing/changed mainnet nSubsidyHalvingInterval=${EXPECTED_HALVING}"
 rg -q "CAmount\s+nSubsidy\s*=\s*${EXPECTED_SUBSIDY}\s*\*\s*COIN" src/validation.cpp || fail "Missing/changed starting subsidy ${EXPECTED_SUBSIDY} * COIN"
 
 echo "== PORTS (code truth) =="
