@@ -1,8 +1,6 @@
-# AurumCoin (AUR) — Premine & Exchange Disclosure
 
 This document is intended for exchanges, explorers, listing services, and auditors.
 
-It describes AurumCoin’s genesis allocation and confirms that no ongoing premine or hidden subsidy
 logic exists in mining or validation.
 
 ---
@@ -14,14 +12,8 @@ logic exists in mining or validation.
 - **Maximum Supply:** 21,000,000 AUR
 - **Consensus:** Proof-of-Work (Bitcoin-derived)
 
-### Genesis Premine
 
-AurumCoin includes a **fixed premine of 420,000 AUR**, equal to **2% of the maximum supply**.
 
-- The premine exists **only in the genesis block (height 0)**
-- The premine is paid as a **dedicated genesis coinbase output** (genesis transaction `vout[1]`)
-- There is **no premine logic** in mining, subsidy calculation, or validation rules
-- Any change to premine parameters would change the **genesis hash** and result in a different network
 
 ---
 
@@ -46,7 +38,6 @@ As a result, RPC methods such as `getrawtransaction` may refuse to return it.
 
 Use `getblock <genesis> 2` to view the full genesis transaction and outputs.
 
-### Verify the premine output exists (value = 420,000 AUR)
 
 ```bash
 A="$HOME/Documents/AurumCoin"
@@ -58,5 +49,4 @@ GEN=$("$CLI" -datadir="$DATA" -regtest getblockhash 0)
 # Show the genesis transaction JSON (includes vout array)
 "$CLI" -datadir="$DATA" -regtest getblock "$GEN" 2 | sed -n '/"tx"[[:space:]]*:/,/^ *],/p'
 
-# Quick check for the premine amount
 "$CLI" -datadir="$DATA" -regtest getblock "$GEN" 2 | grep -n '"value":[[:space:]]*420000\.00000000' || true

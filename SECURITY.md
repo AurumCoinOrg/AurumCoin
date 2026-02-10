@@ -22,9 +22,7 @@ You can import a key by running the following command with that individual’s f
 
 ## Backup Policy
 
-- The premine wallet is encrypted at all times
 - The wallet remains locked except during intentional operations
-- Any action involving the premine wallet requires a fresh backup
 - Backups are never overwritten
 - Each backup is verified with SHA256
 - Backups are stored offline only (USB)

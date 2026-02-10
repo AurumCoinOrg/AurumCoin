@@ -1,0 +1,184 @@
+#include <crypto/scrypt.h>
+
+#include <stdlib.h>
+#include <string.h>
+
+// This is the classic Litecoin scrypt core: N=1024, r=1, p=1, output=32 bytes.
+// It uses PBKDF2-HMAC-SHA256 as defined by the scrypt paper.
+#include <crypto/hmac_sha256.h>
+#include <crypto/sha256.h>
+
+static inline uint32_t le32dec(const void* pp)
+{
+    const uint8_t* p = (const uint8_t*)pp;
+    return ((uint32_t)p[0]) | ((uint32_t)p[1] << 8) | ((uint32_t)p[2] << 16) | ((uint32_t)p[3] << 24);
+}
+
+static inline void le32enc(void* pp, uint32_t x)
+{
+    uint8_t* p = (uint8_t*)pp;
+    p[0] = (uint8_t)(x);
+    p[1] = (uint8_t)(x >> 8);
+    p[2] = (uint8_t)(x >> 16);
+    p[3] = (uint8_t)(x >> 24);
+}
+
+static void salsa20_8(uint32_t B[16])
+{
+    uint32_t x[16];
+    memcpy(x, B, 64);
+
+#define R(a,b) (((a) << (b)) | ((a) >> (32 - (b))))
+#define X(a,b,c) (a ^= R(b + c, 7), c ^= R(a + b, 9), b ^= R(c + a,13), a ^= R(b + c,18))
+
+    for (int i = 0; i < 8; i += 2) {
+        // column rounds
+        X(x[ 0], x[ 4], x[ 8]);
+        X(x[12], x[ 0], x[ 4]);
+        X(x[ 8], x[12], x[ 0]);
+        X(x[ 4], x[ 8], x[12]);
+
+        X(x[ 5], x[ 9], x[13]);
+        X(x[ 1], x[ 5], x[ 9]);
+        X(x[13], x[ 1], x[ 5]);
+        X(x[ 9], x[13], x[ 1]);
+
+        X(x[10], x[14], x[ 2]);
+        X(x[ 6], x[10], x[14]);
+        X(x[ 2], x[ 6], x[10]);
+        X(x[14], x[ 2], x[ 6]);
+
+        X(x[15], x[ 3], x[ 7]);
+        X(x[11], x[15], x[ 3]);
+        X(x[ 7], x[11], x[15]);
+        X(x[ 3], x[ 7], x[11]);
+
+        // row rounds
+        X(x[ 0], x[ 1], x[ 2]);
+        X(x[ 3], x[ 0], x[ 1]);
+        X(x[ 2], x[ 3], x[ 0]);
+        X(x[ 1], x[ 2], x[ 3]);
+
+        X(x[ 5], x[ 6], x[ 7]);
+        X(x[ 4], x[ 5], x[ 6]);
+        X(x[ 7], x[ 4], x[ 5]);
+        X(x[ 6], x[ 7], x[ 4]);
+
+        X(x[10], x[11], x[ 8]);
+        X(x[ 9], x[10], x[11]);
+        X(x[ 8], x[ 9], x[10]);
+        X(x[11], x[ 8], x[ 9]);
+
+        X(x[15], x[12], x[13]);
+        X(x[14], x[15], x[12]);
+        X(x[13], x[14], x[15]);
+        X(x[12], x[13], x[14]);
+    }
+
+#undef X
+#undef R
+
+    for (int i = 0; i < 16; i++) {
+        B[i] += x[i];
+    }
+}
+
+static void blockmix_salsa8(const uint32_t Bin[32], uint32_t Bout[32])
+{
+    uint32_t X[16];
+    memcpy(X, &Bin[16], 64);
+
+    for (int i = 0; i < 2; i++) {
+        uint32_t T[16];
+        for (int j = 0; j < 16; j++) T[j] = X[j] ^ Bin[i * 16 + j];
+        memcpy(X, T, 64);
+        salsa20_8(X);
+        memcpy(&Bout[i * 16], X, 64);
+    }
+
+    // permute
+    uint32_t Y[32];
+    memcpy(Y, Bout, 128);
+    memcpy(&Bout[0], &Y[0], 64);
+    memcpy(&Bout[16], &Y[16], 64);
+}
+
+static uint32_t integerify(const uint32_t B[32])
+{
+    return B[16]; // for r=1, integerify = little-endian of last 64 bytes, first word
+}
+
+static void smix(uint32_t B[32])
+{
+    uint32_t V[1024][32];
+    uint32_t X[32];
+    memcpy(X, B, 128);
+
+    for (int i = 0; i < 1024; i++) {
+        memcpy(V[i], X, 128);
+        blockmix_salsa8(X, X);
+    }
+
+    for (int i = 0; i < 1024; i++) {
+        uint32_t j = integerify(X) & 1023;
+        for (int k = 0; k < 32; k++) X[k] ^= V[j][k];
+        blockmix_salsa8(X, X);
+    }
+
+    memcpy(B, X, 128);
+}
+
+static void pbkdf2_hmac_sha256(const uint8_t* pass, size_t passlen,
+                              const uint8_t* salt, size_t saltlen,
+                              uint64_t c, uint8_t* buf, size_t dkLen)
+{
+    // Minimal PBKDF2-HMAC-SHA256 for the scrypt parameters here.
+    // Only dkLen needed for this scrypt function: 128 then 32.
+    uint32_t i = 1;
+    uint8_t U[32];
+    uint8_t T[32];
+
+    while (dkLen > 0) {
+        // U1 = HMAC(pass, salt || INT(i))
+        uint8_t block[256];
+        if (saltlen + 4 > sizeof(block)) abort();
+        memcpy(block, salt, saltlen);
+        block[saltlen + 0] = (uint8_t)(i >> 24);
+        block[saltlen + 1] = (uint8_t)(i >> 16);
+        block[saltlen + 2] = (uint8_t)(i >> 8);
+        block[saltlen + 3] = (uint8_t)(i);
+
+        CHMAC_SHA256 hmac(pass, passlen);
+        hmac.Write(block, saltlen + 4).Finalize(U);
+
+        memcpy(T, U, 32);
+
+        for (uint64_t j = 1; j < c; j++) {
+            CHMAC_SHA256 hmac2(pass, passlen);
+            hmac2.Write(U, 32).Finalize(U);
+            for (int k = 0; k < 32; k++) T[k] ^= U[k];
+        }
+
+        size_t clen = dkLen < 32 ? dkLen : 32;
+        memcpy(buf, T, clen);
+        buf += clen;
+        dkLen -= clen;
+        i++;
+    }
+}
+
+void scrypt_1024_1_1_256(const char* input, char* output)
+{
+    uint8_t B[128];
+    // 1) B = PBKDF2(input, input, 1, 128)
+    pbkdf2_hmac_sha256((const uint8_t*)input, 80, (const uint8_t*)input, 80, 1, B, 128);
+
+    // 2) ROMix on 128 bytes interpreted as 32 little-endian uint32s
+    uint32_t X[32];
+    for (int i = 0; i < 32; i++) X[i] = le32dec(B + i * 4);
+    smix(X);
+    for (int i = 0; i < 32; i++) le32enc(B + i * 4, X[i]);
+
+    // 3) output = PBKDF2(input, B, 1, 32)
+    pbkdf2_hmac_sha256((const uint8_t*)input, 80, B, 128, 1, (uint8_t*)output, 32);
+}

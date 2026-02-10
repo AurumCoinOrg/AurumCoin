@@ -21,6 +21,9 @@
 class CBlockHeader
 {
 public:
+    uint256 GetPoWHash() const;
+
+public:
     // header
     int32_t nVersion;
     uint256 hashPrevBlock;

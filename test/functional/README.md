@@ -72,7 +72,6 @@ don't have test cases for.
   runtime of the test.
 - Set the `self.setup_clean_chain` variable in `set_test_params()` to `True` to
   initialize an empty blockchain and start from the Genesis block, rather than
-  load a premined blockchain from cache with the default value of `False`. The
   cached data directories contain a 200-block pre-mined blockchain with the
   spendable mining rewards being split between four nodes. Each node has 25
   mature block subsidies (25x50=1250 BTC) in its wallet. Using them is much more

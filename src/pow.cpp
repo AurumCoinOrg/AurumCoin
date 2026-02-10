@@ -148,6 +148,7 @@ std::optional<arith_uint256> DeriveTarget(unsigned int nBits, const uint256 pow_
     bool fNegative;
     bool fOverflow;
     arith_uint256 bnTarget;
+    // AurumCoin: scrypt PoW uses GetPoWHash exclusively
 
     bnTarget.SetCompact(nBits, &fNegative, &fOverflow);
 
