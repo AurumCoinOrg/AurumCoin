@@ -3,8 +3,8 @@
 Aurum is a proof-of-work cryptocurrency focused on simplicity, transparency, and long-term network stability.
 
 ## Core Principles
-- Fair launch (no premine, no pre-allocation)
-- No founder or developer rewards
+- Fair launch (no pre-allocation)
+- No team or developer rewards
 - Fixed and auditable monetary policy
 - Minimal changes from battle-tested consensus design
 
