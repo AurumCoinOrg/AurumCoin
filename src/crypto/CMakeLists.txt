@@ -10,6 +10,7 @@ add_library(bitcoin_crypto STATIC EXCLUDE_FROM_ALL
   hkdf_sha256_32.cpp
   hmac_sha256.cpp
   hmac_sha512.cpp
+  scrypt.cpp
   muhash.cpp
   poly1305.cpp
   ripemd160.cpp
@@ -29,8 +30,8 @@ target_link_libraries(bitcoin_crypto
 
 if(HAVE_SSE41)
   target_compile_definitions(bitcoin_crypto PRIVATE ENABLE_SSE41)
-  target_sources(bitcoin_crypto PRIVATE sha256_sse41.cpp)
-  set_property(SOURCE sha256_sse41.cpp PROPERTY
+   target_sources(bitcoin_crypto PRIVATE sha256_sse41.cpp)
+   set_property(SOURCE sha256_sse41.cpp PROPERTY
     COMPILE_OPTIONS ${SSE41_CXXFLAGS}
   )
 endif()

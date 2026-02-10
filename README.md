@@ -12,24 +12,15 @@ Its design philosophy mirrors early Bitcoin: fixed supply, predictable issuance,
 - **Ticker:** AUR
 - **Consensus:** Proof-of-Work (Bitcoin-derived)
 - **Maximum Supply:** 21,000,000 AUR
-- **Premine:** 420,000 AUR (2% of max supply, genesis only)
 - **Network Types:** Mainnet, Testnet, Regtest
 
 ---
 
-## Premine Disclosure (Important)
 
-AurumCoin launched with a **fixed genesis-only premine of 420,000 AUR**, representing **2% of the total supply**.
 
-- The premine exists **only in the genesis block**
-- No premine logic exists in mining, subsidy, or validation code
-- The premine output is permanently embedded in the genesis transaction
-- Any modification to the premine would alter the genesis hash and create a different chain
 
-This design ensures the premine is **transparent, immutable, and auditable**.
 
 **Full exchange-facing disclosure:**  
-- [Premine Exchange Disclosure](docs/PREMINE_EXCHANGE_DISCLOSURE.md)
 
 ---
 

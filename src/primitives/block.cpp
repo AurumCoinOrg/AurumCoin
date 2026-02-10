@@ -1,13 +1,18 @@
+#include <cassert>
+#include <algorithm>
+#include <protocol.h>
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-present The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include <primitives/block.h>
+#include <crypto/scrypt.h>
+#include <serialize.h>
+#include <streams.h>
 
 #include <hash.h>
 #include <tinyformat.h>
-
 uint256 CBlockHeader::GetHash() const
 {
     return (HashWriter{} << *this).GetHash();
@@ -28,3 +33,20 @@ std::string CBlock::ToString() const
     }
     return s.str();
 }
+
+
+uint256 CBlockHeader::GetPoWHash() const
+{
+    DataStream ss;
+    ss << *this;
+
+    assert(ss.size() == 80);
+
+    uint256 hash;
+    scrypt_1024_1_1_256(
+        reinterpret_cast<const char*>(ss.data()),
+        reinterpret_cast<char*>(hash.begin())
+    );
+    return hash;
+}
+
