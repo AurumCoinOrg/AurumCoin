@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # Copyright 2014 BitPay Inc.
-# Copyright 2016-present The Bitcoin Core developers
+# Copyright 2016-present The Aurum Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or https://opensource.org/license/mit.
 """Exercise the utils via json-defined tests."""

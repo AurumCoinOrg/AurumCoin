@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-# Copyright (c) 2020-present The Bitcoin Core developers
+# Copyright (c) 2020-present The Aurum Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test asmap config argument for ASN-based IP bucketing.
 
-Verify node behaviour and debug log when launching bitcoind with different
+Verify node behaviour and debug log when launching aurumd with different
 `-asmap` and `-noasmap` arg values, including absolute and relative paths, and
 with missing and unparseable files.
 
@@ -36,19 +36,19 @@ class AsmapTest(BitcoinTestFramework):
             self.nodes[node_id].addpeeraddress(address=f"101.{addr}.0.0", tried=tried, port=8333)
 
     def test_without_asmap_arg(self):
-        self.log.info('Test bitcoind with no -asmap arg passed')
+        self.log.info('Test aurumd with no -asmap arg passed')
         self.stop_node(0)
         with self.node.assert_debug_log(['Using /16 prefix for IP bucketing']):
             self.start_node(0)
 
     def test_noasmap_arg(self):
-        self.log.info('Test bitcoind with -noasmap arg passed')
+        self.log.info('Test aurumd with -noasmap arg passed')
         self.stop_node(0)
         with self.node.assert_debug_log(['Using /16 prefix for IP bucketing']):
             self.start_node(0, ["-noasmap"])
 
     def test_asmap_with_absolute_path(self):
-        self.log.info('Test bitcoind -asmap=<absolute path>')
+        self.log.info('Test aurumd -asmap=<absolute path>')
         self.stop_node(0)
         filename = os.path.join(self.datadir, 'my-map-file.map')
         shutil.copyfile(self.asmap_raw, filename)
@@ -57,7 +57,7 @@ class AsmapTest(BitcoinTestFramework):
         os.remove(filename)
 
     def test_asmap_with_relative_path(self):
-        self.log.info('Test bitcoind -asmap=<relative path>')
+        self.log.info('Test aurumd -asmap=<relative path>')
         self.stop_node(0)
         name = 'ASN_map'
         filename = os.path.join(self.datadir, name)
@@ -69,12 +69,12 @@ class AsmapTest(BitcoinTestFramework):
     def test_unspecified_asmap(self):
         msg = "Error: -asmap requires a file path. Use -asmap=<file>."
         for arg in ['-asmap', '-asmap=']:
-            self.log.info(f'Test bitcoind {arg} (and no filename specified)')
+            self.log.info(f'Test aurumd {arg} (and no filename specified)')
             self.stop_node(0)
             self.node.assert_start_raises_init_error(extra_args=[arg], expected_msg=msg)
 
     def test_asmap_interaction_with_addrman_containing_entries(self):
-        self.log.info("Test bitcoind -asmap restart with addrman containing new and tried entries")
+        self.log.info("Test aurumd -asmap restart with addrman containing new and tried entries")
         self.stop_node(0)
         self.start_node(0, [f"-asmap={self.asmap_raw}", "-checkaddrman=1", "-test=addrman"])
         self.fill_addrman(node_id=0)
@@ -88,13 +88,13 @@ class AsmapTest(BitcoinTestFramework):
             self.node.getnodeaddresses()  # getnodeaddresses re-runs the addrman checks
 
     def test_asmap_with_missing_file(self):
-        self.log.info('Test bitcoind -asmap with missing map file')
+        self.log.info('Test aurumd -asmap with missing map file')
         self.stop_node(0)
         msg = f"Error: Could not find asmap file \"{self.datadir}{os.sep}missing\""
         self.node.assert_start_raises_init_error(extra_args=['-asmap=missing'], expected_msg=msg)
 
     def test_empty_asmap(self):
-        self.log.info('Test bitcoind -asmap with empty map file')
+        self.log.info('Test aurumd -asmap with empty map file')
         self.stop_node(0)
         empty_asmap = os.path.join(self.datadir, "ip_asn.map")
         with open(empty_asmap, "w") as f:
@@ -104,7 +104,7 @@ class AsmapTest(BitcoinTestFramework):
         os.remove(empty_asmap)
 
     def test_asmap_health_check(self):
-        self.log.info('Test bitcoind -asmap logs ASMap Health Check with basic stats')
+        self.log.info('Test aurumd -asmap logs ASMap Health Check with basic stats')
         msg = "ASMap Health Check: 4 clearnet peers are mapped to 3 ASNs with 0 peers being unmapped"
         with self.node.assert_debug_log(expected_msgs=[msg]):
             self.start_node(0, extra_args=[f'-asmap={self.asmap_raw}'])

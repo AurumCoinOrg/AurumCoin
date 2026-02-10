@@ -1,7 +1,7 @@
 # It is not recommended to modify this file in-place, because it will
 # be overwritten during package upgrades. If you want to add further
 # options or overwrite existing ones then use
-# $ systemctl edit bitcoind.service
+# $ systemctl edit aurumd.service
 # See "man systemd.service" for details.
 
 # Note that almost all daemon options could be specified in
@@ -10,7 +10,7 @@
 # config file.
 
 [Unit]
-Description=Bitcoin daemon
+Description=Aurum daemon
 Documentation=https://github.com/bitcoin/bitcoin/blob/master/doc/init.md
 
 # https://www.freedesktop.org/wiki/Software/systemd/NetworkTarget/
@@ -18,9 +18,9 @@ After=network-online.target
 Wants=network-online.target
 
 [Service]
-ExecStart=/usr/bin/bitcoind -pid=/run/bitcoind/bitcoind.pid \
+ExecStart=/usr/bin/aurumd -pid=/run/aurumd/aurumd.pid \
                             -conf=/etc/bitcoin/bitcoin.conf \
-                            -datadir=/var/lib/bitcoind \
+                            -datadir=/var/lib/aurumd \
                             -startupnotify='systemd-notify --ready' \
                             -shutdownnotify='systemd-notify --stopping'
 
@@ -32,7 +32,7 @@ ExecStartPre=!/bin/chgrp bitcoin /etc/bitcoin
 
 Type=notify
 NotifyAccess=all
-PIDFile=/run/bitcoind/bitcoind.pid
+PIDFile=/run/aurumd/aurumd.pid
 
 Restart=on-failure
 TimeoutStartSec=infinity
@@ -44,16 +44,16 @@ TimeoutStopSec=600
 # Run as bitcoin:bitcoin
 User=bitcoin
 
-# /run/bitcoind
-RuntimeDirectory=bitcoind
+# /run/aurumd
+RuntimeDirectory=aurumd
 RuntimeDirectoryMode=0710
 
 # /etc/bitcoin
 ConfigurationDirectory=bitcoin
 ConfigurationDirectoryMode=0710
 
-# /var/lib/bitcoind
-StateDirectory=bitcoind
+# /var/lib/aurumd
+StateDirectory=aurumd
 StateDirectoryMode=0710
 
 # Hardening measures

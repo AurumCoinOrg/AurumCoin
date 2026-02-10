@@ -4098,7 +4098,7 @@ Go to File &gt; Open Wallet to load a wallet.
         <translation type="unfinished">エラー: ダンプファイルの識別子レコードが不正です。得られた値は"%s"で、期待値は"%s"です。</translation>
     </message>
     <message>
-        <source>Error: Dumpfile version is not supported. This version of bitcoin-wallet only supports version 1 dumpfiles. Got dumpfile with version %s</source>
+        <source>Error: Dumpfile version is not supported. This version of aurum-wallet only supports version 1 dumpfiles. Got dumpfile with version %s</source>
         <translation type="unfinished">エラー: ダンプファイルのバージョンがサポート外です。このバージョンの Aurum ウォレットは、バージョン 1 のダンプファイルのみをサポートします。バージョン%sのダンプファイルでした。</translation>
     </message>
     <message>

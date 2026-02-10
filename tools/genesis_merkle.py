@@ -52,8 +52,8 @@ def main():
     pubkey = bytes.fromhex(args.pubkeyhex)
 
     # Build scriptSig: CScript() << 486604799 << CScriptNum(4) << vector(pszTimestamp)
-    # 486604799 == 0x1d00ffff (Bitcoin's original), 4 is the "difficulty" string length marker in old code.
-    # The modern CreateGenesisBlock in Bitcoin Core still uses these exact pushes.
+    # 486604799 == 0x1d00ffff (Aurum's original), 4 is the "difficulty" string length marker in old code.
+    # The modern CreateGenesisBlock in Aurum Core still uses these exact pushes.
     #
     # scriptSig bytes are:
     #   push(486604799 as little-endian) + push(4) + push(timestamp bytes)

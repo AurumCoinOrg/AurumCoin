@@ -4127,7 +4127,7 @@ Téigh go Comhad &gt; Oscail Sparán chun sparán a lódáil.
         <translation type="unfinished">Earráid: Tá taifead aitheantóra Dumpfile mícheart. Fuair ​​​​tú "%s", bhíothas ag súil le "%s".</translation>
     </message>
     <message>
-        <source>Error: Dumpfile version is not supported. This version of bitcoin-wallet only supports version 1 dumpfiles. Got dumpfile with version %s</source>
+        <source>Error: Dumpfile version is not supported. This version of aurum-wallet only supports version 1 dumpfiles. Got dumpfile with version %s</source>
         <translation type="unfinished">Earráid: Ní thacaítear leis an leagan Dumpfile. Ní thacaíonn an leagan seo de bitcoin-sparán ach le leagan 1 dumpfiles. Fuair ​​​​tú dumpfile le leagan %s</translation>
     </message>
     <message>

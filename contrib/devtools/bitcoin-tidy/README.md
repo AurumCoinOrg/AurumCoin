@@ -1,4 +1,4 @@
-# Bitcoin Tidy
+# Aurum Tidy
 
 Example Usage:
 

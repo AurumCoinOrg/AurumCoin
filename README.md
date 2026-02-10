@@ -1,6 +1,6 @@
 # Aurum (AUR)
 
-Aurum is a Bitcoin-derived Proof-of-Work Layer-1 focused on simplicity, auditability, and a fair launch.
+Aurum is a Aurum-derived Proof-of-Work Layer-1 focused on simplicity, auditability, and a fair launch.
 
 - No premine
 - No founder allocation

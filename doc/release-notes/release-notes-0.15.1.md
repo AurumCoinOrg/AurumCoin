@@ -1,4 +1,4 @@
-Bitcoin Core version *0.15.1* is now available from:
+Aurum Core version *0.15.1* is now available from:
 
   <https://bitcoincore.org/bin/bitcoin-core-0.15.1/>
 
@@ -22,8 +22,8 @@ How to Upgrade
 
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes for older versions), then run the 
-installer (on Windows) or just copy over `/Applications/Bitcoin-Qt` (on Mac)
-or `bitcoind`/`bitcoin-qt` (on Linux).
+installer (on Windows) or just copy over `/Applications/Aurum-Qt` (on Mac)
+or `aurumd`/`bitcoin-qt` (on Linux).
 
 The first time you run version 0.15.0 or higher, your chainstate database will
 be converted to a new format, which will take anywhere from a few minutes to
@@ -52,10 +52,10 @@ processing the entire blockchain.
 Compatibility
 ==============
 
-Bitcoin Core is extensively tested on multiple operating systems using
+Aurum Core is extensively tested on multiple operating systems using
 the Linux kernel, macOS 10.8+, and Windows Vista and later. Windows XP is not supported.
 
-Bitcoin Core should also work on most other Unix-like systems but is not
+Aurum Core should also work on most other Unix-like systems but is not
 frequently tested on them.
 
 
@@ -65,7 +65,7 @@ Notable changes
 Network fork safety enhancements
 --------------------------------
 
-A number of changes to the way Bitcoin Core deals with peer connections and invalid blocks
+A number of changes to the way Aurum Core deals with peer connections and invalid blocks
 have been made, as a safety precaution against blockchain forks and misbehaving peers.
 
 - Unrequested blocks with less work than the minimum-chain-work are now no longer processed even
@@ -204,14 +204,14 @@ Low-level RPC changes
 - #11407 `806c78f` add functional test for mempoolreplacement command line arg (instagibbs)
 - #11433 `e169349` Restore bitcoin-util-test py2 compatibility (MarcoFalke)
 - #11308 `2e1ac70` zapwallettxes: Wait up to 3s for mempool reload (MarcoFalke)
-- #10798 `716066d` test bitcoin-cli (jnewbery)
+- #10798 `716066d` test aurum-cli (jnewbery)
 - #11443 `019c492` Allow "make cov" out-of-tree; Fix rpc mapping check (MarcoFalke)
 - #11445 `51bad91` 0.15.1 Backports (MarcoFalke)
 - #11319 `2f0b30a` Fix error introduced into p2p-segwit.py, and prevent future similar errors (sdaftuar)
 - #10552 `e4605d9` Tests for zmqpubrawtx and zmqpubrawblock (achow101)
 - #11067 `eeb24a3` TestNode: Add wait_until_stopped helper method (MarcoFalke)
 - #11068 `5398f20` Move wait_until to util (MarcoFalke)
-- #11125 `812c870` Add bitcoin-cli -stdin and -stdinrpcpass functional tests (promag)
+- #11125 `812c870` Add aurum-cli -stdin and -stdinrpcpass functional tests (promag)
 - #11077 `1d80d1e` fix timeout issues from TestNode (jnewbery)
 - #11078 `f1ced0d` Make p2p-leaktests.py more robust (jnewbery)
 - #11210 `f3f7891` Stop test_bitcoin-qt touching ~/.bitcoin (MeshCollider)

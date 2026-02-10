@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) 2017-present The Bitcoin Core developers
+# Copyright (c) 2017-present The Aurum Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test various command line arguments and configuration file parameters."""
@@ -189,7 +189,7 @@ class ConfArgsTest(BitcoinTestFramework):
         self.log.info('Test that correct configuration path is changed when configuration file changes the datadir')
 
         # Create a temporary directory that will be treated as the default data
-        # directory by bitcoind.
+        # directory by aurumd.
         env, default_datadir = util.get_temp_default_datadir(Path(self.options.tmpdir, "test_config_file_log"))
         default_datadir.mkdir(parents=True)
 
@@ -438,7 +438,7 @@ class ConfArgsTest(BitcoinTestFramework):
                       'and it contains a different bitcoin.conf file that would be ignored')
 
         # Create a temporary directory that will be treated as the default data
-        # directory by bitcoind.
+        # directory by aurumd.
         env, default_datadir = util.get_temp_default_datadir(Path(self.options.tmpdir, "home"))
         default_datadir.mkdir(parents=True)
 

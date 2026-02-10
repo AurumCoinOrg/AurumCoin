@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Copyright (c) 2021-present The Bitcoin Core developers
+# Copyright (c) 2021-present The Aurum Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -7,7 +7,7 @@ export LC_ALL=C
 TOPDIR=${TOPDIR:-$(git rev-parse --show-toplevel)}
 BUILDDIR=${BUILDDIR:-$TOPDIR/build}
 BINDIR=${BINDIR:-$BUILDDIR/bin}
-BITCOIND=${BITCOIND:-$BINDIR/bitcoind}
+BITCOIND=${BITCOIND:-$BINDIR/aurumd}
 SHARE_EXAMPLES_DIR=${SHARE_EXAMPLES_DIR:-$TOPDIR/share/examples}
 EXAMPLE_CONF_FILE=${EXAMPLE_CONF_FILE:-$SHARE_EXAMPLES_DIR/bitcoin.conf}
 
@@ -46,7 +46,7 @@ cat > "${EXAMPLE_CONF_FILE}" << 'EOF'
 ### Options
 EOF
 
-# parse the output from bitcoind --help
+# parse the output from aurumd --help
 # adding newlines is a bit funky to ensure portability for BSD
 # see here for more details: https://stackoverflow.com/a/24575385
 ${BITCOIND} --help \

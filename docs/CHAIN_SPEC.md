@@ -6,7 +6,7 @@ If documentation conflicts with code, code is authoritative.
 ## Identity
 - Name: Aurum
 - Ticker: AUR
-- Type: Bitcoin-derived Proof-of-Work Layer-1
+- Type: Aurum-derived Proof-of-Work Layer-1
 - Launch policy: Fair launch (no premine, no founder allocation, no hidden minting)
 
 ## Consensus

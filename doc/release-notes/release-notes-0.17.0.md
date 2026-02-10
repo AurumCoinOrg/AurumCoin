@@ -1,4 +1,4 @@
-Bitcoin Core version 0.17.0 is now available from:
+Aurum Core version 0.17.0 is now available from:
 
   <https://bitcoincore.org/bin/bitcoin-core-0.17.0/>
 
@@ -18,8 +18,8 @@ How to Upgrade
 
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes for older versions), then run the
-installer (on Windows) or just copy over `/Applications/Bitcoin-Qt` (on Mac)
-or `bitcoind`/`bitcoin-qt` (on Linux).
+installer (on Windows) or just copy over `/Applications/Aurum-Qt` (on Mac)
+or `aurumd`/`bitcoin-qt` (on Linux).
 
 If your node has a txindex, the txindex db will be migrated the first time you run 0.17.0 or newer, which may take up to a few hours. Your node will not be functional until this migration completes.
 
@@ -46,10 +46,10 @@ processing the entire blockchain.
 Compatibility
 ==============
 
-Bitcoin Core is extensively tested on multiple operating systems using
+Aurum Core is extensively tested on multiple operating systems using
 the Linux kernel, macOS 10.10+, and Windows 7 and newer (Windows XP is not supported).
 
-Bitcoin Core should also work on most other Unix-like systems but is not
+Aurum Core should also work on most other Unix-like systems but is not
 frequently tested on them.
 
 From 0.17.0 onwards macOS <10.10 is no longer supported. 0.17.0 is built using Qt 5.9.x, which doesn't
@@ -151,7 +151,7 @@ outside of sections.
 
 A new 'label' API has been introduced for the wallet. This is intended as a
 replacement for the deprecated 'account' API. The 'account' can continue to
-be used in V0.17 by starting bitcoind with the '-deprecatedrpc=accounts'
+be used in V0.17 by starting aurumd with the '-deprecatedrpc=accounts'
 argument, and will be fully removed in V0.18.
 
 The label RPC methods mirror the account functionality, with the following functional differences:
@@ -184,10 +184,10 @@ Here are the changes to RPC methods:
 | `listtransactions`     | The `account` named parameter has been renamed to `dummy`. If provided, the `dummy` parameter must be set to the string `*`, unless running with the `-deprecatedrpc=accounts` argument (in which case functionality is unchanged). |
 | `getbalance`           | `account`, `minconf` and `include_watchonly` parameters are deprecated, and can only be used if running with '-deprecatedrpc=accounts' |
 
-BIP 174 Partially Signed Bitcoin Transactions support
+BIP 174 Partially Signed Aurum Transactions support
 -----------------------------------------------------
 
-[BIP 174 PSBT](https://github.com/bitcoin/bips/blob/master/bip-0174.mediawiki) is an interchange format for Bitcoin transactions that are not fully signed
+[BIP 174 PSBT](https://github.com/bitcoin/bips/blob/master/bip-0174.mediawiki) is an interchange format for Aurum transactions that are not fully signed
 yet, together with relevant metadata to help entities work towards signing it.
 It is intended to simplify workflows where multiple parties need to cooperate to
 produce a transaction. Examples include hardware wallets, multisig setups, and
@@ -195,7 +195,7 @@ produce a transaction. Examples include hardware wallets, multisig setups, and
 
 ### Overall workflow
 
-Overall, the construction of a fully signed Bitcoin transaction goes through the
+Overall, the construction of a fully signed Aurum transaction goes through the
 following steps:
 
 - A **Creator** proposes a particular transaction to be created. He constructs
@@ -210,7 +210,7 @@ following steps:
   partial signature for the inputs for which they have relevant key(s).
 - A **Finalizer** is run for each input to convert the partial signatures and
   possibly script information into a final `scriptSig` and/or `scriptWitness`.
-- An **Extractor** produces a valid Bitcoin transaction (in network format)
+- An **Extractor** produces a valid Aurum transaction (in network format)
   from a PSBT for which all inputs are finalized.
 
 Generally, each of the above (excluding Creator and Extractor) will simply
@@ -256,7 +256,7 @@ hardware implementations will typically implement multiple roles simultaneously.
 Upgrading non-HD wallets to HD wallets
 --------------------------------------
 
-Since Bitcoin Core 0.13.0, creating new BIP 32 Hierarchical Deterministic wallets has been supported by Bitcoin Core but old non-HD wallets could not be upgraded to HD. Now non-HD wallets can be upgraded to HD using the `-upgradewallet` command line option. This upgrade will result in the all keys in the keypool being marked as used and a new keypool generated. **A new backup must be made when this upgrade is performed.**
+Since Aurum Core 0.13.0, creating new BIP 32 Hierarchical Deterministic wallets has been supported by Aurum Core but old non-HD wallets could not be upgraded to HD. Now non-HD wallets can be upgraded to HD using the `-upgradewallet` command line option. This upgrade will result in the all keys in the keypool being marked as used and a new keypool generated. **A new backup must be made when this upgrade is performed.**
 
 Additionally, `-upgradewallet` can be used to upgraded from a non-split HD chain (all keys generated with `m/0'/0'/i'`) to a split HD chain (receiving keys generated with `'m/0'/0'/i'` and change keys generated with `m'/0'/1'/i'`). When this upgrade occurs, all keys already in the keypool will remain in the keypool to be used until all keys from before the upgrade are exhausted. This is to avoid issues with backups and downgrades when some keys may come from the change key keypool. Users can begin using the new split HD chain keypools by using the `newkeypool` RPC to mark all keys in the keypool as used and begin using a new keypool generated from the split HD chain.
 
@@ -286,7 +286,7 @@ Low-level RPC changes
   `getrawtransaction` RPC commands.
 - New `fees` field introduced in `getrawmempool`, `getmempoolancestors`, `getmempooldescendants` and
    `getmempoolentry` when verbosity is set to `true` with sub-fields `ancestor`, `base`, `modified`
-   and `descendant` denominated in BTC. This new field deprecates previous fee fields, such as
+   and `descendant` denominated in AUR. This new field deprecates previous fee fields, such as
    `fee`, `modifiedfee`, `ancestorfee` and `descendantfee`.
 - The new RPC `getzmqnotifications` returns information about active ZMQ
   notifications.
@@ -322,7 +322,7 @@ Low-level RPC changes
   `pubkeys`, `sigsrequired`, `pubkey`, `addresses`, `embedded`, `iscompressed`,
   `account`, `timestamp`, `hdkeypath`, `hdmasterkeyid`.
 - `signrawtransaction` is deprecated and will be fully removed in v0.18. To use
-  `signrawtransaction` in v0.17, restart bitcoind with
+  `signrawtransaction` in v0.17, restart aurumd with
   `-deprecatedrpc=signrawtransaction`. Projects should transition to using
   `signrawtransactionwithkey` and `signrawtransactionwithwallet` before
   upgrading to v0.18.
@@ -336,7 +336,7 @@ Other API changes
 
 - The log timestamp format is now ISO 8601 (e.g. "2018-02-28T12:34:56Z").
 
-- When running bitcoind with `-debug` but without `-daemon`, logging to stdout
+- When running aurumd with `-debug` but without `-daemon`, logging to stdout
   is now the default behavior. Setting `-printtoconsole=1` no longer implicitly
   disables logging to debug.log. Instead, logging to file can be explicitly disabled
   by setting `-debuglogfile=0`.
@@ -345,7 +345,7 @@ Transaction index changes
 -------------------------
 
 The transaction index is now built separately from the main node procedure,
-meaning the `-txindex` flag can be toggled without a full reindex. If bitcoind
+meaning the `-txindex` flag can be toggled without a full reindex. If aurumd
 is run with `-txindex` on a node that is already partially or fully synced
 without one, the transaction index will be built in the background and become
 available once caught up. When switching from running `-txindex` to running
@@ -536,7 +536,7 @@ Support for Python 2 has been discontinued for all test files and tools.
 - #11200 `5f2a399` Allow for aborting rescans in the GUI (achow101)
 - #12791 `3a8a4dc` Expose a transaction's weight via RPC (TheBlueMatt)
 - #12436 `6e67754` Adds a functional test to validate the transaction version number in the RPC output (251Labs)
-- #12240 `6f8b345` Introduced a new `fees` structure that aggregates all sub-field fee types denominated in BTC (mryandao)
+- #12240 `6f8b345` Introduced a new `fees` structure that aggregates all sub-field fee types denominated in AUR (mryandao)
 - #12321 `eac067a` p2wsh and p2sh-p2wsh address in decodescript (fivepiece)
 - #13090 `17266a1` Remove Safe mode (achow101, laanwj)
 - #12639 `7eb7076` Reduce `cs_main` lock in listunspent (promag)
@@ -809,8 +809,8 @@ Support for Python 2 has been discontinued for all test files and tools.
 - #10694 `ae5bcc7` Remove redundant code in MutateTxSign(CMutableTransaction&, const std::string&) (practicalswift)
 - #12659 `3d16f58` Improve Fatal LevelDB Log Messages (eklitzke)
 - #12643 `0f0229d` util: Remove unused `sync_chain` (MarcoFalke)
-- #12102 `7fb8fb4` Apply hardening measures in bitcoind systemd service file (Flowdalic)
-- #12652 `55f490a` bitcoin-cli: Provide a better error message when bitcoind is not running (practicalswift)
+- #12102 `7fb8fb4` Apply hardening measures in aurumd systemd service file (Flowdalic)
+- #12652 `55f490a` aurum-cli: Provide a better error message when aurumd is not running (practicalswift)
 - #12630 `c290508` Provide useful error message if datadir is not writable (murrayn)
 - #11881 `624bee9` Remove Python2 support (jnewbery)
 - #12821 `082e26c` contrib: Remove unused import string (MarcoFalke)
@@ -831,7 +831,7 @@ Support for Python 2 has been discontinued for all test files and tools.
 - #13031 `826acc9` Fix for utiltime to compile with msvc (sipsorcery)
 - #13119 `81743b5` Remove script to clean up datadirs (MarcoFalke)
 - #12954 `5a66642` util: Refactor logging code into a global object (jimpo)
-- #12769 `35eb9d6` Add systemd service to bitcoind in debian package (ghost)
+- #12769 `35eb9d6` Add systemd service to aurumd in debian package (ghost)
 - #13146 `0bc980b` rpcauth: Make it possible to provide a custom password (laanwj)
 - #13148 `b62b437` logging: Fix potential use-after-free in logprintstr(…) (practicalswift)
 - #13214 `0612d96` Enable Travis checking for two Python linting rules we are currently not violating (practicalswift)
@@ -872,7 +872,7 @@ Support for Python 2 has been discontinued for all test files and tools.
 - #13441 `4a7e64f` Prevent shared conf files from failing with different available options in different binaries (achow101)
 - #13471 `5eca4e8` For AVX2 code, also check for AVX, XSAVE, and OS support (sipa)
 - #13503 `c655b2c` Document FreeBSD quirk. Fix FreeBSD build: Use std::min<int>(…) to allow for compilation under certain FreeBSD versions (practicalswift)
-- #13725 `07ce278` Fix bitcoin-cli --version (Empact)
+- #13725 `07ce278` Fix aurum-cli --version (Empact)
 
 ### Documentation
 - #12306 `216f9a4` Improvements to UNIX documentation (axvr)
@@ -898,7 +898,7 @@ Support for Python 2 has been discontinued for all test files and tools.
 - #12800 `2d97611` Add note about our preference for scoped enumerations ("enum class") (practicalswift)
 - #12798 `174d016` Refer to witness reserved value as spec. in the BIP (MarcoFalke)
 - #12759 `d3908e2` Improve formatting of developer notes (eklitzke)
-- #12877 `2b54155` Use bitcoind in Tor documentation (knoxcard)
+- #12877 `2b54155` Use aurumd in Tor documentation (knoxcard)
 - #12896 `b15485e` Fix conflicting statements about initialization in developer notes (practicalswift)
 - #12850 `319991d` add qrencode to brew install instructions (buddilla)
 - #12007 `cd8e45b` Clarify the meaning of fee delta not being a fee rate in prioritisetransaction RPC (honzik666)
@@ -948,7 +948,7 @@ Support for Python 2 has been discontinued for all test files and tools.
 - #13895 `1cd5f2c` fix GetWarnings docs to reflect behavior (Empact)
 - #13911 `3e3a50a` Revert translated string change, clarify wallet log messages (PierreRochard)
 - #13908 `d6faea4` upgrade rescan time warning from minutes to >1 hour (masonicboom)
-- #13905 `73a09b4` fixed bitcoin-cli -help output for help2man (hebasto)
+- #13905 `73a09b4` fixed aurum-cli -help output for help2man (hebasto)
 - #14100 `2936dbc` Change documentation for =0 for non-boolean options (laanwj)
 - #14096 `465a583` Add reference documentation for descriptors language (sipa)
 - #12757 `0c5f67b` Clarify include guard naming convention (practicalswift)

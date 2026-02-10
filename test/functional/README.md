@@ -74,7 +74,7 @@ don't have test cases for.
   initialize an empty blockchain and start from the Genesis block, rather than
   cached data directories contain a 200-block pre-mined blockchain with the
   spendable mining rewards being split between four nodes. Each node has 25
-  mature block subsidies (25x50=1250 BTC) in its wallet. Using them is much more
+  mature block subsidies (25x50=1250 AUR) in its wallet. Using them is much more
   efficient than mining blocks in your test.
 - When calling RPCs with lots of arguments, consider using named keyword
   arguments instead of positional arguments to make the intent of the call
@@ -103,12 +103,12 @@ over the network (`CBlock`, `CTransaction`, etc, along with the network-level
 wrappers for them, `msg_block`, `msg_tx`, etc).
 
 - P2P tests have two threads. One thread handles all network communication
-with the bitcoind(s) being tested in a callback-based event loop; the other
+with the aurumd(s) being tested in a callback-based event loop; the other
 implements the test logic.
 
-- `P2PConnection` is the class used to connect to a bitcoind.  `P2PInterface`
+- `P2PConnection` is the class used to connect to a aurumd.  `P2PInterface`
 contains the higher level logic for processing P2P payloads and connecting to
-the Bitcoin Core node application logic. For custom behaviour, subclass the
+the Aurum Core node application logic. For custom behaviour, subclass the
 P2PInterface object and override the callback methods.
 
 `P2PConnection`s can be used as such:
@@ -153,7 +153,7 @@ Base class for functional tests.
 Generally useful functions.
 
 #### [p2p.py](test_framework/p2p.py)
-Test objects for interacting with a bitcoind node over the p2p interface.
+Test objects for interacting with a aurumd node over the p2p interface.
 
 #### [script.py](test_framework/script.py)
 Utilities for manipulating transaction scripts (originally from python-bitcoinlib)

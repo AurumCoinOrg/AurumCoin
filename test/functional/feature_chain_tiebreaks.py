@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) The Bitcoin Core developers
+# Copyright (c) The Aurum Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test that the correct active block is chosen in complex reorgs."""
@@ -25,7 +25,7 @@ class ChainTiebreaksTest(BitcoinTestFramework):
 
     def test_chain_split_in_memory(self):
         node = self.nodes[0]
-        # Add P2P connection to bitcoind
+        # Add P2P connection to aurumd
         peer = node.add_p2p_connection(P2PDataStore())
 
         self.log.info('Precomputing blocks')
