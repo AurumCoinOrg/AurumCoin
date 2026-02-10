@@ -3,6 +3,7 @@
 Thanks for your interest in contributing.
 
 ## Ground rules
+- Consensus parameters listed in docs/SPEC_LOCK.md are frozen and must not be changed without a hard-fork proposal.
 - No local data directories, wallets, logs, or backups in commits.
 - No consensus changes without an explicit proposal and review.
 - If docs conflict with code, code wins.
