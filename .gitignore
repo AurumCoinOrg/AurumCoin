@@ -1,30 +1,26 @@
-# Build artifacts
 /build/
 /build-*/
-/CMakeFiles/
-/CMakeCache.txt
-cmake_install.cmake
-Makefile
+/**/CMakeFiles/
+/**/CMakeCache.txt
+/**/cmake_install.cmake
+/**/Makefile
+/**/*.o
+/**/*.a
+/**/*.so
+/**/*.dylib
+/**/*.dll
+/**/*.exe
 
-# Runtime data
-**/aurum/blocks/
-**/aurum/chainstate/
-**/aurum/wallets/
-**/aurum/.cookie
-**/aurum/debug.log
-**/aurum/peers.dat
-**/aurum/fee_estimates.dat
+**/*-data/
+**/*-node*/
+**/debug.log
+**/.cookie
+**/wallet.dat
+**/wallets/
+**/*.dat
+**/*wallet*backup*
+**/*premine*
+**/*Premine*
 
-# Wallets / keys
-wallet.dat
-*.wallet
-*.key
-*.pem
-*.seed
-
-# OS junk
+*_wallet_convert_*
 .DS_Store
-Thumbs.db
-
-# Local tools / temp
-_wallet_convert_*
