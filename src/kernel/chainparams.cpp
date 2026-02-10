@@ -145,8 +145,8 @@ public:
     vFixedSeeds.clear();
 
     // DNS seeds (MAINNET)
-    vSeeds.emplace_back("seed1.aurumcoin.org");
-    vSeeds.emplace_back("seed2.aurumcoin.org");
+    
+    
 // GENESIS (MAINNET — FULL, EXPLICIT)
         const char* pszTimestamp = "Aurum Coin launch 2026-02-06";
         const CScript genesisOutputScript =
