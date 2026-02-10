@@ -1,52 +1,31 @@
-aurum-regtest/
-aurum-mainnet/
-aurum-mainnet2/
-mainnet-data/
-*.pid
+# Build outputs
+/build/
+/build-*/
+/**/CMakeFiles/
+/**/CMakeCache.txt
+/**/cmake_install.cmake
+/**/Makefile
+
+# Local chain data / wallets / logs
+/*-data/
+/mainnet-data/
+/mainnet-node2/
+/regtest-data/
+/testnet-data/
+/signet-data/
+**/debug.log
+**/peers.dat
+**/anchors.dat
+**/.cookie
+**/banlist.dat
+**/fee_estimates.dat
+**/mempool.dat
+**/wallets/
+**/chainstate/
+**/blocks/
+**/indexes/
+
+# Local scripts/artifacts
+*_wallet_convert_*/
 *.log
-*.dat
-anchors.dat
-fee_estimates.dat
-mempool.dat
-
-*.BAK_*
-fix_chain.sh
-regtest_up.sh
-reset_aurum_mainnet.sh
-2
-64-hex
-
-# build outputs
-build/
-**/build/
-
-# local chain data / wallets / backups
-main-data/
-main-data-*/
-premine-data/
-premine-test/
-regtest-data*/
-*.bak
-*.dat
-*.wallet
-.wallet/
-*.cookie
-*.log
-*.ldb
-*.json
-
-# mac
 .DS_Store
-
-# local secrets / wallet backups
-premine_MAIN_ENCRYPTED_FINAL.bak
-wallet-backups/
-main-data/
-mainnet-data/
-regtest-data/
-premine-data/
-
-# local artifacts
-_wallet_convert_*
-
-build-genesis/
