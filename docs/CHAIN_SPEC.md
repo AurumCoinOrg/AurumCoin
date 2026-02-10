@@ -1,3 +1,7 @@
+> ⚠️ Mainnet consensus is frozen. See docs/SPEC_LOCK.md
+
+> ⚠️ Mainnet consensus is frozen. See docs/SPEC_LOCK.md
+
 # Aurum Chain Specification
 
 This document is the exchange / integrator-facing specification for Aurum.
