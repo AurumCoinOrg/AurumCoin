@@ -1,18 +1,21 @@
 # Support
 
-## Security issues
-Please do not open public issues for security vulnerabilities.
-See SECURITY.md for reporting instructions.
+## Getting Help
+- Read `docs/README.md` first
+- Run the spec checker: `bash scripts/verify_spec.sh`
 
-## Bug reports
-Open a GitHub issue and include:
-- exact commit hash
-- OS and build steps
-- logs (redact secrets)
-- steps to reproduce
+## Common Commands
+```bash
+# Build (example)
+cmake -S . -B build
+cmake --build build -j
 
-## Feature requests
-Open a GitHub issue describing:
-- the problem you're solving
-- proposed solution
-- alternatives considered
+# Run node (mainnet example)
+DATADIR="$HOME/Documents/AurumCoin/main-data-main"
+./build/bin/aurumd -chain=main -datadir="$DATADIR" -daemon
+./build/bin/aurum-cli -chain=main -datadir="$DATADIR" getnetworkinfo
+```
+
+## Security
+- Do not post private keys, wallet files, seed phrases, or `wallet.dat`
+- For vulnerabilities, follow `SECURITY.md`
