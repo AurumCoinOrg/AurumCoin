@@ -4,7 +4,7 @@ Aurum is an independent Layer-1 Proof-of-Work blockchain.
 
 ## Core Principles
 - Fair launch (no pre-allocation)
-- No founder allocation
+- No team allocation
 - No ICO
 - No hidden allocations
 
