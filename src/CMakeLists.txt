@@ -299,8 +299,8 @@ endif()
 # AurumCoin Core aurumd.
 if(BUILD_DAEMON)
   add_executable(aurumd
-    bitcoind.cpp
-    init/bitcoind.cpp
+    aurumd.cpp
+    init/aurumd.cpp
   )
   add_windows_resources(aurumd aurumd-res.rc)
   add_windows_application_manifest(aurumd)
@@ -313,7 +313,7 @@ if(BUILD_DAEMON)
 endif()
 if(ENABLE_IPC AND BUILD_DAEMON)
   add_executable(bitcoin-node
-    bitcoind.cpp
+    aurumd.cpp
     init/bitcoin-node.cpp
   )
   target_link_libraries(bitcoin-node

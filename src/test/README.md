@@ -1,7 +1,7 @@
 # Unit tests
 
 The sources in this directory are unit test cases. Boost includes a
-unit testing framework, and since Bitcoin Core already uses Boost, it makes
+unit testing framework, and since Aurum Core already uses Boost, it makes
 sense to simply use this framework rather than require developers to
 configure some other framework (we want as few impediments to creating
 unit tests as possible).
@@ -16,7 +16,7 @@ The examples in this document assume the build directory is named
 ### Compiling/running unit tests
 
 Unit tests will be automatically compiled if dependencies were met
-during the generation of the Bitcoin Core build system
+during the generation of the Aurum Core build system
 and tests weren't explicitly disabled.
 
 The unit tests can be run with `ctest --test-dir build`, which includes unit
@@ -68,7 +68,7 @@ build/bin/test_bitcoin --run_test=getarg_tests/doubledash
 The `--log_level=` (or `-l`) argument controls the verbosity of the test output.
 
 The `test_bitcoin` runner also accepts some of the command line arguments accepted by
-`bitcoind`. Use `--` to separate these sets of arguments:
+`aurumd`. Use `--` to separate these sets of arguments:
 
 ```bash
 build/bin/test_bitcoin --log_level=all --run_test=getarg_tests -- -printtoconsole=1
@@ -82,7 +82,7 @@ Running `test_bitcoin` creates a temporary working (data) directory with a rando
 generated pathname within `test_common bitcoin/`, which in turn is within
 the system's temporary directory (see
 [`temp_directory_path`](https://en.cppreference.com/w/cpp/filesystem/temp_directory_path)).
-This data directory looks like a simplified form of the standard `bitcoind` data
+This data directory looks like a simplified form of the standard `aurumd` data
 directory. Its content will vary depending on the test, but it will always
 have a `debug.log` file, for example.
 
