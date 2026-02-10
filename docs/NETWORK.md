@@ -1,25 +1,27 @@
 # Aurum Network Guide
 
-## Networks
-- mainnet
-- testnet
-- regtest
+This document describes basic networking parameters and how to run a node.
 
-## Default Ports (Mainnet)
-- P2P: **19444**
-- RPC: **19443**
+## Ports
+- P2P (mainnet): **19444**
+- RPC (mainnet): **19443**
 
-## Data Directory
-- Default chain dir: `aurum/`
-- Example: `-datadir=$HOME/Documents/AurumCoin/main-data-main`
-
-## Start a Node (Mainnet)
+## Run a node (mainnet)
 ```bash
 DATADIR="$HOME/Documents/AurumCoin/main-data-main"
-./build/bin/aurumd -chain=main -datadir="$DATADIR" -daemon
-./build/bin/aurum-cli -chain=main -datadir="$DATADIR" getblockchaininfo
+mkdir -p "$DATADIR"
+
+./build/bin/aurumd -datadir="$DATADIR" -daemon
+
+./build/bin/aurum-cli -datadir="$DATADIR" getblockchaininfo
+./build/bin/aurum-cli -datadir="$DATADIR" getnetworkinfo
 ```
 
-## Firewall
-- Allow inbound TCP **19444** for a reachable node
-- Keep RPC (**19443**) bound to localhost unless you know exactly what you are doing
+## Run a node (regtest)
+```bash
+DATADIR="$HOME/Documents/AurumCoin/regtest-data"
+mkdir -p "$DATADIR"
+
+./build/bin/aurumd -regtest -datadir="$DATADIR" -daemon
+./build/bin/aurum-cli -regtest -datadir="$DATADIR" getblockchaininfo
+```
