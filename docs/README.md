@@ -2,6 +2,7 @@
 
 Start here:
 
+- **BOOTSTRAP.md** — how to connect while DNS seeds are disabled
 - **CHAIN_SPEC.md** — exchange / integrator specification (ports, genesis, consensus)
 - **BUILD.md** — build instructions
 - **OVERVIEW.md** — project overview
