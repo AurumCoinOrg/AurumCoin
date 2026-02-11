@@ -1,16 +1,14 @@
-# Aurum Network Seeds
+# Seed Nodes (Bootstrap)
 
-This document lists DNS seeds and static nodes.
+## Status
+Aurum currently ships with **no default DNS seeds**.
 
-## DNS Seeds
-- (to be announced)
+Until seed infrastructure is deployed, bootstrap using one of:
+- `-addnode=<ip>:19444` (recommended)
+- `-connect=<ip>:19444` (strict, only that peer)
 
-## Static addnode Examples
+## Example
 ```bash
-addnode=seed1.aurumcoin.org
-addnode=seed2.aurumcoin.org
+DATADIR="$HOME/Documents/AurumCoin/main-data-main"
+./build/bin/aurumd -datadir="$DATADIR" -daemon -addnode=203.0.113.10:19444
 ```
-
-## Notes
-- Seeds will be added before public mainnet launch
-- Exchanges may request private bootstrap nodes
