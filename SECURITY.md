@@ -6,7 +6,7 @@ If you discover a security vulnerability in Aurum, **do not** open a public issu
 
 Please report it privately by emailing:
 
-**security@aurumcoin.org** (replace with a real inbox before launch)
+**security@example.com** (replace with a real inbox before launch)
 
 Include:
 - A clear description of the issue
